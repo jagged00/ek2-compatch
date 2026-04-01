@@ -1,0 +1,66 @@
+﻿### EK TODO: Give them different colours
+maormer = {
+	color = { 0.43 0.21 0.41 } # More blue-ish for them?
+	
+	created = 350.1.1
+	history_loc_override = maormer_history_loc
+	
+	name_order_convention = dynasty_always_first
+	ethos = ethos_spiritual
+	heritage = heritage_maormeri
+	language = language_maormeris
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+	
+	traditions = {
+		tradition_orgnumic_core
+		tradition_fervent_temple_builders
+		tradition_philosopher_culture
+	}
+	
+	name_list = name_list_maormer
+	
+	coa_gfx = { maormeris_group_coa_gfx }
+	building_gfx = { ek_aldmer_building_gfx }
+	clothing_gfx = { ek_aldmeri_clothing_gfx }
+	unit_gfx = { altmer_unit_gfx }
+	house_coa_frame = house_frame_18
+	
+	ethnicities = {
+		10 = race_maormer
+	}
+}
+
+beyonder = {
+	color = { 0.43 0.21 0.41 }
+	
+	created = 450.1.1
+	parents = { maormer }
+	history_loc_override = beyonder_history_loc
+	
+	name_order_convention = dynasty_always_first
+	ethos = ethos_bellicose
+	heritage = heritage_maormeri
+	language = language_maormeris
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+	
+	traditions = {
+		tradition_orgnumic_core
+		tradition_quarrelsome
+		tradition_seafaring
+		tradition_practiced_pirates
+	}
+	
+	name_list = name_list_maormer
+	
+	coa_gfx = { maormeris_group_coa_gfx }
+	building_gfx = { ek_aldmer_building_gfx }
+	clothing_gfx = { ek_aldmeri_clothing_gfx }
+	unit_gfx = { altmer_unit_gfx }
+	house_coa_frame = house_frame_18
+	
+	ethnicities = {
+		10 = race_maormer
+	}
+}

@@ -1,0 +1,322 @@
+﻿hared = {
+	color = { 0.33 0.3 0.15 }
+	
+	created = 2.1.1
+	history_loc_override = cyrod_history_loc
+	
+	ethos = ethos_stoic
+	heritage = heritage_cyrod
+	language = language_old_cyrod
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_warrior_culture
+		tradition_hill_dwellers
+		tradition_zealous_people
+	}
+
+	name_list = name_list_nibenu
+	
+	coa_gfx = { nedic_coa_gfx }
+	building_gfx = { ek_nedic_south_building_gfx }
+	clothing_gfx = { ek_nedic_old_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_23
+	house_coa_mask_offset = { 0.0 0.03 }
+	house_coa_mask_scale = { 0.9 0.9 }
+	
+	ethnicities = {
+		1 = race_nede_1_dark
+		1 = race_nede_2_dark
+		1 = race_nede_3_dark
+		1 = race_imperial_nibenese_1_dark
+		1 = race_imperial_nibenese_2_dark
+		1 = race_imperial_nibenese_3_dark
+		1 = race_imperial_nibenese_4_dark
+		1 = race_imperial_colovian_1_dark
+		1 = race_imperial_colovian_4_dark
+		1 = race_imperial_colovian_5_dark
+	}
+}
+
+gemha = {
+	color = { 0.15 0.15 0.33 }
+	
+	created = 2.1.1
+	history_loc_override = cyrod_history_loc
+	
+	ethos = ethos_egalitarian
+	heritage = heritage_cyrod
+	language = language_old_cyrod
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+	
+	traditions = {
+		tradition_agrarian
+		tradition_xenophilic
+		tradition_religious_patronage
+	}
+
+	name_list = name_list_nibenu
+	
+	coa_gfx = { nedic_coa_gfx }
+	building_gfx = { ek_nedic_south_building_gfx }
+	clothing_gfx = { ek_nedic_old_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_23
+	house_coa_mask_offset = { 0.0 0.03 }
+	house_coa_mask_scale = { 0.9 0.9 }
+	
+	ethnicities = {
+		1 = race_koth_1
+		1 = race_koth_2
+		1 = race_koth_3
+		1 = race_imperial_nibenese_1_dark
+		1 = race_imperial_nibenese_2_dark
+		1 = race_imperial_nibenese_3_dark
+		1 = race_imperial_nibenese_4_dark
+		1 = race_imperial_nibenese_5
+		1 = race_imperial_nibenese_6
+	}
+}
+
+sedor = {
+	color = { 0.35 0.15 0.33 }
+	
+	created = 2.1.1
+	history_loc_override = cyrod_history_loc
+	
+	ethos = ethos_stoic
+	heritage = heritage_cyrod
+	language = language_old_cyrod
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	 traditions = {
+        tradition_only_the_strong
+        tradition_mountain_homes
+        tradition_isolationist
+    }
+
+	name_list = name_list_nibenu
+	
+	coa_gfx = { nedic_coa_gfx }
+	building_gfx = { ek_nedic_south_building_gfx }
+	clothing_gfx = { ek_nedic_old_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_23
+	house_coa_mask_offset = { 0.0 0.03 }
+	house_coa_mask_scale = { 0.9 0.9 }
+	
+	ethnicities = {
+		1 = race_nede_1_dark
+		1 = race_nede_2_dark
+		1 = race_nede_3_dark
+		1 = race_imperial_nibenese_1_dark
+		1 = race_imperial_nibenese_2_dark
+		1 = race_imperial_nibenese_3_dark
+		1 = race_imperial_nibenese_4_dark
+		1 = race_imperial_colovian_1_dark
+		1 = race_imperial_colovian_4_dark
+		1 = race_imperial_colovian_5_dark
+	}
+}
+
+ket = {
+	color = { 0.35 0.15 0.33 }
+	
+	created = 2.1.1
+	history_loc_override = cyrod_history_loc
+	
+	ethos = ethos_bellicose
+	heritage = heritage_cyrod
+	language = language_old_cyrod
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	 traditions = {
+        tradition_adaptive_skirmishing
+		tradition_quarrelsome
+        tradition_malleable_invaders
+    }
+
+	name_list = name_list_nibenu
+	
+	coa_gfx = { nedic_coa_gfx }
+	building_gfx = { ek_nedic_south_building_gfx }
+	clothing_gfx = { ek_nedic_old_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_23
+	house_coa_mask_offset = { 0.0 0.03 }
+	house_coa_mask_scale = { 0.9 0.9 }
+	
+	ethnicities = {
+		1 = race_koth_1
+		1 = race_koth_2
+		1 = race_koth_3
+		1 = race_imperial_nibenese_1_dark
+		1 = race_imperial_nibenese_2_dark
+		1 = race_imperial_nibenese_3_dark
+		1 = race_imperial_nibenese_4_dark
+		1 = race_imperial_nibenese_5
+		1 = race_imperial_nibenese_6
+	}
+}
+
+keptu_cyrod = {
+	color = { 0.15 0.15 0.33 }
+	
+	created = 2.1.1
+	history_loc_override = cyrod_history_loc
+	
+	ethos = ethos_spiritual
+	heritage = heritage_cyrod
+	language = language_old_cyrod
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+	
+	traditions = {
+		tradition_fishermen
+		tradition_philosophy_of_trade
+		tradition_sorcerous_metallurgy
+	}
+
+	name_list = name_list_nibenu
+	
+	coa_gfx = { nedic_coa_gfx }
+	building_gfx = { ek_nedic_south_building_gfx }
+	clothing_gfx = { ek_nedic_old_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_23
+	house_coa_mask_offset = { 0.0 0.03 }
+	house_coa_mask_scale = { 0.9 0.9 }
+	
+	ethnicities = {
+		1 = race_koth_1
+		1 = race_koth_2
+		1 = race_koth_3
+		1 = race_imperial_nibenese_1_dark
+		1 = race_imperial_nibenese_2_dark
+		1 = race_imperial_nibenese_3_dark
+		1 = race_imperial_nibenese_4_dark
+		1 = race_imperial_nibenese_5
+		1 = race_imperial_nibenese_6
+	}
+}
+
+men_of_ge = {
+	color = { 0.15 0.15 0.33 }
+	
+	created = 2.1.1
+	history_loc_override = cyrod_history_loc
+	
+	ethos = ethos_communal
+	heritage = heritage_cyrod
+	language = language_old_cyrod
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+	
+	traditions = {
+		tradition_fight_for_survival
+		tradition_attuned_to_magicka
+		tradition_frugal
+	}
+
+	name_list = name_list_nibenu
+	
+	coa_gfx = { nedic_coa_gfx }
+	building_gfx = { ek_nedic_south_building_gfx }
+	clothing_gfx = { ek_nedic_old_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_23
+	house_coa_mask_offset = { 0.0 0.03 }
+	house_coa_mask_scale = { 0.9 0.9 }
+	
+	ethnicities = {
+		1 = race_koth_1
+		1 = race_koth_2
+		1 = race_koth_3
+		1 = race_imperial_nibenese_1_dark
+		1 = race_imperial_nibenese_2_dark
+		1 = race_imperial_nibenese_3_dark
+		1 = race_imperial_nibenese_4_dark
+		1 = race_imperial_nibenese_5
+		1 = race_imperial_nibenese_6
+	}
+}
+
+kreath = {
+	color = { 0.3 0.15 0.33 }
+	
+	created = 350.1.1
+	history_loc_override = nedic_history_loc
+	
+	ethos = ethos_communal
+	heritage = heritage_cyrod
+	language = language_old_cyrod
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_mountain_homes
+		tradition_sacred_groves
+		tradition_hunters
+		tradition_storytellers
+	}
+
+	name_list = name_list_nibenu
+	
+	coa_gfx = { reachfolk_coa_gfx }
+	building_gfx = { ek_nedic_north_building_gfx }
+	clothing_gfx = { ek_nedic_reach_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_27
+	house_coa_mask_offset = { 0.0 0.055 }
+	house_coa_mask_scale = { 0.9 0.9 }
+	
+	ethnicities = {
+		1 = race_nede_1
+		1 = race_nede_2
+		1 = race_nede_3
+	}
+}
+
+rontha = {
+	color = { 0.1 0.1 0.35 }
+	
+	created = 350.1.1
+	history_loc_override = nedic_history_loc
+	
+	ethos = ethos_bellicose
+	heritage = heritage_cyrod
+	language = language_rontha
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+	
+	traditions = {
+		tradition_pastoralists
+		tradition_deep_strike
+		tradition_practiced_pirates
+		tradition_battlefield_looters
+	}
+
+	name_list = name_list_nibenu
+	
+	coa_gfx = { nedic_coa_gfx }
+	building_gfx = { ek_nedic_south_building_gfx }
+	clothing_gfx = { ek_nedic_old_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	house_coa_frame = house_frame_23
+	house_coa_mask_offset = { 0.0 0.03 }
+	house_coa_mask_scale = { 0.9 0.9 }
+	
+	ethnicities = {
+		5 = race_nede_1
+		5 = race_nede_2
+		5 = race_nede_3
+		1 = race_nede_1_dark
+		1 = race_nede_2_dark
+		1 = race_nede_3_dark
+	}
+}

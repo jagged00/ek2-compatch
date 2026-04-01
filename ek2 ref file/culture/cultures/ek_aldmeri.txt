@@ -1,0 +1,159 @@
+﻿alinor = {
+	color = { 1.0 0.85 0.0 }
+	
+	created = 350.1.1
+	history_loc_override = altmer_history_loc
+	
+	name_order_convention = dynasty_always_first
+	ethos = ethos_courtly
+	heritage = heritage_aldmeri
+	language = language_altmeris
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_ceremoniarchy
+		tradition_prescriptivism
+		tradition_philosopher_culture
+		tradition_attuned_to_magicka
+		tradition_coastal_defences
+	}	
+
+	name_list = name_list_altmer
+	
+	coa_gfx = { aldmeris_group_coa_gfx }
+	building_gfx = { ek_aldmer_building_gfx }
+	clothing_gfx = { ek_aldmeri_clothing_gfx }
+	unit_gfx = { altmer_unit_gfx }
+	house_coa_frame = house_frame_15
+	house_coa_mask_offset = { 0.0 -0.03 }
+	house_coa_mask_scale = { 0.95 0.95 }
+	
+	ethnicities = {
+		15 = race_altmer_pure_1
+		30 = race_altmer_pure_2
+		4 = race_altmer
+		4 = race_altmer_ear
+	}
+}
+
+auridon = {
+	color = { 0.7 0.62 0.47 }
+	
+	created = 350.1.1
+	history_loc_override = altmer_history_loc
+	
+	name_order_convention = dynasty_always_first
+	ethos = ethos_courtly
+	heritage = heritage_aldmeri
+	language = language_altmeris
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+	
+	traditions = {
+		tradition_ceremoniarchy
+		tradition_maritime_mercantilism
+		tradition_chivalry
+		tradition_attuned_to_magicka
+		tradition_coastal_defences
+	}
+	
+	name_list = name_list_altmer
+	
+	coa_gfx = { aldmeris_group_coa_gfx }
+	building_gfx = { ek_aldmer_building_gfx }
+	clothing_gfx = { ek_aldmeri_clothing_gfx }
+	unit_gfx = { altmer_unit_gfx }
+	house_coa_frame = house_frame_15
+	house_coa_mask_offset = { 0.0 -0.03 }
+	house_coa_mask_scale = { 0.95 0.95 }
+	
+	ethnicities = {
+		20 = race_altmer_pure_1
+		15 = race_altmer_pure_2
+		12 = race_altmer
+		2 = race_altmer_ear
+	}
+}
+
+balfiera = {
+	color = { 0.7 0.9 0.9 } 
+	
+	parents = { alinor }
+	created = 465.1.1
+	history_loc_override = direnni_history_loc
+	
+	name_order_convention = dynasty_always_first
+	ethos = ethos_courtly
+	heritage = heritage_aldmeri
+	language = language_altmeris
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+	
+	traditions = {
+		tradition_direnni_sorcerer_kings
+		tradition_family_entrepreneurship
+		tradition_attuned_to_magicka
+		tradition_ruling_caste
+	}
+	
+	name_list = name_list_balfiera
+	
+	coa_gfx = { balfiera_group_coa_gfx }
+	building_gfx = { ek_balfieri_building_gfx }
+	clothing_gfx = { ek_balfieri_clothing_gfx }
+	unit_gfx = { altmer_unit_gfx }
+	house_coa_frame = house_frame_22
+	house_coa_mask_offset = { 0.0 0.11 }
+	house_coa_mask_scale = { 0.85 0.85 }
+	
+	ethnicities = {
+		6 = race_altmer_pure_1
+		10 = race_altmer
+		5 = race_altmer_ear
+		10 = race_altmer_balfieri_1 
+		10 = race_altmer_balfieri_2
+	}
+}
+
+corelanya = {
+	color = { 0.9 0.4 0.1 }
+	
+	parents = { auridon } #Unknown, could be alinor as well
+	created = 550.1.1 #Sometime in sixth century
+	history_loc_override = corelanya_history_loc
+	
+	name_order_convention = dynasty_always_first
+	ethos = ethos_bellicose
+	heritage = heritage_aldmeri
+	language = language_altmeris
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+	
+	traditions = {
+		tradition_dryland_dwellers
+		tradition_attuned_to_magicka
+		tradition_sorcerer_kings #Altmer
+		tradition_city_keepers #Lived in cities along the coast
+		tradition_coastal_defences
+	}
+	
+	name_list = name_list_altmer
+	
+	coa_gfx = { aldmeris_group_coa_gfx }
+	building_gfx = { ek_aldmer_building_gfx }
+	clothing_gfx = { ek_aldmeri_clothing_gfx }
+	unit_gfx = { altmer_unit_gfx }
+	house_coa_frame = house_frame_15
+	house_coa_mask_offset = { 0.0 -0.03 }
+	house_coa_mask_scale = { 0.95 0.95 }
+	
+	ethnicities = {
+		6 = race_altmer_pure_1
+		6 = race_altmer_pure_2
+		10 = race_altmer
+		5 = race_altmer_ear
+		10 = race_altmer_balfieri_1 
+		10 = race_altmer_balfieri_2
+	}
+}
