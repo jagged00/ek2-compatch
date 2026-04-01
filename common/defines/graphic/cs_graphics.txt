@@ -1,0 +1,3 @@
+﻿NRulerDesigner = {
+	MIN_AGE_FOR_SEXUALITY = 1 # If your age is below this we hide the sexuality choice
+}

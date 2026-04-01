@@ -1,0 +1,48 @@
+﻿would_attempt_to_seduce_trigger = {
+	age <= 50
+	# Already interested or not a relation
+	trigger_if = {
+		limit = {
+			any_relation = { this = $CHARACTER$ }
+		}
+		OR = {
+			has_relation_potential_lover = $CHARACTER$
+			has_relation_crush = $CHARACTER$
+		}
+	}
+	# Not married
+	NOT = { is_consort_of = $CHARACTER$ }
+	OR = {
+		# Pre-existing schemes
+		is_scheming_against = {
+			target = $CHARACTER$
+			type = seduce
+		}
+		is_scheming_against = {
+			target = $CHARACTER$
+			type = courting
+		}
+		AND = {
+			# Sexuality
+			is_attracted_to_gender_of = $CHARACTER$
+			NOR = {
+				# Proactive
+				has_trait = chaste
+				# Undevoted
+				any_relation = { type = soulmate }
+			}
+			# Compatible or attractive
+			OR = {
+				trait_compatibility = {
+					target = $CHARACTER$
+					value >= low_positive_trait_compatibility
+				}
+				$CHARACTER$.attraction >= medium_positive_attraction
+			}
+		}
+	}
+	# Flouts the laws of decency
+	would_attempt_to_seduce_incest_trigger = { CHARACTER = $CHARACTER$ }
+	# Flouts the sanctity of marriage
+	would_attempt_to_seduce_married_trigger = yes
+}

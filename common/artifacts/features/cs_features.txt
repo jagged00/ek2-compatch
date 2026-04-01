@@ -1,0 +1,228 @@
+﻿	book_topic_intrigue_seduction = {
+		group = book_topic
+		trigger = {
+			has_artifact_feature = book_subject_intrigue
+			trigger_if = {
+				limit = { exists = scope:owner.var:book_topic_category }
+				scope:owner.var:book_topic_category = flag:intrigue_seduction
+			}
+			trigger_if = { # If the topic has been pre-saved from events etc. we make sure it's picked
+				limit = { exists = scope:owner.var:book_artifact_topic }
+				scope:owner.var:book_artifact_topic = flag:seduction
+			}
+			scope:owner = {
+				trigger_if = {
+					limit = { exists = scope:owner.var:book_artifact_author }
+					scope:owner.var:book_artifact_author = {
+						NOT = { has_trait = chaste }
+					}
+				}
+			}
+		}
+		weight = {
+			value = 1
+			if = {
+				limit = {
+					exists = scope:owner.var:book_artifact_author
+				}
+				scope:owner.var:book_artifact_author = {
+					if = {
+						limit = { book_topic_intrigue_seduction_trigger = yes }
+						add = 10
+					}
+				}
+			}
+			else = {
+				scope:owner = {
+					if = {
+						limit = { book_topic_intrigue_seduction_trigger = yes }
+						add = 10
+					}
+				}
+			}
+		}
+	}
+
+	book_topic_intrigue_the_art_of_love = {
+		group = book_topic
+		trigger = {
+			OR = {
+				has_artifact_feature = book_subject_intrigue
+				has_artifact_feature = book_subject_deviant
+			}
+			trigger_if = {
+				limit = { exists = scope:owner.var:book_topic_category }
+				scope:owner.var:book_topic_category = flag:intrigue_seduction
+			}
+			trigger_if = { # If the topic has been pre-saved from events etc. we make sure it's picked
+				limit = { exists = scope:owner.var:book_artifact_topic }
+				scope:owner.var:book_artifact_topic = flag:intrigue_the_art_of_love
+			}
+			scope:owner = {
+				trigger_if = {
+					limit = { exists = scope:owner.var:book_artifact_author }
+					scope:owner.var:book_artifact_author = {
+						NOT = { has_trait = chaste }
+					}
+				}
+			}
+		}
+		weight = {
+			value = 1
+			if = {
+				limit = {
+					exists = scope:owner.var:book_artifact_author
+				}
+				scope:owner.var:book_artifact_author = {
+					if = {
+						limit = { book_topic_intrigue_seduction_trigger = yes }
+						add = 10
+					}
+				}
+			}
+			else = {
+				scope:owner = {
+					if = {
+						limit = { book_topic_intrigue_seduction_trigger = yes }
+						add = 10
+					}
+				}
+			}
+		}
+	}
+
+	book_topic_intrigue_fertility = {
+		group = book_topic
+		trigger = {
+			OR = {
+				has_artifact_feature = book_subject_intrigue
+				has_artifact_feature = book_subject_deviant
+			}
+			trigger_if = {
+				limit = { exists = scope:owner.var:book_topic_category }
+				scope:owner.var:book_topic_category = flag:intrigue_seduction
+			}
+			trigger_if = { # If the topic has been pre-saved from events etc. we make sure it's picked
+				limit = { exists = scope:owner.var:book_artifact_topic }
+				scope:owner.var:book_artifact_topic = flag:fertility
+			}
+			scope:owner = {
+				trigger_if = {
+					limit = { exists = scope:owner.var:book_artifact_author }
+					scope:owner.var:book_artifact_author = {
+						NOT = { has_trait = chaste }
+					}
+				}
+			}
+		}
+		weight = {
+			value = 1
+			if = {
+				limit = {
+					exists = scope:owner.var:book_artifact_author
+				}
+				scope:owner.var:book_artifact_author = {
+					if = {
+						limit = { book_topic_intrigue_seduction_trigger = yes }
+						add = 10
+					}
+					if = {
+						limit = {
+							any_child = { count >= 8 }
+						}
+						add = 20
+					}
+				}
+			}
+			else = {
+				scope:owner = {
+					if = {
+						limit = { book_topic_intrigue_seduction_trigger = yes }
+						add = 10
+					}
+					if = {
+						limit = {
+							any_child = { count >= 8 }
+						}
+						add = 20
+					}
+				}
+			}
+		}
+	}
+
+	book_topic_witch_love_sorcery = {
+		group = book_topic
+		trigger = {
+			has_artifact_feature = book_subject_witch
+			trigger_if = { # If the topic has been pre-saved from events etc. we make sure it's picked
+				limit = { exists = scope:owner.var:book_artifact_topic }
+				scope:owner.var:book_artifact_topic = flag:love_sorcery
+			}
+			scope:owner = {
+				trigger_if = {
+					limit = { exists = scope:owner.var:book_artifact_author }
+				}
+			}
+		}
+		weight = {
+			value = 1
+			if = {
+				limit = {
+					exists = scope:owner.var:book_artifact_author
+				}
+				scope:owner.var:book_artifact_author = {
+					if = {
+						limit = { book_topic_witch_love_sorcery_trigger = yes }
+						add = 10
+					}
+				}
+			}
+			else = {
+				scope:owner = {
+					if = {
+						limit = { book_topic_witch_love_sorcery_trigger = yes }
+						add = 10
+					}
+				}
+			}
+		}
+	}
+
+	book_topic_witch_curse_sorcery = {
+		group = book_topic
+		trigger = {
+			has_artifact_feature = book_subject_witch
+			trigger_if = { # If the topic has been pre-saved from events etc. we make sure it's picked
+				limit = { exists = scope:owner.var:book_artifact_topic }
+				scope:owner.var:book_artifact_topic = flag:curse_sorcery
+			}
+			scope:owner = {
+				trigger_if = {
+					limit = { exists = scope:owner.var:book_artifact_author }
+				}
+			}
+		}
+		weight = {
+			value = 1
+			if = {
+				limit = {
+					exists = scope:owner.var:book_artifact_author
+				}
+				scope:owner.var:book_artifact_author = {
+					if = {
+						limit = { book_topic_witch_curse_sorcery_trigger = yes }
+						add = 10
+					}
+				}
+			}
+			else = {
+				scope:owner = {
+					if = {
+						limit = { book_topic_witch_curse_sorcery_trigger = yes }
+						add = 10
+					}
+				}
+			}
+		}
+	}
