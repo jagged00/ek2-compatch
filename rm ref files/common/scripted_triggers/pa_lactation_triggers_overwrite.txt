@@ -1,0 +1,12 @@
+﻿
+carn_milk_production_decreases_yearly_trigger = {
+	NOR = {
+		trigger_if = {
+			limit = { is_alive = yes }
+			has_variable = lactation_genetic
+		}
+		carn_is_visibly_pregnant_trigger = yes
+		has_character_flag = carn_block_yearly_milk_production_decrease
+		has_trait_with_flag = carn_block_yearly_milk_production_decrease
+	}
+}

@@ -1,0 +1,9 @@
+﻿breastfeeding_adult = {
+	corresponding = breastfed_child
+	hidden = yes
+}
+
+breastfed_child = {
+	corresponding = breastfeeding_adult
+	hidden = yes
+}

@@ -1,0 +1,22 @@
+﻿#Default values for each of the physical attributes
+#Seeding values determine the min and max for each character being given that variable without any parent to inherit it from
+#min and max determine the largest and smallest value for any character (except those seeded)
+#randomness min and max determine the range of values thrown on after a genetic value is inherited
+#don't go less than zero, it might mess up some formulas
+#max 180
+breast_size_seeding_1_min_range_default = 0
+breast_size_seeding_1_max_range_default = 50
+breast_size_seeding_2_min_range_default = 0
+breast_size_seeding_2_max_range_default = 100
+#max 230
+butt_size_seeding_1_min_range_default = 0
+butt_size_seeding_1_max_range_default = 50
+butt_size_seeding_2_min_range_default = 0
+butt_size_seeding_2_max_range_default = 100
+
+#height is set to the default range in ethnicity file any less and characters will look like dwarfs, any more they will look like giants (just without the face morphs)
+#max 100
+height_seeding_1_min_range_default = 40
+height_seeding_1_max_range_default = 60
+height_seeding_2_min_range_default = 20
+height_seeding_2_max_range_default = 80

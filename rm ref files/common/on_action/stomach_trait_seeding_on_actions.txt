@@ -1,0 +1,130 @@
+﻿on_stomach_trait = {
+		trigger = {
+			has_variable = cbo_muscles
+		}
+		effect = {
+			remove_variable = abs_variable
+			remove_variable = actual_stomach_size_variable
+			set_variable = {
+				name = abs_variable
+				value = abs_value
+			}
+			set_variable = {
+				name = actual_stomach_size_variable
+				value = actual_stomach_size
+			}
+			if = {
+				limit = { var:abs_variable >= 10 }
+				if = {
+					limit = { var:abs_variable >= 60 }
+					if = { 
+						limit = { Not = { has_trait = abs_2 } }
+						remove_stomach_trait_effect = yes
+						add_trait = abs_2
+					}
+				}
+				else_if = { 
+					limit = { Not = { has_trait = abs_1 } }
+					remove_stomach_trait_effect = yes
+					add_trait = abs_1
+				}
+			}
+			else_if = {
+				limit = { 
+					var:actual_stomach_size_variable < 30
+					var:actual_stomach_size_variable >= 15
+				}
+				if = {
+					limit = { Not = { has_trait = fat_1 } }
+					remove_stomach_trait_effect = yes
+					add_trait = fat_1
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_stomach_size_variable < 15
+					var:actual_stomach_size_variable >= -15
+				}
+				if = {
+					limit = { Not = { has_trait = average_weight } }
+					remove_stomach_trait_effect = yes
+					add_trait = average_weight
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_stomach_size_variable < -15
+					var:actual_stomach_size_variable >= -30
+				}
+				if = {
+					limit = { Not = { has_trait = skinny_1 } }
+					remove_stomach_trait_effect = yes
+					add_trait = skinny_1
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_stomach_size_variable < 50
+					var:actual_stomach_size_variable >= 30
+				}
+				if = {
+					limit = { Not = { has_trait = fat_2 } }
+					remove_stomach_trait_effect = yes
+					add_trait = fat_2
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_stomach_size_variable < -30
+					var:actual_stomach_size_variable >= -50
+				}
+				if = {
+					limit = { Not = { has_trait = skinny_2 } }
+					remove_stomach_trait_effect = yes
+					add_trait = skinny_2
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_stomach_size_variable < 75
+					var:actual_stomach_size_variable >= 50
+				}
+				if = {
+					limit = { Not = { has_trait = fat_3 } }
+					remove_stomach_trait_effect = yes
+					add_trait = fat_3
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_stomach_size_variable < -50
+					var:actual_stomach_size_variable >= -75
+				}
+				if = {
+					limit = { Not = { has_trait = skinny_3 } }
+					remove_stomach_trait_effect = yes
+					add_trait = skinny_3
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_stomach_size_variable >= 75
+				}
+				if = {
+					limit = { Not = { has_trait = fat_4 } }
+					remove_stomach_trait_effect = yes
+					add_trait = fat_4
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_stomach_size_variable < -75
+				}
+				if = {
+					limit = { Not = { has_trait = skinny_4 } }
+					remove_stomach_trait_effect = yes
+					add_trait = skinny_4
+				}
+			}
+		}
+	}

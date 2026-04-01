@@ -1,0 +1,29 @@
+﻿set_height_growth_rates = {
+	if = {
+		limit = { Not = { has_variable = height_growth_rate } }
+		set_variable = {
+			name = height_growth_rate
+			value = {
+				fixed_range = { 
+					max = 12
+					min = 8
+				}
+			}
+		}
+	}
+}
+
+set_puberty_growth_rates = {
+	if = {
+		limit = { Not = { has_variable = puberty_rate } }
+		set_variable = {
+			name = puberty_rate
+			value = {
+				fixed_range = { 
+					max = 4
+					min = 2
+				}
+			}
+		}
+	}
+}

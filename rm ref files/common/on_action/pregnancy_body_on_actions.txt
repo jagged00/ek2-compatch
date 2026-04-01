@@ -1,0 +1,149 @@
+﻿
+
+on_pregnancy_mother = {
+	on_actions = { 
+		on_pregnancy_body
+		on_lactation_genetic
+	}
+}
+
+on_pregnancy_ended_mother = {
+	on_actions = { 
+		on_remove_pregnant_trait
+	}
+}
+
+on_birth_mother = {
+	on_actions = { 
+		on_ongoing_lactation
+		on_lactation_genetic
+		on_remove_pregnant_trait
+		on_stomach_trait
+	}
+}
+
+on_remove_pregnant_trait = {
+	trigger = {
+		is_pregnant = no
+	}
+	effect = {
+		remove_trait = pregnant
+		trigger_event = {
+			id = pregnancy_body.2001
+			days = 30
+		}
+	}
+}
+
+on_pregnancy_body = {
+	effect = {
+		set_variable = {
+			name = pregnancy_fat
+			value = {
+				fixed_range = { 
+					min = 0
+					max = 5
+				}
+			}
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 30
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 60
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 90
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 120
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 150
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 180
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 210
+		}
+		trigger_event = {
+			id = pregnancy_body.1001
+			days = 240
+		}
+	}
+}
+
+on_ongoing_lactation = {
+	effect = {
+		pa_add_milk_production_birth = yes
+		remove_variable = pregnancy_fat
+		scope:child.mother = { save_scope_as = breastfeeding_child_mother }
+		if = {
+			limit = { scope:child = { is_alive = yes } }
+			scope:child = { 
+				if = {
+					limit = { Not = { has_character_modifier = needs_to_be_breastfed_modifier } }
+					add_character_modifier = {
+						modifier = needs_to_be_breastfed_modifier
+						months = 6
+					}
+				}
+			}
+			scope:child = { set_relation_breastfed_child = scope:mother }
+			add_character_modifier = {
+				modifier = breastfeeding_modifier
+				months = 6
+			}
+			scope:child = { save_scope_as = breastfeeding_child }
+			trigger_event = {
+				id = pregnancy_body.4001
+				months = 6
+			}
+			trigger_event = {
+				id = pregnancy_body.4002
+				months = 12
+			}
+			trigger_event = {
+				id = pregnancy_body.4003
+				months = 18
+			}
+			trigger_event = {
+				id = pregnancy_body.4004
+				months = 24
+			}
+			trigger_event = {
+				id = pregnancy_body.4005
+				months = 30
+			}
+			trigger_event = {
+				id = pregnancy_body.4006
+				months = 36
+			}
+			set_breastfeeding_modifiers_effect = {
+				BREASTS = scope:mother
+				CHILD = scope:breastfeeding_child
+			}
+		}
+		trigger_event = {
+			id = pregnancy_body.2001
+			days = 30
+		}
+	}
+}
+
+on_lactation_genetic = {
+	trigger = {
+		Not = { has_variable = lactation_genetic }
+	}
+	effect = {
+		set_lactation_genetic = yes
+	}
+}

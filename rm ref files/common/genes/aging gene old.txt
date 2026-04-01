@@ -1,0 +1,1202 @@
+﻿@maleMin = -0.5
+@maleMax = 0.499
+@femaleMin = -0.4
+@femaleMax = 0.4
+@boyMin = -0.5
+@boyMax = 0.499
+@girlMin = -0.4
+@girlMax = 0.4
+
+@maleBsMin = 0.0
+@maleBsMax = 1.0
+@femaleBsMin = 0.0
+@femaleBsMax = 0.8
+
+age_presets = {
+	age_preset_eyebrows_old = {
+		mode = multiply
+		curve = {
+			{ 0.4 0.0 }
+			{ 0.8 0.0 }
+		}
+	}
+	age_preset_eyebrows_fullness = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.5 }
+			{ 0.15 0.75 }
+			{ 0.2 1.0 }
+			{ 0.5 1.0 }
+			{ 0.9 1.0 }
+		}
+	}
+}
+
+special_genes = {
+
+	morph_genes = {
+
+		gene_visual_age = {
+
+			visual_old_1 = {
+				index = 0
+				male = {
+					## Old Age ##			
+					setting = {
+						attribute = "bs_old_1"	 
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+					}
+					setting = {
+						attribute = "bs_old" # For beards blend shapes
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+					}
+					setting = {
+						attribute = "bs_body_old_1"   
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+					}
+					setting = {
+						attribute = "jaw_forward"
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.249 }
+							{ 1.0 0.249 }
+						}
+					} 
+					setting = {
+						attribute = "jaw_angle"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_height"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_corner_height"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_width"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_open"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_upper_lip_size"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_lower_lip_size"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "bs_nose_size_max" 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.5 }
+							{ 1.0 0.5 }
+						}
+					} 
+					setting = {
+						attribute = "bs_ear_size_max" 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.5 }
+							{ 1.0 0.5 }
+						}
+					} 
+					setting = {
+						attribute = "bs_ear_size_max" 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.5 }
+							{ 1.0 0.5 }
+						}
+					} 
+					decal = {							  
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/male_head/decal_male_head_old_01_diffuse.dds"
+							normal = "gfx/models/portraits/decals/male_head/decal_male_head_old_01_normal.dds"
+						}
+						blend_modes = {				 #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					decal = {                             
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_diffuse.dds"
+							normal = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_normal.dds"
+						}
+						blend_modes = {              #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					hair_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -1.0 0.3 } }
+						}
+					}
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -0.1 -0.02 } }
+						}
+					}
+				}
+				female = {
+					## Old Age ##	
+					setting = {
+						attribute = "bs_old_1"	   
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+					}
+					setting = {
+						attribute = "bs_body_old_1"   
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = { 
+						attribute = "bs_body_breast_shape_2" 
+						# value = { min = 0.5 max = 1.5 } 
+						curve = {
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+						}
+					}
+					setting = { 
+					required_tags = "breasts_clothed,dressed,default_clothing"
+						attribute = "bs_body_breast_shape_2" 
+						# value = { min = 0.5 max = 1.5 } 
+						curve = {
+							{ 0.075   0.0 }
+							{ 0.80   -1.0 }
+						}
+					}
+					setting = { 
+					required_tags = "breasts_clothed_revealing_2,dressed,revealing_2"
+						attribute = "bs_body_breast_shape_2" 
+						# value = { min = 0.5 max = 1.5 } 
+						curve = {
+							{ 0.075   0.0 }
+							{ 0.80   -1.0 }
+						}
+					}
+					setting = {
+						attribute = "bs_nose_size_max"   
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.4 }
+							{ 1.0 0.4 }
+						}
+					} 
+					setting = {
+						attribute = "bs_ear_size_max"	
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.4 }
+							{ 1.0 0.4 }
+						}
+					} 
+					decal = {											
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_old_01_diffuse.dds"
+							normal = "gfx/models/portraits/decals/female_head/decal_female_head_old_01_normal.dds"
+						}
+						blend_modes = {				 #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					decal = {                             
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_diffuse.dds"
+							normal = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_normal.dds"
+						}
+						blend_modes = {              #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					hair_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -1.0 0.3 } }
+						}
+					}
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -0.1 -0.02 } }
+						}
+					}
+				}
+				boy = male
+				girl = female
+				
+			}
+
+			visual_old_2 = {
+				index = 1
+				male = {
+					## Old Age ##			
+					setting = {
+						attribute = "bs_old_2"	 
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+					}
+					setting = {
+						attribute = "bs_old" # For beards blend shapes
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+					}
+					setting = {
+						attribute = "bs_body_old_1"   
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+					}
+					setting = {
+						attribute = "jaw_forward"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.249 }
+							{ 1.0 0.249 }
+						}
+					} 
+					setting = {
+						attribute = "jaw_angle"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_height"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_corner_height"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_width"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_open"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_upper_lip_size"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_lower_lip_size"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "bs_nose_size_max" 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.5 }
+							{ 1.0 0.5 }
+						}
+					} 
+					setting = {
+						attribute = "bs_ear_size_max" 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.5 }
+							{ 1.0 0.5 }
+						}
+					} 
+					setting = {
+						attribute = "bs_ear_size_max" 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.5 }
+							{ 1.0 0.5 }
+						}
+					} 
+					decal = {							  
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/male_head/decal_male_head_old_02_diffuse.dds"
+							normal = "gfx/models/portraits/decals/male_head/decal_male_head_old_02_normal.dds"
+						}
+						blend_modes = {				 #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					decal = {                             
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_diffuse.dds"
+							normal = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_normal.dds"
+						}
+						blend_modes = {              #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					hair_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -1.0 0.3 } }
+						}
+					}
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -0.1 -0.02 } }
+						}
+					}
+				}
+				female = {
+					## Old Age ##	
+					setting = {
+						attribute = "bs_old_2"	   
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = {
+						attribute = "bs_body_old_1"   
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = { 
+						attribute = "bs_body_breast_shape_2" 
+						# value = { min = 0.5 max = 1.5 } 
+						curve = {
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+						}
+					}
+					setting = { 
+					required_tags = "breasts_clothed,dressed,default_clothing"
+						attribute = "bs_body_breast_shape_2" 
+						# value = { min = 0.5 max = 1.5 } 
+						curve = {
+							{ 0.075   0.0 }
+							{ 0.80   -1.0 }
+						}
+					}
+					setting = { 
+					required_tags = "breasts_clothed_revealing_2,dressed,revealing_2"
+						attribute = "bs_body_breast_shape_2" 
+						# value = { min = 0.5 max = 1.5 } 
+						curve = {
+							{ 0.075   0.0 }
+							{ 0.80   -1.0 }
+						}
+					}
+					setting = {
+						attribute = "bs_nose_size_max"   
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.4 }
+							{ 1.0 0.4 }
+						}
+					} 
+					setting = {
+						attribute = "bs_ear_size_max"	
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.4 }
+							{ 1.0 0.4 }
+						}
+					} 
+					decal = {											
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_old_02_diffuse.dds"
+							normal = "gfx/models/portraits/decals/female_head/decal_female_head_old_02_normal.dds"
+						}
+						blend_modes = {				 #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					decal = {                             
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_diffuse.dds"
+							normal = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_normal.dds"
+						}
+						blend_modes = {              #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					hair_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -1.0 0.3 } }
+						}
+					}
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -0.1 -0.02 } }
+						}
+					}
+				}
+				boy = male
+				girl = female
+			}
+
+			visual_old_3 = {
+				index = 2
+				male = {
+					## Old Age ##			
+					setting = {
+						attribute = "bs_old_3"	 
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = {
+						attribute = "bs_old" # For beards blend shapes
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = {
+						attribute = "bs_body_old_1"   
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = {
+						attribute = "jaw_forward"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.249 }
+							{ 1.0 0.249 }
+						}
+					} 
+					setting = {
+						attribute = "jaw_angle"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_height"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_corner_height"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_width"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_open"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_upper_lip_size"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_lower_lip_size"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "bs_nose_size_max" 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.5 }
+							{ 1.0 0.5 }
+						}
+					} 
+					setting = {
+						attribute = "bs_ear_size_max" 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.5 }
+							{ 1.0 0.5 }
+						}
+					} 
+					setting = {
+						attribute = "bs_ear_size_max" 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.5 }
+							{ 1.0 0.5 }
+						}
+					} 
+					decal = {							  
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/male_head/decal_male_head_old_03_diffuse.dds"
+							normal = "gfx/models/portraits/decals/male_head/decal_male_head_old_03_normal.dds"
+						}
+						blend_modes = {				 #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					decal = {                             
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_diffuse.dds"
+							normal = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_normal.dds"
+						}
+						blend_modes = {              #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					hair_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -1.0 0.3 } }
+						}
+					}
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -0.1 -0.02 } }
+						}
+					}
+				}
+				female = {
+					## Old Age ##	
+					setting = {
+						attribute = "bs_old_3"	   
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = {
+						attribute = "bs_body_old_1"   
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = { 
+						attribute = "bs_body_breast_shape_2" 
+						# value = { min = 0.5 max = 1.5 } 
+						curve = {
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+						}
+					}
+					setting = { 
+					required_tags = "breasts_clothed,dressed,default_clothing"
+						attribute = "bs_body_breast_shape_2" 
+						# value = { min = 0.5 max = 1.5 } 
+						curve = {
+							{ 0.075   0.0 }
+							{ 0.80   -1.0 }
+						}
+					}
+					setting = { 
+					required_tags = "breasts_clothed_revealing_2,dressed,revealing_2"
+						attribute = "bs_body_breast_shape_2" 
+						# value = { min = 0.5 max = 1.5 } 
+						curve = {
+							{ 0.075   0.0 }
+							{ 0.80   -1.0 }
+						}
+					}
+					setting = {
+						attribute = "bs_nose_size_max"   
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.4 }
+							{ 1.0 0.4 }
+						}
+					} 
+					setting = {
+						attribute = "bs_ear_size_max"	
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.4 }
+							{ 1.0 0.4 }
+						}
+					} 
+					decal = {											
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_old_03_diffuse.dds"
+							normal = "gfx/models/portraits/decals/female_head/decal_female_head_old_03_normal.dds"
+						}
+						blend_modes = {				 #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					decal = {                             
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_diffuse.dds"
+							normal = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_normal.dds"
+						}
+						blend_modes = {              #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					hair_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -1.0 0.3 } }
+						}
+					}
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -0.1 -0.02 } }
+						}
+					}
+				}
+				boy = male
+				girl = female
+			}
+
+			visual_old_4 = {
+				index = 3
+				male = {
+					## Old Age ##			
+					setting = {
+						attribute = "bs_old_4"	 
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = {
+						attribute = "bs_old" # For beards blend shapes
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = {
+						attribute = "bs_body_old_1"   
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = {
+						attribute = "jaw_forward"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.249 }
+							{ 1.0 0.249 }
+						}
+					} 
+					setting = {
+						attribute = "jaw_angle"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_height"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_corner_height"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_width"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_open"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_upper_lip_size"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					setting = {
+						attribute = "mouth_lower_lip_size"	 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.6 0.0 }
+							{ 1.0 -0.2499 }
+						}
+					} 
+					# setting = {
+					# 	attribute = "bs_nose_size_max" 
+					# 	value = { min = @maleMax max = @maleMax }
+					# 	age = age_preset_aging_secondary
+					# } 
+					setting = {
+						attribute = "bs_ear_size_max" 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.249 }
+						}
+					} 
+					setting = {
+						attribute = "bs_ear_size_max" 
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.249 }
+						}
+					} 
+					decal = {							  
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/male_head/decal_male_head_old_04_diffuse.dds"
+							normal = "gfx/models/portraits/decals/male_head/decal_male_head_old_04_normal.dds"
+						}
+						blend_modes = {				 #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					decal = {                             
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_diffuse.dds"
+							normal = "gfx/models/portraits/decals/male_body/decal_male_body_old_01_normal.dds"
+						}
+						blend_modes = {              #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					hair_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -1.0 0.3 } }
+						}
+					}
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -0.1 -0.02 } }
+						}
+					}
+				}
+				female = {
+					## Old Age ##	
+					setting = {
+						attribute = "bs_old_4"	   
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = {
+						attribute = "bs_body_old_1"   
+						curve = {
+							{ 0.0	0.0 }
+							{ 0.85	1.0 }
+							{ 1.0	1.0 }
+						}
+						
+					}
+					setting = { 
+						attribute = "bs_body_breast_shape_2" 
+						# value = { min = 0.5 max = 1.5 } 
+						curve = {
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+						}
+					}
+					setting = { 
+					required_tags = "breasts_clothed,dressed,default_clothing"
+						attribute = "bs_body_breast_shape_2" 
+						# value = { min = 0.5 max = 1.5 } 
+						curve = {
+							{ 0.075   0.0 }
+							{ 0.80   -1.0 }
+						}
+					}
+					setting = { 
+					required_tags = "breasts_clothed_revealing_2,dressed,revealing_2"
+						attribute = "bs_body_breast_shape_2" 
+						# value = { min = 0.5 max = 1.5 } 
+						curve = {
+							{ 0.075   0.0 }
+							{ 0.80   -1.0 }
+						}
+					}
+					setting = {
+						attribute = "bs_nose_size_max"   
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.4 }
+							{ 1.0 0.4 }
+						}
+					} 
+					setting = {
+						attribute = "bs_ear_size_max"	
+						curve = {
+							{ 0.0 0.0 }
+							{ 0.33 0.0 }
+							{ 0.8 0.4 }
+							{ 1.0 0.4 }
+						}
+					} 
+					decal = {											
+						body_part = head
+						textures = {
+							diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_old_04_diffuse.dds"
+							normal = "gfx/models/portraits/decals/female_head/decal_female_head_old_04_normal.dds"
+						}
+						blend_modes = {				 #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					decal = {                             
+						body_part = torso
+						textures = {
+							diffuse = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_diffuse.dds"
+							normal = "gfx/models/portraits/decals/female_body/decal_female_body_old_01_normal.dds"
+						}
+						blend_modes = {              #overlay/replace/hard_light/multiply
+							diffuse = multiply 
+							normal = overlay
+							# properties = 
+						}
+						alpha_curve = {              #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+							{ 0.075   0.0 }
+							{ 0.80   1.0 }
+							{ 1.0   1.0 }
+						}
+						priority = 0
+					}
+					hair_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -1.0 0.3 } }
+						}
+					}
+					skin_hsv_shift_curve = {
+						curve = {
+							{ 0.0   { 0.0 0.0 0.0 } }
+							{ 0.133   { 0.0 0.0 0.0 } }
+							{ 0.6   { 0.0 -0.1 -0.02 } }
+						}
+					}
+				}
+				boy = male
+				girl = female
+			}
+		}
+	}
+}

@@ -1,0 +1,1305 @@
+﻿GetBreastSize = {
+	type = character
+
+	text = {
+		trigger = {
+			actual_breast_size <= 9
+		}
+		localization_key = aa_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 18
+			actual_breast_size > 9
+		}
+		localization_key = a_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 27
+			actual_breast_size > 18
+		}
+		localization_key = b_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 36
+			actual_breast_size > 27
+		}
+		localization_key = c_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 45
+			actual_breast_size > 36
+		}
+		localization_key = d_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 54
+			actual_breast_size > 45
+		}
+		localization_key = dd_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 63
+			actual_breast_size > 54
+		}
+		localization_key = ddd_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 72
+			actual_breast_size > 63
+		}
+		localization_key = g_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 81
+			actual_breast_size > 72
+		}
+		localization_key = h_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 90
+			actual_breast_size > 81
+		}
+		localization_key = i_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 99
+			actual_breast_size > 90
+		}
+		localization_key = j_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 108
+			actual_breast_size > 99
+		}
+		localization_key = k_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 117
+			actual_breast_size > 108
+		}
+		localization_key = l_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 126
+			actual_breast_size > 117
+		}
+		localization_key = m_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 135
+			actual_breast_size > 126
+		}
+		localization_key = n_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 144
+			actual_breast_size > 135
+		}
+		localization_key = o_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 153
+			actual_breast_size > 144
+		}
+		localization_key = p_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 162
+			actual_breast_size > 153
+		}
+		localization_key = q_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 171
+			actual_breast_size > 162
+		}
+		localization_key = r_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 180
+			actual_breast_size > 171
+		}
+		localization_key = s_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 189
+			actual_breast_size > 180
+		}
+		localization_key = t_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 198
+			actual_breast_size > 189
+		}
+		localization_key = u_cups
+	}
+
+	text = {
+		trigger = {
+			actual_breast_size <= 207
+			actual_breast_size > 198
+		}
+		localization_key = v_cups
+	}
+	text = {
+		trigger = {
+			actual_breast_size <= 216
+			actual_breast_size > 207
+		}
+		localization_key = vv_cups
+	}
+	text = {
+		trigger = {
+			actual_breast_size <= 225
+			actual_breast_size > 216
+		}
+		localization_key = x_cups
+	}
+	text = {
+		trigger = {
+			actual_breast_size <= 234
+			actual_breast_size > 225
+		}
+		localization_key = xx_cups
+	}
+	text = {
+		trigger = {
+			actual_breast_size <= 243
+			actual_breast_size > 234
+		}
+		localization_key = xxx_cups
+	}
+	text = {
+		trigger = {
+			actual_breast_size <= 252
+			actual_breast_size > 243
+		}
+		localization_key = y_cups
+	}
+	text = {
+		trigger = {
+			actual_breast_size <= 261
+			actual_breast_size > 252
+		}
+		localization_key = yy_cups
+	}
+	text = {
+		trigger = {
+			actual_breast_size <= 270
+			actual_breast_size > 261
+		}
+		localization_key = z_cups
+	}
+	text = {
+		trigger = {
+			actual_breast_size <= 279
+			actual_breast_size > 270
+		}
+		localization_key = zz_cups
+	}
+	text = {
+		trigger = {
+			actual_breast_size > 279
+		}
+		localization_key = why_cups
+	}
+}
+
+GetBreastBandSize = {
+	type = character
+
+	text = {
+		trigger = {
+			breast_band_size_value < -80
+		}
+		localization_key = 24_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= -80
+			breast_band_size_value < -60
+		}
+		localization_key = 26_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= -60
+			breast_band_size_value < -40
+		}
+		localization_key = 28_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= -40
+			breast_band_size_value < -20
+		}
+		localization_key = 30_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= -20
+			breast_band_size_value < 0
+		}
+		localization_key = 32_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 0
+			breast_band_size_value < 10
+		}
+		localization_key = 34_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 10
+			breast_band_size_value < 20
+		}
+		localization_key = 36_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 20
+			breast_band_size_value < 30
+		}
+		localization_key = 38_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 30
+			breast_band_size_value < 40
+		}
+		localization_key = 40_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 40
+			breast_band_size_value < 50
+		}
+		localization_key = 42_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 50
+			breast_band_size_value < 60
+		}
+		localization_key = 44_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 60
+			breast_band_size_value < 70
+		}
+		localization_key = 46_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 70
+			breast_band_size_value < 80
+		}
+		localization_key = 48_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 80
+			breast_band_size_value < 90
+		}
+		localization_key = 50_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 90
+			breast_band_size_value < 100
+		}
+		localization_key = 52_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 100
+			breast_band_size_value < 110
+		}
+		localization_key = 54_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 110
+			breast_band_size_value < 120
+		}
+		localization_key = 56_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 120
+			breast_band_size_value < 130
+		}
+		localization_key = 58_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 130
+			breast_band_size_value < 140
+		}
+		localization_key = 60_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 140
+			breast_band_size_value < 150
+		}
+		localization_key = 62_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 150
+			breast_band_size_value < 160
+		}
+		localization_key = 64_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 160
+			breast_band_size_value < 170
+		}
+		localization_key = 66_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 170
+			breast_band_size_value < 180
+		}
+		localization_key = 68_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 180
+			breast_band_size_value < 190
+		}
+		localization_key = 70_band
+	}
+
+	text = {
+		trigger = {
+			breast_band_size_value >= 190
+		}
+		localization_key = 72_band
+	}
+}
+
+GetHeight = {
+	type = character
+
+	text = {
+		trigger = {
+			actual_height_for_weight <= -48
+			has_game_rule = us_custom_units
+		}
+		localization_key = one_foot_eight
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -48
+			actual_height_for_weight <= -46
+			has_game_rule = us_custom_units
+		}
+		localization_key = one_foot_nine
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -46
+			actual_height_for_weight <= -44
+			has_game_rule = us_custom_units
+		}
+		localization_key = one_foot_ten
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -44
+			actual_height_for_weight <= -42
+			has_game_rule = us_custom_units
+		}
+		localization_key = one_foot_eleven
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -42
+			actual_height_for_weight <= -40
+			has_game_rule = us_custom_units
+		}
+		localization_key = two_foot
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -40
+			actual_height_for_weight <= -38
+			has_game_rule = us_custom_units
+		}
+		localization_key = two_foot_one
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -38
+			actual_height_for_weight <= -36
+			has_game_rule = us_custom_units
+		}
+		localization_key = two_foot_two
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -36
+			actual_height_for_weight <= -34
+			has_game_rule = us_custom_units
+		}
+		localization_key = two_foot_three
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -34
+			actual_height_for_weight <= -32
+			has_game_rule = us_custom_units
+		}
+		localization_key = two_foot_four
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -32
+			actual_height_for_weight <= -30
+			has_game_rule = us_custom_units
+		}
+		localization_key = two_foot_five
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -30
+			actual_height_for_weight <= -28
+			has_game_rule = us_custom_units
+		}
+		localization_key = two_foot_six
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -28
+			actual_height_for_weight <= -26
+			has_game_rule = us_custom_units
+		}
+		localization_key = two_foot_seven
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -26
+			actual_height_for_weight <= -24
+			has_game_rule = us_custom_units
+		}
+		localization_key = two_foot_eight
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -24
+			actual_height_for_weight <= -22
+			has_game_rule = us_custom_units
+		}
+		localization_key = two_foot_nine
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -22
+			actual_height_for_weight <= -20
+			has_game_rule = us_custom_units
+		}
+		localization_key = two_foot_ten
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -20
+			actual_height_for_weight <= -18
+			has_game_rule = us_custom_units
+		}
+		localization_key = two_foot_eleven
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -18
+			actual_height_for_weight <= -16
+			has_game_rule = us_custom_units
+		}
+		localization_key = three_foot
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -16
+			actual_height_for_weight <= -14
+			has_game_rule = us_custom_units
+		}
+		localization_key = three_foot_one
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -14
+			actual_height_for_weight <= -12
+			has_game_rule = us_custom_units
+		}
+		localization_key = three_foot_two
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -12
+			actual_height_for_weight <= -10
+			has_game_rule = us_custom_units
+		}
+		localization_key = three_foot_three
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -10
+			actual_height_for_weight <= -8
+			has_game_rule = us_custom_units
+		}
+		localization_key = three_foot_four
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -8
+			actual_height_for_weight <= -6
+			has_game_rule = us_custom_units
+		}
+		localization_key = three_foot_five
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -6
+			actual_height_for_weight <= -4
+			has_game_rule = us_custom_units
+		}
+		localization_key = three_foot_six
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -4
+			actual_height_for_weight <= -2
+			has_game_rule = us_custom_units
+		}
+		localization_key = three_foot_seven
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > -2
+			actual_height_for_weight <= 0
+			has_game_rule = us_custom_units
+		}
+		localization_key = three_foot_eight
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 0
+			actual_height_for_weight <= 2.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = three_foot_nine
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 2.5
+			actual_height_for_weight <= 5
+			has_game_rule = us_custom_units
+		}
+		localization_key = three_foot_ten
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 5
+			actual_height_for_weight <= 7.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = three_foot_eleven
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 7.5
+			actual_height_for_weight <= 10
+			has_game_rule = us_custom_units
+		}
+		localization_key = four_foot
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 10
+			actual_height_for_weight <= 12.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = four_foot_one
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 12.5
+			actual_height_for_weight <= 15
+			has_game_rule = us_custom_units
+		}
+		localization_key = four_foot_two
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 15
+			actual_height_for_weight <= 17.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = four_foot_three
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 17.5
+			actual_height_for_weight <= 20
+			has_game_rule = us_custom_units
+		}
+		localization_key = four_foot_four
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 20
+			actual_height_for_weight <= 22.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = four_foot_five
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 22.5
+			actual_height_for_weight <= 25
+			has_game_rule = us_custom_units
+		}
+		localization_key = four_foot_six
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 25
+			actual_height_for_weight <= 27.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = four_foot_seven
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 27.5
+			actual_height_for_weight <= 30
+			has_game_rule = us_custom_units
+		}
+		localization_key = four_foot_eight
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 30
+			actual_height_for_weight <= 32.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = four_foot_nine
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 32.5
+			actual_height_for_weight <= 35
+			has_game_rule = us_custom_units
+		}
+		localization_key = four_foot_ten
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 35
+			actual_height_for_weight <= 37.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = four_foot_eleven
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 37.5
+			actual_height_for_weight <= 40
+			has_game_rule = us_custom_units
+		}
+		localization_key = five_foot
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 40
+			actual_height_for_weight <= 42.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = five_foot_one
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 42.5
+			actual_height_for_weight <= 45
+			has_game_rule = us_custom_units
+		}
+		localization_key = five_foot_two
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 42.5
+			actual_height_for_weight <= 45
+			has_game_rule = us_custom_units
+		}
+		localization_key = five_foot_three
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 45
+			actual_height_for_weight <= 47.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = five_foot_four
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 47.5
+			actual_height_for_weight <= 50
+			has_game_rule = us_custom_units
+		}
+		localization_key = five_foot_five
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 50
+			actual_height_for_weight <= 52.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = five_foot_six
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 52.5
+			actual_height_for_weight <= 55
+			has_game_rule = us_custom_units
+		}
+		localization_key = five_foot_seven
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 55
+			actual_height_for_weight <= 57.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = five_foot_eight
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 57.5
+			actual_height_for_weight <= 60
+			has_game_rule = us_custom_units
+		}
+		localization_key = five_foot_nine
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 60
+			actual_height_for_weight <= 62.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = five_foot_ten
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 62.5
+			actual_height_for_weight <= 65
+			has_game_rule = us_custom_units
+		}
+		localization_key = five_foot_eleven
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 65
+			actual_height_for_weight <= 67.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = six_foot
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 67.5
+			actual_height_for_weight <= 70
+			has_game_rule = us_custom_units
+		}
+		localization_key = six_foot_one
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 70
+			actual_height_for_weight <= 72.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = six_foot_two
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 72.5
+			actual_height_for_weight <= 75
+			has_game_rule = us_custom_units
+		}
+		localization_key = six_foot_three
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 75
+			actual_height_for_weight <= 77.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = six_foot_four
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 77.5
+			actual_height_for_weight <= 80
+			has_game_rule = us_custom_units
+		}
+		localization_key = six_foot_five
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 80
+			actual_height_for_weight <= 82.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = six_foot_six
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 82.5
+			actual_height_for_weight <= 85
+			has_game_rule = us_custom_units
+
+		}
+		localization_key = six_foot_seven
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 85
+			actual_height_for_weight <= 87.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = six_foot_eight
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 87.5
+			actual_height_for_weight <= 90
+			has_game_rule = us_custom_units
+		}
+		localization_key = six_foot_nine
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 90
+			actual_height_for_weight <= 92.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = six_foot_ten
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 92.5
+			actual_height_for_weight <= 95
+			has_game_rule = us_custom_units
+		}
+		localization_key = six_foot_eleven
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 95
+			actual_height_for_weight <= 97.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = seven_foot
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 97.5
+			actual_height_for_weight <= 100
+			has_game_rule = us_custom_units
+		}
+		localization_key = seven_foot_one
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 100
+			actual_height_for_weight <= 102.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = seven_foot_two
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 102.5
+			actual_height_for_weight <= 105
+			has_game_rule = us_custom_units
+		}
+		localization_key = seven_foot_three
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 105
+			actual_height_for_weight <= 107.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = seven_foot_four
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 107.5
+			actual_height_for_weight <= 110
+			has_game_rule = us_custom_units
+		}
+		localization_key = seven_foot_five
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 110
+			actual_height_for_weight <= 112.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = seven_foot_six
+	}
+	text = {
+		trigger = {
+			actual_height_for_weight > 112.5
+			actual_height_for_weight <= 115
+			has_game_rule = us_custom_units
+		}
+		localization_key = seven_foot_seven
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 115
+			actual_height_for_weight <= 117.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = seven_foot_eight
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 117.5
+			actual_height_for_weight <= 120
+			has_game_rule = us_custom_units
+		}
+		localization_key = seven_foot_nine
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 120
+			actual_height_for_weight <= 122.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = seven_foot_ten
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 122.5
+			actual_height_for_weight <= 125
+			has_game_rule = us_custom_units
+		}
+		localization_key = seven_foot_eleven
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 125
+			actual_height_for_weight <= 127.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = eight_foot
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 127.5
+			actual_height_for_weight <= 130
+			has_game_rule = us_custom_units
+		}
+		localization_key = eight_foot_one
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 130
+			actual_height_for_weight <= 132.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = eight_foot_two
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 132.5
+			actual_height_for_weight <= 135
+			has_game_rule = us_custom_units
+		}
+		localization_key = eight_foot_three
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 135
+			actual_height_for_weight <= 137.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = eight_foot_four
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 137.5
+			actual_height_for_weight <= 140
+			has_game_rule = us_custom_units
+		}
+		localization_key = eight_foot_five
+	}
+
+	text = {
+		trigger = {
+			actual_height_for_weight > 140
+			actual_height_for_weight <= 142.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = eight_foot_six
+	}
+	text = {
+		trigger = {
+			actual_height_for_weight > 142.5
+			actual_height_for_weight <= 145
+			has_game_rule = us_custom_units
+		}
+		localization_key = eight_foot_eight
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 145
+			actual_height_for_weight <= 147.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = eight_foot_eight
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 147.5
+			actual_height_for_weight <= 150
+			has_game_rule = us_custom_units
+		}
+		localization_key = eight_foot_nine
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 150
+			actual_height_for_weight <= 152.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = eight_foot_ten
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 152.5
+			actual_height_for_weight <= 155
+			has_game_rule = us_custom_units
+		}
+		localization_key = eight_foot_eleven
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 155
+			actual_height_for_weight <= 157.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = nine_foot
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 157.5
+			actual_height_for_weight <= 160
+			has_game_rule = us_custom_units
+		}
+		localization_key = nine_foot_one
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 160
+			actual_height_for_weight <= 162.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = nine_foot_two
+	}
+	
+	text = {
+		trigger = {
+			actual_height_for_weight > 162.5
+			has_game_rule = us_custom_units
+		}
+		localization_key = nine_foot_three
+	}
+
+	text = {
+		trigger = {
+			has_game_rule = metric_units
+		}
+		localization_key = metric_height
+	}
+}
+
+GetWeight = {
+	type = character
+
+	text = {
+		trigger = {
+			not = { has_game_rule = metric_units }
+		}
+		localization_key = us_custom_weight
+	}
+
+	text = {
+		trigger = {
+			has_game_rule = metric_units
+		}
+		localization_key = metric_weight
+	}
+
+}

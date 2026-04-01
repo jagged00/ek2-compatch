@@ -1,0 +1,279 @@
+﻿
+short_1 = {
+	opposites = {
+		average_height
+		tall
+	}
+	group = short
+	level = 1
+	physical = yes
+	flag = pa_trait
+
+	random_creation = 0
+	
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_short_1_desc
+			}
+			desc = trait_short_1_character_desc
+		}
+	}
+}
+short_2 = {
+	opposites = {
+		average_height
+		tall
+	}
+	group = short
+	level = 2
+	
+	physical = yes
+	flag = pa_trait
+
+	random_creation = 0
+	
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_short_2_desc
+			}
+			desc = trait_short_2_character_desc
+		}
+	}
+}
+short_3 = {
+	opposites = {
+		average_height
+		tall
+	}
+	group = short
+	level = 3
+	
+	physical = yes
+	flag = pa_trait
+
+	random_creation = 0
+	
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_short_3_desc
+			}
+			desc = trait_short_3_character_desc
+		}
+	}
+}
+short_4 = {
+	opposites = {
+		average_height
+		tall
+	}
+	group = short
+	level = 4
+	
+	physical = yes
+	flag = pa_trait
+
+	random_creation = 0
+	
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_short_4_desc
+			}
+			desc = trait_short_4_character_desc
+		}
+	}
+}
+short_5 = {
+
+	opposites = {
+		average_height
+		tall
+	}
+	group = short
+	level = 5
+	physical = yes
+	flag = pa_trait
+
+	random_creation = 0
+	
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_short_5_desc
+			}
+			desc = trait_short_5_character_desc
+		}
+	}
+}
+average_height = {
+
+	opposites = {
+		short
+		tall
+	}
+	physical = yes
+	flag = pa_trait
+
+	random_creation = 0
+	
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_average_height_desc
+			}
+			desc = trait_average_height_character_desc
+		}
+	}
+}
+tall_1 = {
+	opposites = {
+		average_height
+		short
+	}
+	group = tall
+	level = 1
+
+	physical = yes
+	flag = pa_trait
+
+	random_creation = 0
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_tall_1_desc
+			}
+			desc = trait_tall_1_character_desc
+		}
+	}
+}
+tall_2 = {
+	opposites = {
+		average_height
+		short
+	}
+	group = tall
+	level = 2
+	physical = yes
+	flag = pa_trait
+
+
+	random_creation = 0
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_tall_2_desc
+			}
+			desc = trait_tall_2_character_desc
+		}
+	}
+}
+tall_3 = {
+	opposites = {
+		average_height
+		short
+	}
+	group = tall
+	level = 3
+	physical = yes
+	flag = pa_trait
+
+
+	random_creation = 0
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_tall_3_desc
+			}
+			desc = trait_tall_3_character_desc
+		}
+	}
+}
+tall_4 = {
+	opposites = {
+		average_height
+		short
+	}
+	group = tall
+	level = 4
+	physical = yes
+	flag = pa_trait
+
+
+	random_creation = 0
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_tall_4_desc
+			}
+			desc = trait_tall_4_character_desc
+		}
+	}
+}
+tall_5 = {
+	opposites = {
+		average_height
+		short
+	}
+	group = tall
+	level = 5
+	physical = yes
+	flag = pa_trait
+
+
+	random_creation = 0
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_tall_5_desc
+			}
+			desc = trait_tall_5_character_desc
+		}
+	}
+}

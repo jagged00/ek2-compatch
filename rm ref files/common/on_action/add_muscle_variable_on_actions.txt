@@ -1,0 +1,134 @@
+﻿on_muscle_variable = {
+	on_actions = { 
+			on_muscle_variable_new
+			on_muscle_ruler_designer
+	}
+}
+
+on_muscle_ruler_designer = {
+		trigger = {
+			not = { has_variable = cbo_muscles }
+			has_arm_trait = yes
+			is_adult = yes
+		}
+		effect = {
+			add_character_flag = ruler_designer_muscles
+			if = {
+				limit = { has_trait = muscular_3 }
+				set_variable = {
+					name = cbo_muscles
+					value = 90
+				}
+				set_variable = {
+					name = cbo_lower_body_muscles
+					value = 45
+				}
+			}
+			else_if = {
+				limit = { has_trait = muscular_2 }
+				set_variable = {
+					name = cbo_muscles
+					value = 60
+				}
+				set_variable = {
+					name = cbo_lower_body_muscles
+					value = 30
+				}
+			}
+			else_if = {
+				limit = { has_trait = muscular_1 }
+				set_variable = {
+					name = cbo_muscles
+					value = 30
+				}
+				set_variable = {
+					name = cbo_lower_body_muscles
+					value = 15
+				}
+			}
+			else = {
+				set_variable = {
+					name = cbo_muscles
+					value = 0
+				}
+				set_variable = {
+					name = cbo_lower_body_muscles
+					value = 0
+				}
+			}
+			trigger_event = { on_action = on_add_muscle_modifier }
+			trigger_event = { on_action = on_arms_trait }
+			trigger_event = { on_action = on_butt_trait }
+		}
+	}
+
+
+on_muscle_variable_new = {
+		trigger = {
+			not = { has_character_flag = cbo_muscles_cooldown }
+			Not = { has_character_flag = ruler_designer_muscles }
+			trigger_if = {
+				limit = { Not = { has_variable = cbo_muscles } }
+				has_arm_trait = no 
+			}
+		}
+		effect = {
+			if = {
+				limit = { not = { has_variable = cbo_muscles } }
+				set_variable = {
+					name = cbo_muscles
+					value = muscle_target
+				}
+			}
+			else = {
+				set_variable = {
+					name = old_cbo_muscles
+					value = var:cbo_muscles
+				}
+				remove_variable = cbo_muscles
+				set_variable = {
+					name = cbo_muscles
+					value = {
+						value = muscle_target
+						subtract = var:old_cbo_muscles
+						divide = 3
+						add = var:old_cbo_muscles
+					}
+				}
+				remove_variable = old_cbo_muscles
+			}
+			if = {
+				limit = { not = { has_variable = cbo_lower_body_muscles } }
+				set_variable = {
+					name = cbo_lower_body_muscles
+					value = {
+						value = lower_body_muscle_target
+					}
+				}
+			}
+			else = {
+				set_variable = {
+					name = old_cbo_lower_body_muscles
+					value = var:cbo_lower_body_muscles
+				}
+				remove_variable = cbo_lower_body_muscles
+				set_variable = {
+					name = cbo_lower_body_muscles
+					value = {
+						value = lower_body_muscle_target
+						subtract = var:old_cbo_lower_body_muscles
+						divide = 3
+						add = var:old_cbo_lower_body_muscles
+					}
+				}
+				remove_variable = old_cbo_lower_body_muscles
+			}
+			add_character_flag = {
+				flag = cbo_muscles_cooldown
+				days = 360 # So doesn't happen multiple times per year
+			}
+			trigger_event = { on_action = on_add_muscle_modifier }
+			trigger_event = { on_action = on_arms_trait }
+			trigger_event = { on_action = on_butt_trait }
+		}
+	}

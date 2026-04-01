@@ -1,0 +1,106 @@
+﻿on_physical_variable = {
+	on_actions = { 
+		on_breast_variable
+		on_butt_variable
+		on_hips_variable
+		on_waist_variable
+		on_shoulders_variable
+		on_height_variable
+		on_muscle_variable
+		on_lactation_genetic
+		on_add_visual_age_variable
+		on_metabolic_variable
+		on_add_height_growth_delay
+		on_puberty_start_age
+	}
+}
+
+on_breast_variable = {
+	trigger = { 
+		Or = {
+			not = { has_variable = breast_size_genetic }
+			not = { has_variable = breast_size_gene_1 }
+			not = { has_variable = breast_size_gene_2 }
+		}
+	}
+	effect = {
+		add_breast_variable_effect = yes
+	}
+}
+
+on_butt_variable = {
+	trigger = { 
+		Or = {
+			not = { has_variable = butt_size_genetic }
+			not = { has_variable = butt_size_gene_1 }
+			not = { has_variable = butt_size_gene_2 }
+		}
+	}
+	effect = {
+		add_butt_variable_effect = yes
+	}
+}
+
+on_height_variable = {
+	trigger = { 
+		Or = {
+			not = { has_variable = height_genetic }
+			not = { has_variable = height_gene_1 }
+			not = { has_variable = height_gene_2 }
+		}
+	}
+	effect = {
+		add_height_variable_effect = yes
+	}
+}
+
+on_hips_variable = {
+	trigger = { 
+		Or = {
+			not = { has_variable = hips_genetic }
+			not = { has_variable = hips_gene_1 }
+			not = { has_variable = hips_gene_2 }
+		}
+	}
+	effect = {
+		add_hips_variable_effect = yes
+	}
+}
+
+on_waist_variable = {
+	trigger = { 
+		Or = {
+			not = { has_variable = waist_genetic }
+			not = { has_variable = waist_gene_1 }
+			not = { has_variable = waist_gene_2 }
+		}
+	}
+	effect = {
+		add_waist_variable_effect = yes
+	}
+}
+
+on_shoulders_variable = {
+	trigger = { 
+		Or = {
+			not = { has_variable = shoulders_genetic }
+			not = { has_variable = shoulders_gene_1 }
+			not = { has_variable = shoulders_gene_2 }
+		}
+	}
+	effect = {
+		add_shoulders_variable_effect = yes
+	}
+}
+
+on_metabolic_variable = {
+	trigger = { 
+		Or = {
+			not = { has_variable = upper_body_metabolic_gene }
+			not = { has_variable = lower_body_metabolic_gene }
+		}
+	}
+	effect = {
+		add_metabolic_variable_effect = yes
+	}
+}

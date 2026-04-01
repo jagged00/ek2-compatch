@@ -1,0 +1,122 @@
+﻿carn_character_initialization_pulse = {
+	events = {
+		carn_futa.0001 # initialize this character with futa trait
+	}
+}
+
+on_seed_carn_trait = {
+		on_actions = {
+			on_carn_tits_trait
+			on_butt_trait
+			on_height_trait
+			on_stomach_trait
+			on_arms_trait
+			on_remove_carn_trait_failsafe
+			on_remove_carn_tits_trait_failsafe
+			on_purge_bad_carn_traits
+			on_add_weight_modifier
+			on_add_height_modifier
+			on_add_muscle_modifier
+		}
+	}
+
+#I don't want to have to code for both trait versions
+on_purge_bad_carn_traits = {
+		on_actions = {
+			on_purge_tits_big_bad_3
+			on_purge_tits_big_bad_2
+			on_purge_tits_big_bad_1
+			on_purge_tits_small_bad_3
+			on_purge_tits_small_bad_2
+			on_purge_tits_small_bad_1
+		}
+	}
+	
+on_purge_tits_big_bad_3 = {
+	trigger = {
+		has_trait = tits_big_bad_3
+	}
+	effect = {
+		remove_trait = tits_big_bad_3
+		add_trait = tits_big_good_3
+	}
+}
+
+on_purge_tits_big_bad_2 = {
+	trigger = {
+		has_trait = tits_big_bad_2
+	}
+	effect = {
+		remove_trait = tits_big_bad_2
+		add_trait = tits_big_good_2
+	}
+}
+		
+on_purge_tits_big_bad_1 = {
+	trigger = {
+		has_trait = tits_big_bad_1
+	}
+	effect = {
+		remove_trait = tits_big_bad_1
+		add_trait = tits_big_good_1
+	}
+}
+
+on_purge_tits_small_bad_1= {
+	trigger = {
+		has_trait = tits_small_bad_1
+	}
+	effect = {
+		remove_trait = tits_small_bad_1
+		add_trait = tits_small_good_1
+	}
+}
+
+on_purge_tits_small_bad_2 = {
+	trigger = {
+		has_trait = tits_small_bad_2
+	}
+	effect = {
+		remove_trait = tits_small_bad_2
+		add_trait = tits_small_good_2
+	}
+}
+
+on_purge_tits_small_bad_3 = {
+	trigger = {
+		has_trait = tits_small_bad_3
+	}
+	effect = {
+		remove_trait = tits_small_bad_3
+		add_trait = tits_small_good_3
+	}
+}
+	
+on_remove_carn_trait_failsafe = {
+			trigger = {
+				trigger_if = {
+					limit = { has_variable = puberty_value }
+					var:puberty_value = 0
+				}
+				trigger_else = {
+					is_adult = no
+				}
+				Or = {
+					has_breast_traits = yes
+					has_butt_traits = yes
+				}
+			}
+			effect = {
+				remove_breasts_trait_effect = yes
+				remove_butt_trait_effect = yes
+			}
+		}
+
+on_remove_carn_tits_trait_failsafe = {
+			trigger = {
+				carn_should_have_tits_trigger = no
+			}
+			effect = {
+				remove_breasts_trait_effect = yes
+			}
+		}

@@ -1,0 +1,149 @@
+﻿bulky_arms_value = 100
+muscular_arms_value = 50
+average_arms_value = 0
+fat_arms_value = 50
+skinny_arms_value = 50
+
+bulky_arms_ratio = {
+	if = {
+		limit = { 
+			has_variable = visual_arm_muscle_variable
+			has_variable = upper_body_fat_variable
+		}
+		if = {
+			limit = { var:visual_arm_muscle_variable >= bulky_arms_value }
+			value = var:visual_arm_muscle_variable
+			divide = bulky_arms_value
+		}
+		else_if = {
+			limit = { var:visual_arm_muscle_variable >= muscular_arms_value }
+			value = var:visual_arm_muscle_variable
+			subtract = muscular_arms_value
+			divide = {
+				value = bulky_arms_value
+				subtract = muscular_arms_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+muscular_arms_ratio = {
+	if = {
+		limit = { 
+			has_variable = visual_arm_muscle_variable
+			has_variable = upper_body_fat_variable
+		}
+		if = {
+			limit = { var:visual_arm_muscle_variable >= bulky_arms_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:visual_arm_muscle_variable >= muscular_arms_value }
+			value = bulky_arms_value
+			subtract = var:visual_arm_muscle_variable
+			divide = {
+				value = bulky_arms_value
+				subtract = muscular_arms_value
+			}
+		}
+		else = {
+			value = var:visual_arm_muscle_variable
+			divide = muscular_arms_value
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+average_arms_ratio = {
+	if = {
+		limit = { 
+			has_variable = visual_arm_muscle_variable
+			has_variable = upper_body_fat_variable
+		}
+		if = {
+			limit = { var:visual_arm_muscle_variable >= muscular_arms_value }
+			value = 0
+		}
+		else = {
+			limit = { var:upper_body_fat_variable >= 0 }
+			value = muscular_arms_value
+			subtract = var:visual_arm_muscle_variable
+			divide = muscular_arms_value
+			if = {
+				limit = { var:upper_body_fat_variable >= 0 }
+				subtract = fat_arms_ratio
+			}
+			else_if = {
+				limit = { var:upper_body_fat_variable < 0 }
+				subtract = skinny_arms_ratio
+			}
+			min = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+fat_arms_ratio = {
+	if = {
+		limit = { 
+			has_variable = visual_arm_muscle_variable
+			has_variable = upper_body_fat_variable
+		}
+		if = {
+			limit = { var:visual_arm_muscle_variable >= muscular_arms_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:upper_body_fat_variable >= 0 }
+			value = var:upper_body_fat_variable
+			divide = fat_arms_value
+			max = 1
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+normalized_upper_body_fat_variable = {
+	value = var:upper_body_fat_variable
+	multiply = -1
+}
+
+skinny_arms_ratio = {
+	if = {
+		limit = { 
+			has_variable = visual_arm_muscle_variable
+			has_variable = upper_body_fat_variable
+		}
+		if = {
+			limit = { var:visual_arm_muscle_variable >= muscular_arms_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:upper_body_fat_variable < 0 }
+			value = normalized_upper_body_fat_variable
+			divide = skinny_arms_value
+			max = 1
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}

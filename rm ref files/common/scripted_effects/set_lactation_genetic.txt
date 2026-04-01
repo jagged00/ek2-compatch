@@ -1,0 +1,152 @@
+﻿
+set_lactation_genetic = {
+	if = {
+		limit = {
+			exists = scope:real_father 
+			exists = scope:mother
+			trigger_if = {
+				limit = {
+				exists = scope:real_father 
+				exists = scope:mother
+				}
+				scope:real_father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+			}
+		}
+		scope:real_father = { set_lactation_gene_effect = yes }
+		scope:mother = { set_lactation_gene_effect = yes }
+		set_variable = {
+			name = lactation_gene_1
+			value = scope:real_father.var:lactation_genetic
+		}
+		set_variable = {
+			name = lactation_gene_2
+			value = scope:mother.var:lactation_genetic
+		}
+		if = {
+			limit = { check_lactation_gene_max_min > 0 }
+			set_variable = {
+				name = lactation_genetic
+				value = {
+					fixed_range = {
+						max = var:lactation_gene_1
+						min = var:lactation_gene_2
+					}
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				name = lactation_genetic
+				value = {
+					fixed_range = {
+						max = var:lactation_gene_2
+						min = var:lactation_gene_1
+					}
+				}
+			}
+		}
+		remove_variable = lactation_gene_1
+		remove_variable = lactation_gene_2
+	}
+	else_if = {
+		limit = {
+			exists = scope:father
+			exists = scope:mother
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					exists = scope:mother
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+			}
+		}
+		scope:father = { set_lactation_gene_effect = yes }
+		scope:mother = { set_lactation_gene_effect = yes }
+		set_variable = {
+			name = lactation_gene_1
+			value = scope:father.var:lactation_genetic
+		}
+		set_variable = {
+			name = lactation_gene_2
+			value = scope:mother.var:lactation_genetic
+		}
+		if = {
+			limit = { check_lactation_gene_max_min > 0 }
+			set_variable = {
+				name = lactation_genetic
+				value = {
+					fixed_range = {
+						max = var:lactation_gene_1
+						min = var:lactation_gene_2
+					}
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				name = lactation_genetic
+				value = {
+					fixed_range = {
+						max = var:lactation_gene_2
+						min = var:lactation_gene_1
+					}
+				}
+			}
+		}
+		remove_variable = lactation_gene_1
+		remove_variable = lactation_gene_2
+	}
+	else_if = {
+		limit = {
+			exists = scope:real_father 
+			trigger_if = {
+				limit = { exists = scope:real_father }
+				scope:real_father = { is_alive = yes }
+			}
+		}
+		scope:real_father = { set_lactation_gene_effect = yes }
+		set_variable = {
+			name = lactation_genetic
+			value = scope:real_father.var:lactation_genetic
+		}
+	}
+	else_if = {
+		limit = {
+			exists = scope:father 
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+			}
+		}
+		scope:father = { set_lactation_gene_effect = yes }
+		set_variable = {
+			name = lactation_genetic
+			value = scope:father.var:lactation_genetic
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:mother
+			trigger_if = {
+				limit = { exists = scope:mother }
+				scope:mother = { is_alive = yes }
+			}
+		}
+		scope:mother = { set_lactation_gene_effect = yes }
+		set_variable = {
+			name = lactation_genetic
+			value = scope:mother.var:lactation_genetic
+		}
+	}
+	else = {
+		set_lactation_gene_effect = yes
+	}
+}

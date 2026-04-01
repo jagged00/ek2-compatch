@@ -1,0 +1,28 @@
+﻿on_siege_finished = {
+    trigger = {
+        winner = attacker
+        exists = province_owner
+        province_owner = {
+            is_alive = yes
+            is_imprisoned = no
+        }
+    }
+
+    effect = {
+        random = {
+            chance = 85  # 85% chance to capture (historical: escapes were rare)
+            imprison = {
+                target = province_owner
+                type = normal  # dungeon prison (can ransom/execute/release)
+                reason = captured_in_siege
+            }
+            # Small chance of escape (historical flavor)
+            else = {
+                chance = 15
+                province_owner = {
+                    add_character_flag = escaped_siege
+                }
+            }
+        }
+    }
+}

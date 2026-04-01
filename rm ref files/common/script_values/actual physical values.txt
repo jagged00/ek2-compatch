@@ -1,0 +1,1611 @@
+﻿actual_butt_size = {
+	if = {
+		limit = { 
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = butt_size_genetic
+				has_variable = cbo_muscles
+				has_variable = cbo_lower_body_muscles
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		value = var:butt_size_genetic
+		if = {
+			limit = { current_weight <= -25 }
+			add = {
+				value = current_weight
+				add = 25
+				multiply = 2
+			}
+			min = 0
+		}
+		if = {
+			limit = { has_variable = cbo_lower_body_muscles }
+			multiply = {
+				value = 100
+				subtract = {
+					value = actual_cbo_lower_body_muscles
+					max = 67
+				}
+				divide = 100
+			}
+			add = actual_cbo_lower_body_muscles
+		}
+		add = butt_size_from_upper_body_muscle
+		if = {
+			limit = { 
+				has_variable = puberty_value
+				is_adult = no
+			}
+			multiply = capped_puberty_value
+		}
+		else_if = {
+			limit = { 
+				is_adult = no
+			}
+			multiply = 0
+		}
+		if = {
+			limit = { current_weight > 0 }
+			add = {
+				value = current_weight
+				max = 50
+				if = {
+					limit = { has_variable = lower_body_full_metabolic_gene }
+					multiply = 1.32
+				}
+				else_if = {
+					limit = { has_variable = lower_body_half_metabolic_gene }
+					multiply = 1
+				}
+				else_if = {
+					limit = { has_variable = body_mid_metabolic_gene }
+					multiply = 0.66
+				}
+				else_if = {
+					limit = { has_variable = upper_body_half_metabolic_gene }
+					multiply = 0.34
+				}
+			}
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+butt_size_portrait_modifier = {
+	if = {
+		limit = { 
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = butt_size_genetic
+				has_variable = cbo_muscles
+				has_variable = cbo_lower_body_muscles
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		value = var:butt_size_genetic
+		if = {
+			limit = { current_weight <= -25 }
+			add = {
+				value = current_weight
+				add = 25
+				multiply = 2
+			}
+			min = 0
+		}
+		if = {
+			limit = { has_variable = cbo_lower_body_muscles }
+			multiply = {
+				value = 100
+				subtract = {
+					value = actual_cbo_lower_body_muscles
+					max = 67
+				}
+				divide = 100
+			}
+			add = actual_cbo_lower_body_muscles
+		}
+		if = {
+			limit = {
+				has_variable = puberty_value
+				is_adult = no
+			}
+			multiply = capped_puberty_value
+		}
+		else_if = {
+			limit = { 
+				is_adult = no
+			}
+			multiply = 0
+		}
+		multiply = 0.01
+	}
+	else = {
+		value = 0
+	}
+}
+	
+actual_cbo_lower_body_muscles = {
+	value = var:cbo_lower_body_muscles
+	multiply = 0.666
+}
+
+cbo_lower_body_muscles_portrait_modifier = {
+	value = var:cbo_lower_body_muscles
+	multiply = 0.01
+}
+
+cbo_lower_body_muscles_gui = {
+	if = {
+		limit = {
+			trigger_if = { 
+				limit = { is_alive = yes }
+				has_variable = cbo_lower_body_muscles
+				has_variable = cbo_muscles
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		value = actual_cbo_lower_body_muscles
+		add = butt_size_from_upper_body_muscle
+	}
+	else = {
+		value = 0
+	}
+}
+
+butt_size_from_upper_body_muscle = {
+	value = var:cbo_muscles
+	multiply = {
+		value = 0.25
+		multiply = {
+			value = 1
+			subtract = {
+				value = upper_body_fat
+				divide = 100
+				max = 1
+				min = 0
+			}
+		}
+	}
+}
+
+butt_shape_correction = {
+	if = {
+		limit = { 
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = butt_size_genetic
+				has_variable = hips_genetic
+				has_variable = cbo_lower_body_muscles
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		value = actual_butt_size
+		subtract = var:hips_genetic
+		divide = 150
+		max = 1
+		min = 0
+	}
+	else = {
+		value = 0
+	}
+}
+	
+butt_size_for_weight = {
+		if = {
+			limit = { 
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = butt_size_genetic
+					has_variable = hips_genetic
+					has_variable = cbo_lower_body_muscles
+				}
+				trigger_else = {
+					always = no
+				}
+			}
+			value = var:butt_size_genetic
+			if = {
+				limit = { current_weight <= -25 }
+				add = {
+					value = current_weight
+					add = 25
+					multiply = 2
+				}
+				min = 0
+			}
+			add = var:hips_genetic
+			if = {
+				limit = { has_variable = cbo_lower_body_muscles }
+				multiply = {
+					value = 100
+					subtract = {
+						value = actual_cbo_lower_body_muscles
+						max = 67
+					}
+					divide = 100
+				}
+				add = actual_cbo_lower_body_muscles
+			}
+			if = {
+				limit = { 
+					has_variable = puberty_value
+					is_adult = no
+				}
+				multiply = capped_puberty_value
+			}
+			else_if = {
+				limit = { 
+					is_adult = no
+				}
+				multiply = 0
+			}
+			divide = 2
+		}
+		else = {
+			value = 0
+		}
+	}
+
+actual_hips_size = {
+		if = {
+			limit = { 
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = hips_genetic
+				}
+				trigger_else = {
+					always = no
+				}
+			}
+			value = var:hips_genetic
+			if = {
+				limit = { 
+					has_variable = puberty_value
+					is_adult = no
+				}
+				multiply = capped_puberty_value
+			}
+			else_if = {
+				limit = { 
+					is_adult = no
+				}
+				multiply = 0
+			}
+			if = {
+				limit = { current_weight > 0 }
+				add = {
+					value = current_weight
+					max = 50
+					if = {
+						limit = { has_variable = lower_body_full_metabolic_gene }
+						multiply = 1.32
+					}
+					else_if = {
+						limit = { has_variable = lower_body_half_metabolic_gene }
+						multiply = 1
+					}
+					else_if = {
+						limit = { has_variable = body_mid_metabolic_gene }
+						multiply = 0.66
+					}
+					else_if = {
+						limit = { has_variable = upper_body_half_metabolic_gene }
+						multiply = 0.34
+					}
+				}
+				add = {
+					value = upper_body_fat
+					multiply = 0.66
+				}
+			}
+			min = 0
+		}
+		else = {
+			value = 0
+		}
+	}
+
+hips_size_portrait_modifier = {
+		if = {
+			limit = { 
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = hips_genetic
+				}
+				trigger_else = {
+					always = no
+				}
+			}
+			value = var:hips_genetic
+			if = {
+				limit = { 
+					has_variable = puberty_value
+					is_adult = no
+				}
+				multiply = capped_puberty_value
+			}
+			else_if = {
+				limit = { 
+					is_adult = no
+				}
+				multiply = 0
+			}
+			multiply = 0.01
+		}
+		else = {
+			value = 0
+		}
+	}
+	
+butt_hip_size_total = {
+	value = actual_butt_size
+	add = actual_hips_size
+}
+
+butt_hip_size_ratio = {
+	value = actual_butt_size
+	divide = {
+		value = actual_hips_size
+		min = 1
+	}
+}
+
+
+actual_muscle = {
+		if = {
+			limit = { 
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = cbo_muscles
+				}
+				trigger_else = {
+					always = no
+				}
+			}
+			value = var:cbo_muscles
+		}
+		else = {
+			value = 0
+		}
+	}
+
+
+upper_body_muscle_portrait_modifier = {
+	if = {
+		limit = { 
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = cbo_muscles
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		value = var:cbo_muscles
+		multiply = {
+			value = 100
+			subtract = upper_body_fat
+			divide = 100
+			max = 1
+			min = 0
+		}
+		multiply = 0.01
+		min = 0
+	}
+	else = {
+		value = 0
+	}
+}
+	
+visual_arm_muscle = {
+		if = {
+			limit = { 
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = cbo_muscles
+					has_variable = puberty_value
+					has_variable = shoulders_genetic
+				}
+				trigger_else = {
+					always = no
+				}
+			}
+			value = {
+				value = upper_body_muscle_portrait_modifier
+				multiply = 100
+			}
+			multiply = capped_puberty_value
+			add = actual_shoulders
+		}
+		else = {
+			value = 0
+		}
+	}
+	
+actual_shoulders = {
+		if = {
+			limit = { 
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = puberty_value
+					has_variable = shoulders_genetic
+				}
+				trigger_else = {
+					always = no
+				}
+			}
+			value = var:shoulders_genetic
+			subtract = 50
+			multiply = capped_puberty_value
+			multiply = 0.25
+		}
+		else = {
+			value = 0
+		}
+	}
+
+abs_value = {
+	if = {
+		limit = {
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = cbo_muscles
+				has_variable = puberty_value
+				has_variable = visual_age
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		value = {
+			value = actual_muscle
+			multiply = 4
+			max = 50
+		}
+		if = {
+			limit = { current_weight > 0 }
+			subtract = {
+				value = upper_body_fat
+				multiply = 4
+				min = 0
+			}
+		}
+		else = {
+			multiply = {
+				value = 1
+				add = {
+					value = current_weight
+					multiply = -1
+					divide = 25
+					min = 0
+					max = 1
+				}
+			}
+		}
+		multiply = capped_puberty_value
+		subtract = {
+			value = 100
+			multiply = {
+				value = var:visual_age
+				min = 0
+			}
+		}
+		if = {
+			limit = { is_pregnant = yes }
+			subtract = {
+				value = pregnant_stomach_size
+				multiply = 2
+			}
+		}
+		min = 0
+	}
+	else_if = {
+		limit = {
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = cbo_muscles
+				has_variable = puberty_value
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		value = {
+			value = actual_muscle
+			multiply = 4
+			max = 50
+		}
+		if = {
+			limit = { current_weight > 0 }
+			subtract = {
+				value = upper_body_fat
+				multiply = 4
+				min = 0
+			}
+		}
+		else = {
+			multiply = {
+				value = 1
+				add = {
+					value = current_weight
+					multiply = -1
+					divide = 25
+					min = 0
+					max = 1
+				}
+			}
+		}
+		multiply = capped_puberty_value
+		if = {
+			limit = { is_pregnant = yes }
+			subtract = {
+				value = pregnant_stomach_size
+				multiply = 2
+			}
+		}
+		min = 0
+	}
+	else = {
+		value = 0
+	}
+}
+	
+upper_body_fat = {
+	value = actual_fat
+	if = {
+		limit = {
+			current_weight > 0
+			trigger_if = {
+				limit = { is_alive = yes }
+				or = {
+					has_variable = lower_body_full_metabolic_gene
+					has_variable = lower_body_half_metabolic_gene
+					has_variable = body_mid_metabolic_gene
+					has_variable = upper_body_half_metabolic_gene
+				}
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		subtract = {
+			value = current_weight
+			max = 50
+			if = {
+				limit = { has_variable = lower_body_full_metabolic_gene }
+				multiply = 0.66
+			}
+			else_if = {
+				limit = { has_variable = lower_body_half_metabolic_gene }
+				multiply = 0.5
+			}
+			else_if = {
+				limit = { has_variable = body_mid_metabolic_gene }
+				multiply = 0.33
+			}
+			else_if = {
+				limit = { has_variable = upper_body_half_metabolic_gene }
+				multiply = 0.17
+			}
+		}
+	}
+}
+
+actual_fat = {
+	value = current_weight
+}
+
+actual_stomach_size = {
+	value = upper_body_fat
+	add = actual_waist_size
+	add = aging_stomach_size
+}
+
+pregnant_stomach_size = {
+	if = {
+		limit = { is_pregnant = yes }
+		value = 100
+		multiply = {
+			add = pregnancy_days
+			subtract = 30
+			divide = 220 # PREGNANCY_DAYS is 280; we want 1 month at 100%
+			max = 1
+		}
+		if = {
+			# Overweight females should have less visible pregnancy, so we change the 100% pregnant value
+			limit = { upper_body_fat > 0 }
+			multiply = {
+				value = 100
+				subtract = upper_body_fat # An absolute and normalized value derived from character body weight
+				multiply = 0.01
+				max = 1
+				min = 0
+			}
+		}
+		min = 0
+	}
+	else = {
+		value = 0
+	}
+}
+
+aging_stomach_size = {
+	if = {
+		limit = {
+			or = {
+				And = {
+					is_male = yes
+					Not = { has_character_flag = fat_gender_morph }
+				}
+				And = {
+					is_female = yes
+					has_character_flag = fat_gender_morph
+				}
+			}
+		}
+		value = 25
+	}
+	else = {
+		value = 15
+	}
+	if = {
+		limit = {
+			is_alive = yes
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = visual_age
+			}
+		}
+		multiply = {
+			value = var:visual_age
+			divide = 1.5
+			divide = 0.85
+			max = 1
+			min = 0
+		}
+	}
+	else = {
+		multiply = 0
+	}
+}
+
+actual_waist_size = {
+	value = {
+		if = {
+			limit = {
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = waist_genetic
+				}
+				trigger_else = {
+					always = no
+				}
+			}
+			add = var:waist_genetic
+			subtract = 50
+			max = 50
+			multiply = 0.3
+			if = {
+				limit = { 
+					has_variable = puberty_value
+				}
+				multiply = capped_puberty_value
+			}
+			else_if = {
+				limit = { 
+					is_adult = no
+				}
+				multiply = 0
+			}
+		}
+		else = {
+			add = 0
+		}
+	}
+}
+
+fat_for_weight = {
+		value = actual_fat
+	}
+
+breast_band_size_value = {
+			value = {
+				add = {
+					value = upper_body_fat
+					divide = 100
+					multiply = 75
+				}
+				add = {
+					value = actual_height_for_weight
+					subtract = 50
+					divide = 50
+					multiply = 25
+				}
+			}
+		}
+
+breast_size_from_fat = {
+		if = {
+			limit = { upper_body_fat > 0 }
+			value = 50
+			multiply = {
+				value = upper_body_fat
+				divide = 100
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	
+breast_size_from_lactation = {
+	if = {
+		limit = {
+			is_pregnant = yes
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = lactation_genetic
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		value = var:lactation_genetic
+		divide = 10
+		multiply = {
+			add = pregnancy_days
+			divide = 120 # PREGNANCY_DAYS is 280; we want 1 month at 100%
+			if = {
+				limit = { has_variable = post_pregnancy_breasts }
+				min = var:post_pregnancy_breasts
+			}
+			max = 1
+			if = {
+				limit = { has_court_position = wet_nurse_court_position }
+				min = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_alive = yes
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = lactation_genetic
+				has_court_position = wet_nurse_court_position
+			}
+		}
+		value = var:lactation_genetic
+		divide = 10
+	}
+	else_if = {
+		limit = {
+			is_alive = yes
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = lactation_genetic
+				has_variable = post_pregnancy_breasts
+			}
+		}
+		value = var:lactation_genetic
+		divide = 10
+		multiply = var:post_pregnancy_breasts
+	}
+	else = {
+		value = 0
+	}
+}
+
+actual_breast_size = {
+	if = {
+		limit = {
+			trigger_if = {
+				limit = { is_female = yes }
+				Not = { has_character_flag = chest_gender_morph }
+			}
+			trigger_else = {
+				has_character_flag = chest_gender_morph
+			}
+		}
+		if = {
+			limit = {
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = breast_size_genetic
+				}
+			}
+			value = var:breast_size_genetic
+			if = {
+				limit = { current_weight <= -25 }
+				add = {
+					value = current_weight
+					add = 25
+					multiply = 2
+				}
+				min = 0
+			}
+			if = {
+				limit = { 
+					has_variable = puberty_value
+				}
+				multiply = capped_puberty_value
+			}
+			else_if = {
+				limit = { 
+					is_adult = no
+				}
+				multiply = 0
+			}
+			if = {
+				limit = { breast_size_from_fat > 0 }
+				add = breast_size_from_fat
+			}
+			add = breast_size_from_lactation
+			min = 0
+		}
+		else = {
+			value = 25
+		}
+	}
+	else = {
+		value = 25
+	}
+}
+
+breast_size_portrait_modifier = {
+	if = {
+		limit = {
+			trigger_if = {
+				limit = { is_female = yes }
+				Not = { has_character_flag = chest_gender_morph }
+			}
+			trigger_else = {
+				has_character_flag = chest_gender_morph
+			}
+		}
+		if = {
+			limit = {
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = breast_size_genetic
+				}
+			}
+			value = var:breast_size_genetic
+			if = {
+				limit = { current_weight <= -25 }
+				add = {
+					value = current_weight
+					add = 25
+					multiply = 2
+				}
+				min = 0
+			}
+			if = {
+				limit = { 
+					has_variable = puberty_value
+				}
+				multiply = capped_puberty_value
+			}
+			else_if = {
+				limit = { 
+					is_adult = no
+				}
+				multiply = 0
+			}
+			add = breast_size_from_lactation
+			min = 0
+			multiply = 0.01
+		}
+		else = {
+			value = 25
+		}
+	}
+	else = {
+		value = 25
+	}
+}
+
+breast_size_for_weight = {
+	if = {
+		limit = {
+			trigger_if = {
+				limit = { is_female = yes }
+				Not = { has_character_flag = chest_gender_morph }
+			}
+			trigger_else = {
+				has_character_flag = chest_gender_morph
+			}
+		}
+		if = {
+			limit = {
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = breast_size_genetic
+				}
+			}
+			value = var:breast_size_genetic
+			if = {
+				limit = { current_weight <= -25 }
+				add = {
+					value = current_weight
+					add = 25
+					multiply = 2
+				}
+				min = 0
+			}
+			if = {
+				limit = { 
+					has_variable = puberty_value
+				}
+				multiply = capped_puberty_value
+			}
+			else_if = {
+				limit = { 
+					is_adult = no
+				}
+				multiply = 0
+			}
+			add = breast_size_from_lactation
+			min = 0
+		}
+		else = {
+			value = 25
+		}
+	}
+	else = {
+		value = 25
+	}
+}
+
+weight_lbs = {
+		value = weight_height_fat_lbs
+		add = weight_from_butt_size_lbs
+		add = weight_from_muscle_lbs
+		add = weight_from_breast_size_lbs
+		if = {
+			limit = { fat_for_weight >= 50 }
+			multiply = {
+				value = fat_for_weight
+				add = 100
+				divide = 150
+			}
+		}
+		if = {
+			limit = { actual_height_for_weight >= 50 }
+			multiply = {
+				value = actual_height_for_weight
+				add = 100
+				divide = 150
+			}
+		}
+		if = { 
+			limit = { has_game_rule = metric_units }
+			multiply = 0.4536
+		}
+	}
+
+weight_height_fat_lbs = {
+		value = weight_from_height_lbs
+		if = {
+			limit = { 
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					actual_height_for_weight >= 0
+					has_variable = height_genetic
+				}
+			}
+			add = {
+				value = 60
+				add = {
+					if = {
+						limit = { fat_for_weight < 0 }
+						value = 30
+						multiply = {
+							value = fat_for_weight
+							divide = 100
+						}
+					}
+					else = {
+						add = 50
+						multiply = {
+							value = fat_for_weight
+							divide = 100
+						}
+					}
+				}	
+			}
+		}
+		else_if = {
+			limit = { 
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = height_genetic
+				}
+			}
+			add = {
+				value = 10
+				add = {
+					if = {
+						limit = { fat_for_weight < 0 }
+						value = 10
+						multiply = {
+							value = fat_for_weight
+							divide = 100
+						}
+					}
+					else = {
+						add = 10
+						multiply = {
+							value = fat_for_weight
+							divide = 100
+						}
+					}
+				}	
+			}
+		}
+		else = {
+			value = 100
+		}
+	}
+
+#28% of female weight 37.56% down 140% up
+#24% of male weight 18% down 27% up
+weight_from_butt_size_lbs = { 
+	if = {
+		limit = {
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = butt_size_genetic
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		if = {
+			limit = { is_male = yes }
+			if = {
+				limit = { var:butt_size_genetic < 25 }
+				value = avg_weight_for_height_lbs
+				multiply = 0.24
+				multiply = {
+					value = butt_size_for_weight
+					min = 0
+					subtract = 25
+					divide = 25
+					multiply = 0.15
+				}
+			}
+			else = {
+				value = avg_weight_for_height_lbs
+				multiply = 0.24
+				multiply = {
+					value = butt_size_for_weight
+					subtract = 25
+					divide = 75
+					multiply = 0.30
+				}
+			}
+		}
+		else_if = {
+			limit = { is_female = yes }
+			if = {
+				limit = { var:butt_size_genetic < 25 }
+				value = avg_weight_for_height_lbs
+				multiply = 0.28
+				multiply = {
+					value = butt_size_for_weight
+					min = 0
+					subtract = 25
+					divide = 25
+					multiply = 0.25
+				}
+			}
+			else = {
+				value = avg_weight_for_height_lbs
+				multiply = 0.28
+				multiply = {
+					value = butt_size_for_weight
+					min = 0
+					subtract = 25
+					divide = 75
+					multiply = 0.5
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				is_female = yes
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = butt_size_genetic
+					trigger_if = {
+						limit = { has_variable = butt_size_genetic }
+						has_variable = butt_size_genetic
+						var:butt_size_genetic > 25
+					}
+				}
+			}
+			value = avg_weight_for_height_lbs
+			multiply = 0.28
+			multiply = {
+				value = butt_size_for_weight
+				min = 0
+				subtract = 25
+				divide = 75
+				multiply = 0.5
+			}
+		}
+		else = {
+ 			value = 0
+		}
+	}
+	else = {
+ 		value = 0
+	}
+}
+
+weight_from_muscle_lbs = {
+			if = {
+				limit = {
+					trigger_if = {
+						limit = { is_alive = yes }
+						has_variable = cbo_muscles
+						trigger_if = {
+							limit = { has_variable = cbo_muscles }
+							has_variable = cbo_muscles
+						}
+					}
+					trigger_else = {
+						always = no
+					}
+				}
+				value = avg_weight_for_height_lbs
+				multiply = {
+					value = actual_muscle
+					divide = 150
+					if = {
+						limit = { is_female = yes }
+						divide = 1.5
+					}
+				}
+			}
+			else = {
+ 				value = 0
+			}
+		}
+
+weight_from_breast_size_lbs = {
+	value = {
+		value = breast_size_for_weight
+		max = 25
+		divide = 24
+	}
+	if = {
+		limit = { breast_size_for_weight > 25 }
+		add = {
+			value = breast_size_for_weight
+			max = 50
+			subtract = 25
+			divide = 20
+		}
+	}
+	if = {
+		limit = { breast_size_for_weight > 50 }
+		add = {
+			value = breast_size_for_weight
+			max = 75
+			subtract = 50
+			divide = 16
+		}
+	}
+	if = {
+		limit = { breast_size_for_weight > 75 }
+		add = {
+			value = breast_size_for_weight
+			max = 100
+			subtract = 75
+			divide = 14
+		}
+	}
+	if = {
+		limit = { breast_size_for_weight > 100 }
+		add = {
+			value = breast_size_for_weight
+			max = 125
+			subtract = 100
+			divide = 12
+		}
+	}
+	if = {
+		limit = { breast_size_for_weight > 125 }
+		add = {
+			value = breast_size_for_weight
+			max = 150
+			subtract = 125
+			divide = 10
+		}
+	}
+	if = {
+		limit = { breast_size_for_weight > 150 }
+		add = {
+			value = breast_size_for_weight
+			max = 175
+			subtract = 150
+			divide = 8
+		}
+	}
+	if = {
+		limit = { breast_size_for_weight > 175 }
+		add = {
+			value = breast_size_for_weight
+			max = 200
+			subtract = 175
+			divide = 6
+		}
+	}
+	if = {
+		limit = { breast_size_for_weight > 200 }
+		add = {
+			value = breast_size_for_weight
+			subtract = 200
+			divide = 4
+		}
+	}
+}
+
+avg_weight_for_height_lbs = {
+	if = {
+		limit = { 
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = height_genetic
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		if = {
+			limit = { actual_height_for_weight >= 0 }
+			value = {
+				value = actual_height_for_weight
+				multiply = 1.5
+			}
+			add = 60
+		}
+		else = {
+			value = actual_height_for_weight
+			add = 60
+		}
+	}
+	else = {
+		value = 150
+	}
+}
+
+weight_from_height_lbs = {
+	if = {
+		limit = { 
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = height_genetic
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		if = {
+			limit = { actual_height_for_weight >= 0 }
+			value = actual_height_for_weight
+			multiply = {
+				value = 1.5
+				if = {
+					limit = { 
+						fat_for_weight < 0
+					}
+					add = {
+						value = {
+							value = fat_for_weight
+							divide = 200
+						}
+						multiply = {
+							value = 100
+							subtract = actual_height_for_weight
+							min = 0
+							divide = 100
+						}
+					}
+				}
+				if = {
+					limit = { fat_for_weight > 0 }
+					add = {
+						value = fat_for_weight
+						divide = 100
+						multiply = {
+							value = actual_height_for_weight
+							max = 100
+							divide = 100
+						}
+					}
+				}
+			}
+		}
+		else = {
+			value = actual_height_for_weight
+			add = 50
+			multiply = {
+				value = 1.0
+				if = {
+					limit = { 
+						fat_for_weight < 0
+					}
+					add = {
+						value = {
+							value = fat_for_weight
+							divide = 200
+						}
+						multiply = {
+							value = 150
+							subtract = {
+								value = actual_height_for_weight
+								add = 50
+							}
+							min = 0
+							divide = 150
+						}
+					}
+				}
+				else = {
+					add = {
+						value = fat_for_weight
+						divide = 100
+						multiply = {
+							value = actual_height_for_weight
+							add = 50
+							max = 50
+							divide = 150
+						}
+					}
+				}
+			}
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+#healthy bmi range for height (will need to be adjusted for other factors)
+#                             multiplier 1.25   1.5  2.0  2.5
+#(0)3 foot 8   45  60  85  dif           45          60    85
+#(10)4 feet     55  70  100 dif           55    70   100
+#(20)4 foot 4  65  80  115 10 10 10 15   67.5   85   120
+#(30)4 foot 8  75  95  135 20 20 25 35   75     105  145
+#(40)5 feet    85  110 155 20 20 30 40   92.5   115  160
+#(50)5 foot 4  95  125 175 20 20 30 40   95     135  185
+#(60)5 foot 8  110 140 200 20 25 30 45   117.5  145  200 
+#(70)6 feet    125 160 225 20 30 35 50   125    165  225
+#(80)6 foot 4  140 175 250 20 30 25 50   142.5  175      250
+#(90)6 foot 8  155 200 275 20 30 40 50   155    195  265
+#(100)7 feet    170 220 300 20 30 45 50  167.5 205       300
+#(110)7 foot 4 185 240 330 10 15 20 30   180    220      325
+#healthy bmi range for height female
+#                             multiplier 1.0   1.5  1.5  2.0 2.5
+#(0)3 foot 8   45  60  85  dif           45         60   85
+#(10)4 feet    55  70  100 10 10 10 15   55         75   105
+#(30)4 foot 8  75  95  135 20 20 25 35   75         105  145
+#(50)5 foot 4  95  125 175 20 20 30 40   95         135  185
+#(70)6 feet    125 160 225 20 30 35 50         125  165  225
+#(90)6 foot 8  155 200 275 20 30 40 50         155  195  265
+#(100)7 feet   170 220 300 10 15 20 25         170  215  285
+
+actual_height_for_weight = {
+	if = {
+		limit = { is_alive = yes }
+		if = {
+			limit = { 
+				has_variable = height_genetic
+			}
+			value = actual_height
+		}
+		else = {
+			value = 50
+		}
+		add = 50
+		if = {
+			limit = { is_male = yes }
+			multiply = 1.1
+		}
+		subtract = 50
+	}
+	else = {
+		value = dead_height
+	}
+}
+
+dead_height = {
+	if = {
+		limit = { has_trait = tall_5 }
+		value = 125
+	}
+	else_if = {
+		limit = { has_trait = tall_4 }
+		value = 100
+	}
+	else_if = {
+		limit = { has_trait = tall_3 }
+		value = 80
+	}
+	else_if = {
+		limit = { has_trait = tall_2 }
+		value = 70
+	}
+	else_if = {
+		limit = { has_trait = tall_1 }
+		value = 60
+	}
+	else_if = {
+		limit = { has_trait = short_1 }
+		value = 100
+	}
+	else_if = {
+		limit = { has_trait = short_2 }
+		value = 40
+	}
+	else_if = {
+		limit = { has_trait = short_3 }
+		value = 30
+	}
+	else_if = {
+		limit = { has_trait = short_4 }
+		value = 20
+	}
+	else_if = {
+		limit = { has_trait = short_5 }
+		value = 10
+	}
+	else = {
+		value = 50
+	}
+	if = {
+		limit = { is_adult = no }
+		add = 50
+		multiply = {
+			value = age
+			divide = 16
+		}
+		subtract = 50
+	}
+}
+
+dwarf_height_genetic = {
+			value = {
+				value = var:height_genetic
+				multiply = 0.2
+			}
+		}
+
+giant_height_genetic = {
+			value = {
+				value = var:height_genetic
+				multiply = 0.2
+				add = 80
+			}
+		}
+
+actual_height = {
+	if = {
+		limit = { is_alive = yes }
+		if = {
+			limit = {
+				has_variable = height_genetic
+				has_variable = height_growth
+			}
+			value = actual_height_prelim
+			add = 50
+			multiply = var:height_growth
+			subtract = 50
+			max = 150
+		}
+		else_if = {
+			limit = { is_adult = yes }
+			value = actual_height_prelim
+		}
+		else = {
+			value = actual_height_prelim
+			add = 50
+			multiply = {
+				value = age
+				divide = 16
+				max = 1
+			}
+			subtract = 50
+		}
+	}
+	else = {
+		value = dead_height
+	}
+}
+	
+actual_height_prelim = {
+	if = {
+		limit = {
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = height_genetic
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		if = {
+			limit = { has_trait = dwarf }
+			value = dwarf_height_genetic
+		}
+		else_if = {
+			limit = { has_trait = giant }
+			value = giant_height_genetic
+		}
+		else = {
+			value = var:height_genetic
+		}
+	}
+	else = {
+		value = dead_height
+	}
+}
+
+
+metric_height = {
+		value = actual_height_for_weight
+		add = 50
+		divide = 150
+		multiply = 64
+		multiply = 2.54
+		add = 50.8
+	}
+	
+actual_visual_age = {
+	if = {
+		limit = { has_variable = visual_age }
+		if = {
+			limit = { 
+				var:visual_age <= 0
+				age <= 25
+			}
+			value = age
+		}
+		else = {
+			value = actual_visual_age_preliminary
+		}
+	}
+	else = {
+		value = age
+	}
+}
+
+	
+actual_visual_age_preliminary = {
+	value = 25
+	add = {
+	 value = var:visual_age
+	 multiply = 50
+	}
+	min = 25
+}

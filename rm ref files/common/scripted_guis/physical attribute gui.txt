@@ -1,0 +1,83 @@
+﻿breast_size_gui = {
+	scope = character
+
+	is_shown = {
+		trigger_if = {
+			limit = { is_female = yes }
+			Not = { has_character_flag = chest_gender_morph }
+		}
+		trigger_else = {
+			has_character_flag = chest_gender_morph
+		}
+		is_alive = yes
+		is_adult = yes
+		trigger_if = {
+			limit = {
+				is_alive = yes
+			}
+			has_variable = breast_size_genetic
+		}
+	}
+}
+
+us_height_gui = {
+	scope = character
+	
+	is_shown = {
+		is_alive = yes
+		has_game_rule = us_custom_units
+		trigger_if = {
+			limit = {
+				is_alive = yes
+			}
+			has_variable = height_genetic
+		}
+	}
+}
+
+metric_height_gui = {
+	scope = character
+	
+	is_shown = {
+		is_alive = yes
+		has_game_rule = metric_units
+		trigger_if = {
+			limit = {
+				is_alive = yes
+			}
+			has_variable = height_genetic
+		}
+	}
+}
+
+weight_gui = {
+	scope = character
+	
+	is_shown = {
+		is_alive = yes
+		trigger_if = {
+			limit = {
+				is_alive = yes
+			}
+			has_variable = height_genetic
+		}
+	}
+}
+
+player_notification_gui = {
+	scope = character
+	
+	is_shown = {
+		is_alive = yes
+		trigger_if = {
+			limit = {
+				is_alive = yes
+			}
+			Not = { has_variable = height_genetic }
+		}
+	}
+	
+	effect = {
+		trigger_event = { on_action = on_physical_variable }
+	}
+}

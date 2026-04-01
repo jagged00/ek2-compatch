@@ -1,0 +1,231 @@
+﻿
+set_waist_gene_1_effect = {
+	random_list = {
+		1 = { 
+			set_variable = {
+				name = waist_gene_1
+				value = {
+					fixed_range = { 
+						max = 100
+						min = 90
+					}   
+				}
+			}
+		}
+		2 = { 
+			set_variable = {
+				name = waist_gene_1
+				value = {
+					fixed_range = { 
+						max = 90
+						min = 80
+					}   
+				}
+			}
+		}
+		4 = { 
+			set_variable = {
+				name = waist_gene_1
+				value = {
+					fixed_range = { 
+						max = 80
+						min = 70
+					}   
+				}
+			}
+		}
+		6 = { 
+			set_variable = {
+				name = waist_gene_1
+				value = {
+					fixed_range = { 
+						max = 70
+						min = 60
+					}   
+				}
+			}
+		}
+		8 = { 
+			set_variable = {
+				name = waist_gene_1
+				value = {
+					fixed_range = { 
+						max = 60
+						min = 50
+					}   
+				}
+			}
+		}
+		8 = { 
+			set_variable = {
+				name = waist_gene_1
+				value = {
+					fixed_range = { 
+						max = 50
+						min = 40
+					}   
+				}
+			}
+		}
+		6 = { 
+			set_variable = {
+				name = waist_gene_1
+				value = {
+					fixed_range = { 
+						max = 40
+						min = 30
+					}   
+				}
+			}
+		}
+		4 = { 
+			set_variable = {
+				name = waist_gene_1
+				value = {
+					fixed_range = { 
+						max = 30
+						min = 20
+					}   
+				}
+			}
+		}
+		2 = { 
+			set_variable = {
+				name = waist_gene_1
+				value = {
+					fixed_range = { 
+						max = 20
+						min = 10
+					}   
+				}
+			}
+		}
+		1 = { 
+			set_variable = {
+				name = waist_gene_1
+				value = {
+					fixed_range = { 
+						max = 10
+						min = 0
+					}   
+				}
+			}
+		}
+	}
+}
+
+				
+set_waist_gene_2_effect = {
+	random_list = {
+		1 = { 
+			set_variable = {
+				name = waist_gene_2
+				value = {
+					fixed_range = { 
+						max = 100
+						min = 90
+					}   
+				}
+			}
+		}
+		2 = { 
+			set_variable = {
+				name = waist_gene_2
+				value = {
+					fixed_range = { 
+						max = 90
+						min = 80
+					}   
+				}
+			}
+		}
+		4 = { 
+			set_variable = {
+				name = waist_gene_2
+				value = {
+					fixed_range = { 
+						max = 80
+						min = 70
+					}   
+				}
+			}
+		}
+		6 = { 
+			set_variable = {
+				name = waist_gene_2
+				value = {
+					fixed_range = { 
+						max = 70
+						min = 60
+					}   
+				}
+			}
+		}
+		8 = { 
+			set_variable = {
+				name = waist_gene_2
+				value = {
+					fixed_range = { 
+						max = 60
+						min = 50
+					}   
+				}
+			}
+		}
+		8 = { 
+			set_variable = {
+				name = waist_gene_2
+				value = {
+					fixed_range = { 
+						max = 50
+						min = 40
+					}   
+				}
+			}
+		}
+		6 = { 
+			set_variable = {
+				name = waist_gene_2
+				value = {
+					fixed_range = { 
+						max = 40
+						min = 30
+					}   
+				}
+			}
+		}
+		4 = { 
+			set_variable = {
+				name = waist_gene_2
+				value = {
+					fixed_range = { 
+						max = 30
+						min = 20
+					}   
+				}
+			}
+		}
+		2 = { 
+			set_variable = {
+				name = waist_gene_2
+				value = {
+					fixed_range = { 
+						max = 20
+						min = 10
+					}   
+				}
+			}
+		}
+		1 = { 
+			set_variable = {
+				name = waist_gene_2
+				value = {
+					fixed_range = { 
+						max = 10
+						min = 0
+					}   
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,122 @@
+﻿
+add_height_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+	}
+	
+	on_accept = {
+		scope:recipient = { trigger_event = { on_action = on_physical_variable } }
+		scope:recipient = { save_scope_as = modified_character }
+		scope:actor = { trigger_event = body_modification.0001 }
+	}
+	
+	auto_accept = yes
+}
+
+
+add_breast_size_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+	}
+	
+	on_accept = {
+		scope:recipient = { trigger_event = { on_action = on_physical_variable } }
+		scope:recipient = { save_scope_as = modified_character }
+		scope:actor = { trigger_event = body_modification.1001 }
+	}
+	
+	auto_accept = yes
+}
+
+add_butt_size_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+	}
+	
+	on_accept = {
+		scope:recipient = { trigger_event = { on_action = on_physical_variable } }
+		scope:recipient = { save_scope_as = modified_character }
+		scope:actor = { trigger_event = body_modification.3001 }
+	}
+	
+	auto_accept = yes
+}
+
+add_muscles_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+	}
+	
+	on_accept = {
+		scope:recipient = { trigger_event = { on_action = on_physical_variable } }
+		scope:recipient = { save_scope_as = modified_character }
+		scope:actor = { trigger_event = body_modification.4000 }
+	}
+	
+	auto_accept = yes
+}
+
+change_visual_age_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+	}
+	
+	on_accept = {
+		scope:recipient = { trigger_event = { on_action = on_physical_variable } }
+		scope:recipient = { trigger_event = { on_action = on_add_visual_age_variable } }
+		scope:recipient = { save_scope_as = modified_character }
+		scope:actor = { trigger_event = body_modification.5001 }
+	}
+	
+	auto_accept = yes
+}
+
+add_shoulders_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+	}
+	
+	on_accept = {
+		scope:recipient = { trigger_event = { on_action = on_physical_variable } }
+		scope:recipient = { save_scope_as = modified_character }
+		scope:actor = { trigger_event = body_modification.6000 }
+	}
+	
+	auto_accept = yes
+}
+
+
+add_waist_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+	}
+	
+	on_accept = {
+		scope:recipient = { trigger_event = { on_action = on_physical_variable } }
+		scope:recipient = { save_scope_as = modified_character }
+		scope:actor = { trigger_event = body_modification.7000 }
+	}
+	
+	auto_accept = yes
+}

@@ -1,0 +1,71 @@
+﻿minimum_height_growth = {
+	value = age
+	if = {
+		limit = {
+			is_alive = yes
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = height_genetic
+			}
+		}
+		add = {
+			value = 50
+			subtract = var:height_genetic
+			divide = 2
+			min = 0
+		}
+	}
+	divide = 25
+	max = 1
+}
+
+maximum_height_growth = {
+	value = 0.1
+	multiply = age
+}
+
+minimum_puberty_growth = {
+	value = age
+	subtract = 15
+	divide = 10
+	max = 1
+	min = 0
+}
+
+capped_puberty_value = {
+	value = var:puberty_value
+	max = 1
+	min = 0
+}
+
+puberty_aging_value = {
+	value = 0
+	add = {
+		if = {
+			limit = { has_variable = puberty_start_age }
+			value = age
+			divide = var:puberty_start_age
+			multiply = 0.4
+		}
+		else = {
+			value = age
+			divide = 10
+			multiply = 0.4
+		}
+	}
+	if = {
+		limit = { has_variable = puberty_value }
+		add = {
+			value = var:puberty_value
+			divide = 1.25
+			multiply = 0.6
+		}
+	}
+	else = {
+		value = age
+		subtract = 10
+		divide = 15
+		multiply = 0.6
+	}
+	max = 1
+}

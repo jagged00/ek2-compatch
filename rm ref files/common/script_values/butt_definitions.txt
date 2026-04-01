@@ -1,0 +1,143 @@
+﻿massive_butt_value = 200
+big_butt_value = 120
+average_butt_value = 60
+small_butt_value = 30
+
+massive_butt_ratio = {
+	if = {
+		limit = { has_variable = butt_hip_size_total_variable }
+		if = {
+			limit = { var:butt_hip_size_total_variable >= massive_butt_value }
+			value = var:butt_hip_size_total_variable
+			divide = massive_butt_value
+		}
+		else_if = {
+			limit = { var:butt_hip_size_total_variable >= big_butt_value }
+			value = var:butt_hip_size_total_variable
+			subtract = big_butt_value
+			divide = {
+				value = massive_butt_value
+				subtract = big_butt_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+big_butt_ratio = {
+	if = {
+		limit = { has_variable = butt_hip_size_total_variable }
+		if = {
+			limit = { var:butt_hip_size_total_variable >= massive_butt_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:butt_hip_size_total_variable >= big_butt_value }
+			value = massive_butt_value
+			subtract = var:butt_hip_size_total_variable
+			divide = {
+				value = massive_butt_value
+				subtract = big_butt_value
+			}
+		}
+		else_if = {
+			limit = { var:butt_hip_size_total_variable >= average_butt_value }
+			value = var:butt_hip_size_total_variable
+			subtract = average_butt_value
+			divide = {
+				value = big_butt_value
+				subtract = average_butt_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+average_butt_ratio = {
+	if = {
+		limit = { has_variable = butt_hip_size_total_variable }
+		if = {
+			limit = { var:butt_hip_size_total_variable >= big_butt_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:butt_hip_size_total_variable >= average_butt_value }
+			value = big_butt_value
+			subtract = var:butt_hip_size_total_variable
+			divide = {
+				value = big_butt_value
+				subtract = average_butt_value
+			}
+		}
+		else_if = {
+			limit = { var:butt_hip_size_total_variable >= small_butt_value }
+			value = var:butt_hip_size_total_variable
+			subtract = small_butt_value
+			divide = {
+				value = average_butt_value
+				subtract = small_butt_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+small_butt_ratio = {
+	if = {
+		limit = { has_variable = butt_hip_size_total_variable }
+		if = {
+			limit = { var:butt_hip_size_total_variable >= average_butt_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:butt_hip_size_total_variable >= small_butt_value }
+			value = average_butt_value
+			subtract = var:butt_hip_size_total_variable
+			divide = {
+				value = average_butt_value
+				subtract = small_butt_value
+			}
+		}
+		else = {
+			value = var:butt_hip_size_total_variable
+			divide = small_butt_value
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+flat_butt_ratio = {
+	if = {
+		limit = { has_variable = butt_hip_size_total_variable }
+		if = {
+			limit = { var:butt_hip_size_total_variable >= small_butt_value }
+			value = 0
+		}
+		else = {
+			value = small_butt_value
+			subtract = var:butt_hip_size_total_variable
+			divide = small_butt_value
+			
+		}
+	}
+	else = {
+		value = 0
+	}
+}

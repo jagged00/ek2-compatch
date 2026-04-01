@@ -1,0 +1,351 @@
+﻿
+set_butt_size_gene_1_effect = {
+	random_list = {
+		1 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_big_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 100
+						min = 90
+					}   
+				}
+			}
+		}
+		2 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_big_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 90
+						min = 80
+					}   
+				}
+			}
+		}
+		3 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_big_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 80
+						min = 70
+					}   
+				}
+			}
+		}
+		4 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_big_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 70
+						min = 60
+					}   
+				}
+			}
+		}
+		6 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_medium_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 60
+						min = 50
+					}   
+				}
+			}
+		}
+		8 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_medium_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 50
+						min = 40
+					}   
+				}
+			}
+		}
+		10 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_medium_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 40
+						min = 30
+					}   
+				}
+			}
+		}
+		8 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_medium_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 30
+						min = 20
+					}   
+				}
+			}
+		}
+		6 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_small_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 20
+						min = 10
+					}   
+				}
+			}
+		}
+		4 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_small_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 10
+						min = 0
+					}   
+				}
+			}
+		}
+	}
+}
+
+				
+set_butt_size_gene_2_effect = {
+	random_list = {
+		1 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_big_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 100
+						min = 90
+					}   
+				}
+			}
+		}
+		2 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_big_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 90
+						min = 80
+					}   
+				}
+			}
+		}
+		3 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_big_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 80
+						min = 70
+					}   
+				}
+			}
+		}
+		4 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_big_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 70
+						min = 60
+					}   
+				}
+			}
+		}
+		6 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_medium_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 60
+						min = 50
+					}   
+				}
+			}
+		}
+		8 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_medium_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 50
+						min = 40
+					}   
+				}
+			}
+		}
+		10 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_medium_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 40
+						min = 30
+					}   
+				}
+			}
+		}
+		8 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_medium_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 30
+						min = 20
+					}   
+				}
+			}
+		}
+		6 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_small_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 20
+						min = 10
+					}   
+				}
+			}
+		}
+		4 = { 
+			trigger = {
+				Or = {
+					has_butt_traits = no
+					has_small_butt = yes
+				}
+			}
+			set_variable = {
+				name = butt_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 10
+						min = 0
+					}   
+				}
+			}
+		}
+	}
+}

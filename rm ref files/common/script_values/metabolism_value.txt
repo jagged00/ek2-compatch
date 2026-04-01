@@ -1,0 +1,29 @@
+﻿metabolism_value = {
+	if = {
+		limit = { is_alive = yes }
+		if = {
+			limit = { has_variable = upper_body_full_metabolic_gene }
+			value = var:upper_body_full_metabolic_gene
+		}
+		else_if = {
+			limit = { has_variable = upper_body_half_metabolic_gene }
+			value = var:upper_body_half_metabolic_gene
+		}
+		else_if = {
+			limit = { has_variable = body_mid_metabolic_gene }
+			value = var:body_mid_metabolic_gene
+		}
+		else_if = {
+			limit = { has_variable = lower_body_half_metabolic_gene }
+			value = var:lower_body_half_metabolic_gene
+		}
+		else_if = {
+			limit = { has_variable = lower_body_full_metabolic_gene }
+			value = var:lower_body_full_metabolic_gene
+		}
+	}
+	else = {
+		value = 50
+	}
+}
+

@@ -1,0 +1,35 @@
+﻿breast_size_mutation_chance = 10
+
+breast_size_mutation_max = 5
+
+breast_size_mutation_min = -5
+
+butt_size_mutation_chance = 10
+
+butt_size_mutation_max = 5
+
+butt_size_mutation_min = -5
+
+height_mutation_chance = 10
+
+height_mutation_max = 5
+
+height_mutation_min = -5
+
+hips_mutation_chance = 10
+
+hips_mutation_max = 5
+
+hips_mutation_min = -5
+
+waist_mutation_chance = 10
+
+waist_mutation_max = 5
+
+waist_mutation_min = -5
+
+shoulders_mutation_chance = 10
+
+shoulders_mutation_max = 5
+
+shoulders_mutation_min = -5

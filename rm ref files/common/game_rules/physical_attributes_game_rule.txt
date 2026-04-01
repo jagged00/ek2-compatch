@@ -1,0 +1,15 @@
+﻿measurement_units = {
+	default = us_custom_units
+
+	us_custom_units = {
+		flag = us_custom_units
+		flag = GG_can_change_rule
+	}
+	
+	metric_units = {
+		flag = metric_units
+		flag = GG_can_change_rule
+	}
+
+}
+

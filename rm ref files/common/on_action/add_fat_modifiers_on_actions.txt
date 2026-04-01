@@ -1,0 +1,391 @@
+﻿on_add_weight_modifier = {
+	effect = {
+		set_variable = {
+			name = actual_fat
+			value = actual_fat
+		}
+		if = {
+			limit = {
+				var:actual_fat < 30
+				var:actual_fat > -30
+			}
+			if = {
+				limit = { has_weight_modifier_trigger = yes }
+				remove_weight_modifier_effect = yes
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 40
+				var:actual_fat >= 30
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_1_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_1_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -30
+				var:actual_fat > -40
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_1_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_1_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 50
+				var:actual_fat >= 40
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_2_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_2_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -40
+				var:actual_fat > -50
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_2_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_2_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 60
+				var:actual_fat >= 50
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_3_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_3_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -50
+				var:actual_fat > -60
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_3_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_3_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 70
+				var:actual_fat >= 60
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_4_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_4_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -60
+				var:actual_fat > -70
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_4_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_4_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 80
+				var:actual_fat >= 70
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_5_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_5_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -70
+				var:actual_fat > -80
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_5_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_5_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 90
+				var:actual_fat >= 80
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_6_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_6_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -80
+				var:actual_fat > -90
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_6_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_6_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 100
+				var:actual_fat >= 90
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_7_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_7_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -90
+				var:actual_fat > -100
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_7_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_7_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 110
+				var:actual_fat >= 100
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_8_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_8_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -100
+				var:actual_fat > -110
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_8_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_8_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 120
+				var:actual_fat >= 110
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_9_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_9_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -110
+				var:actual_fat > -120
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_9_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_9_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 130
+				var:actual_fat >= 120
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_10_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_10_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -120
+				var:actual_fat > -130
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_10_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_10_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 140
+				var:actual_fat >= 130
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_11_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_11_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -130
+				var:actual_fat > -140
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_11_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_11_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 150
+				var:actual_fat >= 140
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_12_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_12_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -140
+				var:actual_fat > -150
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_12_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_12_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 160
+				var:actual_fat >= 150
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_13_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_13_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -150
+				var:actual_fat > -160
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_13_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_13_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 170
+				var:actual_fat >= 160
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_14_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_14_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -160
+				var:actual_fat > -170
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_14_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_14_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 180
+				var:actual_fat >= 170
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_15_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_15_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -170
+				var:actual_fat > -180
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_15_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_15_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat < 190
+				var:actual_fat >= 180
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_16_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_16_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -180
+				var:actual_fat > -190
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_16_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_16_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat >= 190
+			}
+			if = {
+				limit = { Not = { has_character_modifier = fat_17_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = fat_17_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_fat <= -190
+			}
+			if = {
+				limit = { Not = { has_character_modifier = thin_17_modifier } }
+				remove_weight_modifier_effect = yes
+				add_character_modifier = thin_17_modifier
+			}
+			add_character_modifier = thin_17_modifier
+		}
+	}
+}

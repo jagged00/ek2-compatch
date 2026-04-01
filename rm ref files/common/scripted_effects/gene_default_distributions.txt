@@ -1,0 +1,1088 @@
+﻿
+
+
+set_breast_size_gene_1_effect = {
+	random_list = {
+		1 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_big_good_3
+					has_trait = tits_big_bad_3
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 100
+						min = 90
+					}   
+				}
+			}
+		}
+		2 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_big_good_3
+					has_trait = tits_big_bad_3
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 90
+						min = 80
+					}   
+				}
+			} 
+		}
+		3 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_big_good_2
+					has_trait = tits_big_bad_2
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 80
+						min = 70
+					}   
+				}
+			}
+		}
+		4 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_big_good_2
+					has_trait = tits_big_bad_2
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 70
+						min = 60
+					}   
+				}
+			}
+		}
+		6 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_big_good_1
+					has_trait = tits_big_bad_1
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 60
+						min = 50
+					}   
+				}
+			}
+		}
+		8 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_big_good_1
+					has_trait = tits_big_bad_1
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 50
+						min = 40
+					}   
+				}
+			}
+		}
+		10 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_average
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 40
+						min = 30
+					}   
+				}
+			}
+		}
+		8 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_small_bad_1
+					has_trait = tits_small_good_1
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 30
+						min = 20
+					}   
+				}
+			}
+		}
+		6 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_small_bad_2
+					has_trait = tits_small_good_2
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 20
+						min = 10
+					}   
+				}
+			}
+		}
+		4 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_small_bad_3
+					has_trait = tits_small_good_3
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_1
+				value = {
+					fixed_range = { 
+						max = 10
+						min = 0
+					}   
+				}
+			}
+		}
+	}
+}
+				
+set_breast_size_gene_2_effect = {
+	random_list = {
+		1 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_big_good_3
+					has_trait = tits_big_bad_3
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 100
+						min = 90
+					}   
+				}
+			}
+		}
+		2 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_big_good_3
+					has_trait = tits_big_bad_3
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 90
+						min = 80
+					}   
+				}
+			} 
+		}
+		3 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_big_good_2
+					has_trait = tits_big_bad_2
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 80
+						min = 70
+					}   
+				}
+			}
+		}
+		4 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_big_good_2
+					has_trait = tits_big_bad_2
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 70
+						min = 60
+					}   
+				}
+			}
+		}
+		6 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_big_good_1
+					has_trait = tits_big_bad_1
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 60
+						min = 50
+					}   
+				}
+			}
+		}
+		8 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_big_good_1
+					has_trait = tits_big_bad_1
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 50
+						min = 40
+					}   
+				}
+			}
+		}
+		10 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_average
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 40
+						min = 30
+					}   
+				}
+			}
+		}
+		8 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_small_bad_1
+					has_trait = tits_small_good_1
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 30
+						min = 20
+					}   
+				}
+			}
+		}
+		6 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_small_bad_2
+					has_trait = tits_small_good_2
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 20
+						min = 10
+					}   
+				}
+			}
+		}
+		4 = { 
+			trigger = {
+				Or = {
+					has_breast_traits = no
+					has_trait = tits_small_bad_3
+					has_trait = tits_small_good_3
+				}
+			}
+			set_variable = {
+				name = breast_size_gene_2
+				value = {
+					fixed_range = { 
+						max = 10
+						min = 0
+					}   
+				}
+			}
+		}
+	}
+}
+			
+set_height_gene_1_effect = {
+	random_list = {
+		1 = {
+			trigger = {
+				has_trait = tall_5
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 150
+						min = 100
+					}   
+				}
+			}
+		}
+		1 = {
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_4
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 100
+						min = 95
+					}   
+				}
+			}
+		}
+		2 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_4
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 95
+						min = 90
+					}   
+				}
+			}
+		}
+		4 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_4
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 90
+						min = 85
+					}   
+				}
+			}
+		}
+		8 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_4
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 85
+						min = 80
+					}   
+				}
+			}
+		}
+		16 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_3
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 80
+						min = 75
+					}   
+				}
+			}
+		}
+		32 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_3
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 75
+						min = 70
+					}   
+				}
+			}
+		}
+		64 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_2
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 70
+						min = 65
+					}   
+				}
+			}
+		}
+		96 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_2
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 65
+						min = 60
+					}   
+				}
+			}
+		}
+		128 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_1
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 60
+						min = 55
+					}   
+				}
+			}
+		}
+		160 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = average_height
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 55
+						min = 50
+					}   
+				}
+			}
+		}
+		160 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = average_height
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 50
+						min = 45
+					}   
+				}
+			}
+		}
+		128 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_1
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 45
+						min = 40
+					}   
+				}
+			}
+		}
+		96 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_2
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 40
+						min = 35
+					}   
+				}
+			}
+		}
+		64 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_2
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 35
+						min = 30
+					}   
+				}
+			}
+		}
+		32 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_3
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 30
+						min = 25
+					}   
+				}
+			}
+		}
+		1 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_3
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 25
+						min = 20
+					}   
+				}
+			}
+		}
+		1 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_4
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 20
+						min = 15
+					}   
+				}
+			}
+		}
+		1 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_4
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 15
+						min = 10
+					}   
+				}
+			}
+		}
+		1 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_4
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 10
+						min = 5
+					}   
+				}
+			}
+		}
+		1 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_4
+				}
+			}
+			set_variable = {
+				name = height_gene_1
+				value = {
+					fixed_range = { 
+						max = 5
+						min = 0
+					}   
+				}
+			}
+		}
+	}
+}
+				
+set_height_gene_2_effect = {
+	random_list = {
+		1 = {
+			trigger = {
+				has_trait = tall_5
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 150
+						min = 100
+					}   
+				}
+			}
+		}
+		1 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_4
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 100
+						min = 95
+					}   
+				}
+			}
+		}
+		2 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_4
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 95
+						min = 90
+					}   
+				}
+			}
+		}
+		4 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_4
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 90
+						min = 85
+					}   
+				}
+			}
+		}
+		8 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_4
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 85
+						min = 80
+					}   
+				}
+			}
+		}
+		16 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_3
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 80
+						min = 75
+					}   
+				}
+			}
+		}
+		32 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_3
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 75
+						min = 70
+					}   
+				}
+			}
+		}
+		64 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_2
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 70
+						min = 65
+					}   
+				}
+			}
+		}
+		96 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_2
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 65
+						min = 60
+					}   
+				}
+			}
+		}
+		128 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = tall_1
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 60
+						min = 55
+					}   
+				}
+			}
+		}
+		160 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = average_height
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 55
+						min = 50
+					}   
+				}
+			}
+		}
+		160 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = average_height
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 50
+						min = 45
+					}   
+				}
+			}
+		}
+		128 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_1
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 45
+						min = 40
+					}   
+				}
+			}
+		}
+		96 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_2
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 40
+						min = 35
+					}   
+				}
+			}
+		}
+		64 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_2
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 35
+						min = 30
+					}   
+				}
+			}
+		}
+		32 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_3
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 30
+						min = 25
+					}   
+				}
+			}
+		}
+		1 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_3
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 25
+						min = 20
+					}   
+				}
+			}
+		}
+		1 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_4
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 20
+						min = 15
+					}   
+				}
+			}
+		}
+		1 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_4
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 15
+						min = 10
+					}   
+				}
+			}
+		}
+		1 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_4
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 10
+						min = 5
+					}   
+				}
+			}
+		}
+		1 = { 
+			trigger = {
+				Or = {
+					has_height_trait = no
+					has_trait = short_4
+				}
+			}
+			set_variable = {
+				name = height_gene_2
+				value = {
+					fixed_range = { 
+						max = 5
+						min = 0
+					}   
+				}
+			}
+		}
+	}
+}

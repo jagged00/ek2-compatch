@@ -1,0 +1,142 @@
+﻿
+	
+on_seed_height_trait = {
+	trigger = {
+		has_height_trait = no
+	}
+	effect = {
+		trigger_event = { 
+			on_action = on_height_trait
+			days = 5
+		}
+	}
+}
+
+on_height_trait = {
+		trigger = {
+			has_variable = height_genetic
+			has_variable = height_growth
+		}
+		effect = {
+			remove_variable = actual_height_variable
+			set_variable = {
+				name = actual_height_variable
+				value = actual_height
+			}
+			if = { 
+				limit = { 
+					var:actual_height_variable < 55
+					var:actual_height_variable >= 45
+				}
+				if = {
+					limit = { Not = { has_trait = average_height } }
+					remove_height_trait_effect = yes
+					add_trait = average_height
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_height_variable < 65
+					var:actual_height_variable >= 55
+				}
+				if = {
+					limit = { Not = { has_trait = tall_1 } }
+					remove_height_trait_effect = yes
+					add_trait = tall_1
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_height_variable < 45
+					var:actual_height_variable >= 35
+				}
+				if = {
+					limit = { Not = { has_trait = short_1 } }
+					remove_height_trait_effect = yes
+					add_trait = short_1
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_height_variable < 75
+					var:actual_height_variable >= 65
+				}
+				if = {
+					limit = { Not = { has_trait = tall_2 } }
+					remove_height_trait_effect = yes
+					add_trait = tall_2
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_height_variable < 35
+					var:actual_height_variable >= 25
+				}
+				if = {
+					limit = { Not = { has_trait = short_2 } }
+					remove_height_trait_effect = yes
+					add_trait = short_2
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_height_variable < 85
+					var:actual_height_variable >= 75
+				}
+				if = {
+					limit = { Not = { has_trait = tall_3 } }
+					remove_height_trait_effect = yes
+					add_trait = tall_3
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_height_variable < 25
+					var:actual_height_variable >= 15
+				}
+				if = {
+					limit = { Not = { has_trait = short_3 } }
+					remove_height_trait_effect = yes
+					add_trait = short_3
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_height_variable < 125
+					var:actual_height_variable >= 85
+				}
+				if = {
+					limit = { Not = { has_trait = tall_4 } }
+					remove_height_trait_effect = yes
+					add_trait = tall_4
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_height_variable < 15
+					var:actual_height_variable >= 0
+				}
+				if = {
+					limit = { Not = { has_trait = short_4 } }
+					remove_height_trait_effect = yes
+					add_trait = short_4
+				}
+			}
+			else_if = { 
+				limit = { var:actual_height_variable >= 125 }
+				if = {
+					limit = { Not = { has_trait = tall_5 } }
+					remove_height_trait_effect = yes
+					add_trait = tall_5
+				}
+			}
+			else_if = {
+				limit = { var:actual_height_variable < 0 }
+				if = {
+					limit = { Not = { has_trait = short_5 } }
+					remove_height_trait_effect = yes
+					add_trait = short_5
+				}
+			}
+		}
+	}

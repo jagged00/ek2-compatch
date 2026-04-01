@@ -1,0 +1,17 @@
+﻿
+milk_production_per_child = {
+	value = var:carn_milk_production
+	divide = num_of_relation_breastfeeding_adult
+}
+
+six_month_weening = 15
+twelve_month_weening = 30
+eighteen_month_weening = 45
+twenty_four_month_weening = 60
+thirty_month_weening = 75
+
+well_fed_baby_1_health_bonus = 0.2
+well_fed_baby_2_health_bonus = 0.4
+well_fed_baby_3_health_bonus = 0.6
+well_fed_baby_4_health_bonus = 0.8
+well_fed_baby_5_health_bonus = 1.0

@@ -1,0 +1,232 @@
+﻿on_add_muscle_modifier = {
+	trigger = {
+		is_alive = yes
+		trigger_if = {
+			limit = { is_alive = yes }
+			has_variable = cbo_muscles
+			has_variable = cbo_lower_body_muscles
+		}
+	}
+	effect = {
+		set_variable = {
+			name = actual_muscle
+			value = actual_muscle
+		}
+		if = {
+			limit = { var:actual_muscle < 10 }
+			if = {
+				limit = { has_muscle_modifier_trigger = yes }
+				remove_muscle_modifier_effect = yes
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 20
+				var:actual_muscle >= 10
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_1_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_1_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 30
+				var:actual_muscle >= 20
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_2_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_2_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 40
+				var:actual_muscle >= 30
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_3_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_3_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 50
+				var:actual_muscle >= 40
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_4_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_4_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 60
+				var:actual_muscle >= 50
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_5_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_5_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 70
+				var:actual_muscle >= 60
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_6_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_6_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle <= 80
+				var:actual_muscle > 70
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_7_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_7_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 90
+				var:actual_muscle >= 80
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_8_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_8_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 100
+				var:actual_muscle >= 90
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_9_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_9_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 110
+				var:actual_muscle >= 100
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_10_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_10_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 120
+				var:actual_muscle >= 110
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_11_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_11_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 130
+				var:actual_muscle >= 120
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_12_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_12_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 140
+				var:actual_muscle >= 130
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_13_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_13_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 150
+				var:actual_muscle >= 140
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_14_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_14_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 160
+				var:actual_muscle >= 150
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_15_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_15_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 170
+				var:actual_muscle >= 160
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_16_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_16_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 180
+				var:actual_muscle >= 170
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_17_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_17_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle < 190
+				var:actual_muscle >= 180
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_18_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_18_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_muscle >= 190
+			}
+			if = {
+				limit = { Not = { has_character_modifier = muscular_19_modifier } }
+				remove_muscle_modifier_effect = yes
+				add_character_modifier = muscular_19_modifier
+			}
+		}
+		remove_variable = actual_muscle
+	}
+}

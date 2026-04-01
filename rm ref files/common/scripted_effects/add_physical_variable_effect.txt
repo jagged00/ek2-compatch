@@ -1,0 +1,2068 @@
+﻿add_breast_variable_effect = {
+	if = {
+		limit = {
+			exists = scope:real_father 
+			exists = scope:mother
+			trigger_if = {
+				limit = { 
+					exists = scope:real_father 
+					exists = scope:mother
+				}
+				scope:real_father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:real_father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:real_father = { has_variable = breast_size_gene_1 }
+					scope:real_father = { has_variable = breast_size_gene_2 }
+					scope:mother = { has_variable = breast_size_gene_1 }
+					scope:mother = { has_variable = breast_size_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = breast_size_gene_1
+				value = scope:real_father.var:breast_size_gene_1
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = breast_size_gene_2
+				value = scope:mother.var:breast_size_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = breast_size_gene_1 } }
+			set_variable = {
+				name = breast_size_gene_1
+				value = scope:real_father.var:breast_size_gene_2
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = breast_size_gene_2 } }
+			set_variable = {
+				name = breast_size_gene_2
+				value = scope:mother.var:breast_size_gene_2
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			exists = scope:father
+			exists = scope:mother
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					exists = scope:mother
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:father = { has_variable = breast_size_gene_1 }
+					scope:father = { has_variable = breast_size_gene_2 }
+					scope:mother = { has_variable = breast_size_gene_1 }
+					scope:mother = { has_variable = breast_size_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = breast_size_gene_1
+				value = scope:father.var:breast_size_gene_1
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = breast_size_gene_2
+				value = scope:mother.var:breast_size_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = breast_size_gene_1 } }
+			set_variable = {
+				name = breast_size_gene_1
+				value = scope:father.var:breast_size_gene_2
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = breast_size_gene_2 } }
+			set_variable = {
+				name = breast_size_gene_2
+				value = scope:mother.var:breast_size_gene_2
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:real_father 
+			trigger_if = {
+				limit = { exists = scope:real_father }
+				scope:real_father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:real_father = { is_alive = yes } }
+					scope:real_father = { has_variable = breast_size_gene_1 }
+					scope:real_father = { has_variable = breast_size_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = breast_size_gene_1
+				value = scope:real_father.var:breast_size_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = breast_size_gene_1 } }
+			set_variable = {
+				name = breast_size_gene_1
+				value = scope:real_father.var:breast_size_gene_2
+			}
+		}
+		set_breast_size_gene_2_effect = yes
+	}
+	else_if = {
+		limit = { 
+			exists = scope:father 
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:father = { is_alive = yes } }
+					scope:father = { has_variable = breast_size_gene_1 }
+					scope:father = { has_variable = breast_size_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = breast_size_gene_1
+				value = scope:father.var:breast_size_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = breast_size_gene_1 } }
+			set_variable = {
+				name = breast_size_gene_1
+				value = scope:father.var:breast_size_gene_2
+			}
+		}
+		set_breast_size_gene_2_effect = yes
+	}
+	else_if = {
+		limit = { 
+			exists = scope:mother
+			trigger_if = {
+				limit = { exists = scope:mother }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:mother = { is_alive = yes } }
+					scope:mother = { has_variable = breast_size_gene_1 }
+					scope:mother = { has_variable = breast_size_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = breast_size_gene_2
+				value = scope:mother.var:breast_size_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = breast_size_gene_2 } }
+			set_variable = {
+				name = breast_size_gene_2
+				value = scope:mother.var:breast_size_gene_2
+			}
+		}
+		set_breast_size_gene_1_effect = yes
+	}
+	else = {
+		set_breast_size_gene_1_effect = yes
+		set_breast_size_gene_2_effect = yes
+	}
+	random = {
+		chance = breast_size_mutation_chance
+		change_variable = {
+			name = breast_size_gene_1
+			add = {
+				value = {
+					fixed_range = { 
+						max = breast_size_mutation_max
+						min = breast_size_mutation_min
+					}
+				}
+			}
+		}
+	}
+	random = {
+		chance = breast_size_mutation_chance
+		change_variable = {
+			name = breast_size_gene_2
+			add = {
+				value = {
+					fixed_range = { 
+						max = breast_size_mutation_max
+						min = breast_size_mutation_min
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = { var:breast_size_gene_1 < 0 }
+		remove_variable = breast_size_gene_1
+		set_variable = {
+			name = breast_size_gene_1
+			value = 0
+		}
+	}
+	if = {
+		limit = { var:breast_size_gene_2 < 0 }
+		remove_variable = breast_size_gene_2
+		set_variable = {
+			name = breast_size_gene_2
+			value = 0
+		}
+	}
+	if = {
+		limit = { check_breast_gene_max_min > 0 }
+		set_variable = {
+			name = breast_size_genetic
+			value = {
+				value = {
+					fixed_range = { 
+						max = var:breast_size_gene_1
+						min = var:breast_size_gene_2
+					}
+				}
+				add = {
+					fixed_range = { 
+						max = var:breast_size_gene_1
+						min = var:breast_size_gene_2
+					}
+				}
+				divide = 2
+			}
+		}
+	}
+	else = {
+		set_variable = {
+			name = breast_size_genetic
+			value = {
+				value = {
+					fixed_range = {
+						min = var:breast_size_gene_1
+						max = var:breast_size_gene_2
+					}
+				}
+				add = {
+					fixed_range = {
+						min = var:breast_size_gene_1
+						max = var:breast_size_gene_2
+					}
+				}
+				divide = 2
+			}
+		}
+	}
+	trigger_event = {
+		on_action = on_carn_tits_trait
+	}
+}
+
+add_butt_variable_effect = {
+	if = {
+		limit = { 
+			exists = scope:real_father 
+			exists = scope:mother
+			trigger_if = {
+				limit = { 
+					exists = scope:real_father 
+					exists = scope:mother
+				}
+				scope:real_father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:real_father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:real_father = { has_variable = butt_size_gene_1 }
+					scope:real_father = { has_variable = butt_size_gene_2 }
+					scope:mother = { has_variable = butt_size_gene_1 }
+					scope:mother = { has_variable = butt_size_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = butt_size_gene_1
+				value = scope:real_father.var:butt_size_gene_1
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = butt_size_gene_2
+				value = scope:mother.var:butt_size_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = butt_size_gene_1 } }
+			set_variable = {
+				name = butt_size_gene_1
+				value = scope:real_father.var:butt_size_gene_2
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = butt_size_gene_2 } }
+			set_variable = {
+				name = butt_size_gene_2
+				value = scope:mother.var:butt_size_gene_2
+			}
+		}
+		if = {
+			limit = { check_butt_gene_max_min > 0 }
+			set_variable = {
+				name = butt_size_genetic
+				value = {
+					fixed_range = { 
+						max = var:butt_size_gene_1
+						min = var:butt_size_gene_2
+					}
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				name = butt_size_genetic
+				value = {
+					fixed_range = { 
+						max = var:butt_size_gene_2
+						min = var:butt_size_gene_1
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:father
+			exists = scope:mother
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					exists = scope:mother
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:father = { has_variable = butt_size_gene_1 }
+					scope:father = { has_variable = butt_size_gene_2 }
+					scope:mother = { has_variable = butt_size_gene_1 }
+					scope:mother = { has_variable = butt_size_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = butt_size_gene_1
+				value = scope:father.var:butt_size_gene_1
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = butt_size_gene_2
+				value = scope:mother.var:butt_size_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = butt_size_gene_1 } }
+			set_variable = {
+				name = butt_size_gene_1
+				value = scope:father.var:butt_size_gene_2
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = butt_size_gene_2 } }
+			set_variable = {
+				name = butt_size_gene_2
+				value = scope:mother.var:butt_size_gene_2
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:real_father 
+			trigger_if = {
+				limit = { exists = scope:real_father }
+				scope:real_father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:real_father = { is_alive = yes } }
+					scope:real_father = { has_variable = butt_size_gene_1 }
+					scope:real_father = { has_variable = butt_size_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = butt_size_gene_1
+				value = scope:real_father.var:butt_size_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = butt_size_gene_1 } }
+			set_variable = {
+				name = butt_size_gene_1
+				value = scope:real_father.var:butt_size_gene_2
+			}
+		}
+		set_butt_size_gene_2_effect = yes
+	}
+	else_if = {
+		limit = { 
+			exists = scope:father 
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:father = { is_alive = yes } }
+					scope:father = { has_variable = butt_size_gene_1 }
+					scope:father = { has_variable = butt_size_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = butt_size_gene_1
+				value = scope:father.var:butt_size_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = butt_size_gene_1 } }
+			set_variable = {
+				name = butt_size_gene_1
+				value = scope:father.var:butt_size_gene_2
+			}
+		}
+		set_butt_size_gene_2_effect = yes
+	}
+	else_if = {
+		limit = { 
+			exists = scope:mother
+			trigger_if = {
+				limit = { exists = scope:mother }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:mother = { is_alive = yes } }
+					scope:mother = { has_variable = butt_size_gene_1 }
+					scope:mother = { has_variable = butt_size_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = butt_size_gene_2
+				value = scope:mother.var:butt_size_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = butt_size_gene_2 } }
+			set_variable = {
+				name = butt_size_gene_2
+				value = scope:mother.var:butt_size_gene_2
+			}
+		}
+		set_butt_size_gene_1_effect = yes
+	}
+	else = {
+		set_butt_size_gene_1_effect = yes
+		set_butt_size_gene_2_effect = yes
+	}
+	random = {
+		chance = butt_size_mutation_chance
+		change_variable = {
+			name = butt_size_gene_1
+			add = {
+				value = {
+					fixed_range = { 
+						max = butt_size_mutation_max
+						min = butt_size_mutation_min
+					}
+				}
+			}
+		}
+	}
+	random = {
+		chance = butt_size_mutation_chance
+		change_variable = {
+			name = butt_size_gene_2
+			add = {
+				value = {
+					fixed_range = { 
+						max = butt_size_mutation_max
+						min = butt_size_mutation_min
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_butt_gene_max_min > 0 }
+		set_variable = {
+			name = butt_size_genetic
+			value = {
+				value = {
+					fixed_range = { 
+						max = var:butt_size_gene_1
+						min = var:butt_size_gene_2
+					}
+				}
+				add = {
+					fixed_range = { 
+						max = var:butt_size_gene_1
+						min = var:butt_size_gene_2
+					}
+				}
+				divide = 2
+				if = {
+					limit = { is_male = yes }
+					divide = 2
+				}
+			}
+		}
+	}
+	else = {
+		set_variable = {
+			name = butt_size_genetic
+			value = {
+				value = {
+					fixed_range = { 
+						min = var:butt_size_gene_1
+						max = var:butt_size_gene_2
+					}
+				}
+				add = {
+					fixed_range = { 
+						min = var:butt_size_gene_1
+						max = var:butt_size_gene_2
+					}
+				}
+				divide = 2
+				if = {
+					limit = { is_male = yes }
+					divide = 2
+				}
+			}
+		}
+	}
+	trigger_event = { 
+		on_action = on_butt_trait
+	}
+}
+
+add_height_variable_effect = {
+	if = {
+		limit = { 
+			exists = scope:real_father 
+			exists = scope:mother
+			trigger_if = {
+				limit = { 
+					exists = scope:real_father 
+					exists = scope:mother
+				}
+				scope:real_father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:real_father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:real_father = { has_variable = height_gene_1 }
+					scope:real_father = { has_variable = height_gene_2 }
+					scope:mother = { has_variable = height_gene_1 }
+					scope:mother = { has_variable = height_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = height_gene_1
+				value = scope:real_father.var:height_gene_1
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = height_gene_2
+				value = scope:mother.var:height_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_1 } }
+			set_variable = {
+				name = height_gene_1
+				value = scope:real_father.var:height_gene_2
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_2 } }
+			set_variable = {
+				name = height_gene_2
+				value = scope:mother.var:height_gene_2
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:father
+			exists = scope:mother
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					exists = scope:mother
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:father = { has_variable = height_gene_1 }
+					scope:father = { has_variable = height_gene_2 }
+					scope:mother = { has_variable = height_gene_1 }
+					scope:mother = { has_variable = height_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = height_gene_1
+				value = scope:father.var:height_gene_1
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = height_gene_2
+				value = scope:mother.var:height_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_1 } }
+			set_variable = {
+				name = height_gene_1
+				value = scope:father.var:height_gene_2
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_2 } }
+			set_variable = {
+				name = height_gene_2
+				value = scope:mother.var:height_gene_2
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:real_father 
+			trigger_if = {
+				limit = { exists = scope:real_father }
+				scope:real_father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:real_father = { is_alive = yes } }
+					scope:real_father = { has_variable = height_gene_1 }
+					scope:real_father = { has_variable = height_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = height_gene_1
+				value = scope:real_father.var:height_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_1 } }
+			set_variable = {
+				name = height_gene_1
+				value = scope:real_father.var:height_gene_2
+			}
+		}
+		set_height_gene_2_effect = yes
+	}
+	else_if = {
+		limit = { 
+			exists = scope:father 
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:father = { is_alive = yes } }
+					scope:father = { has_variable = height_gene_1 }
+					scope:father = { has_variable = height_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = height_gene_1
+				value = scope:father.var:height_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_1 } }
+			set_variable = {
+				name = height_gene_1
+				value = scope:father.var:height_gene_2
+			}
+		}
+		set_height_gene_2_effect = yes
+	}
+	else_if = {
+		limit = { 
+			exists = scope:mother
+			trigger_if = {
+				limit = { exists = scope:mother }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:mother = { is_alive = yes } }
+					scope:mother = { has_variable = height_gene_1 }
+					scope:mother = { has_variable = height_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = height_gene_2
+				value = scope:mother.var:height_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_2 } }
+			set_variable = {
+				name = height_gene_2
+				value = scope:mother.var:height_gene_2
+			}
+		}
+		set_height_gene_1_effect = yes
+	}
+	else = {
+		set_height_gene_1_effect = yes
+		set_height_gene_2_effect = yes
+	}
+	random = {
+		chance = height_mutation_chance
+		change_variable = {
+			name = height_gene_1
+			add = {
+				value = {
+					fixed_range = { 
+						max = height_mutation_max
+						min = height_mutation_min
+					}
+				}
+			}
+		}
+	}
+	random = {
+		chance = height_mutation_chance
+		change_variable = {
+			name = height_gene_2
+			add = {
+				value = {
+					fixed_range = { 
+						max = height_mutation_max
+						min = height_mutation_min
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_height_gene_max_min > 0 }
+		set_variable = {
+			name = height_genetic
+			value = {
+				value = {
+					fixed_range = { 
+						max = var:height_gene_1
+						min = var:height_gene_2
+					}
+				}
+				add = {
+					fixed_range = { 
+						max = var:height_gene_1
+						min = var:height_gene_2
+					}
+				}
+				divide = 2
+			}
+		}
+	}
+	else = {
+		set_variable = {
+			name = height_genetic
+			value = {
+				value = {
+					fixed_range = { 
+						min = var:height_gene_1
+						max = var:height_gene_2
+					}
+				}
+				add = {
+					fixed_range = { 
+						min = var:height_gene_1
+						max = var:height_gene_2
+					}
+				}
+				divide = 2
+			}
+		}
+	}
+	trigger_event = { 
+		on_action = on_height_trait
+	}
+}
+
+
+add_hips_variable_effect = {
+	if = {
+		limit = { 
+			exists = scope:real_father 
+			exists = scope:mother
+			trigger_if = {
+				limit = { 
+					exists = scope:real_father 
+					exists = scope:mother
+				}
+				scope:real_father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:real_father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:real_father = { has_variable = hips_gene_1 }
+					scope:real_father = { has_variable = hips_gene_2 }
+					scope:mother = { has_variable = hips_gene_1 }
+					scope:mother = { has_variable = hips_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = hips_gene_1
+				value = scope:real_father.var:hips_gene_1
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = hips_gene_2
+				value = scope:mother.var:hips_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = hips_gene_1 } }
+			set_variable = {
+				name = hips_gene_1
+				value = scope:real_father.var:hips_gene_2
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = hips_gene_2 } }
+			set_variable = {
+				name = hips_gene_2
+				value = scope:mother.var:hips_gene_2
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:father
+			exists = scope:mother
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					exists = scope:mother
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:father = { has_variable = hips_gene_1 }
+					scope:father = { has_variable = hips_gene_2 }
+					scope:mother = { has_variable = hips_gene_1 }
+					scope:mother = { has_variable = hips_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = hips_gene_1
+				value = scope:father.var:hips_gene_1
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = hips_gene_2
+				value = scope:mother.var:hips_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = hips_gene_1 } }
+			set_variable = {
+				name = hips_gene_1
+				value = scope:father.var:hips_gene_2
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = hips_gene_2 } }
+			set_variable = {
+				name = hips_gene_2
+				value = scope:mother.var:hips_gene_2
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:real_father 
+			trigger_if = {
+				limit = { exists = scope:real_father }
+				scope:real_father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:real_father = { is_alive = yes } }
+					scope:real_father = { has_variable = hips_gene_1 }
+					scope:real_father = { has_variable = hips_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = hips_gene_1
+				value = scope:real_father.var:hips_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = hips_gene_1 } }
+			set_variable = {
+				name = hips_gene_1
+				value = scope:real_father.var:hips_gene_2
+			}
+		}
+		set_hips_gene_2_effect = yes
+	}
+	else_if = {
+		limit = { 
+			exists = scope:father 
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:father = { is_alive = yes } }
+					scope:father = { has_variable = hips_gene_1 }
+					scope:father = { has_variable = hips_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = hips_gene_1
+				value = scope:father.var:hips_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = hips_gene_1 } }
+			set_variable = {
+				name = hips_gene_1
+				value = scope:father.var:hips_gene_2
+			}
+		}
+		set_hips_gene_2_effect = yes
+	}
+	else_if = {
+		limit = { 
+			exists = scope:mother
+			trigger_if = {
+				limit = { exists = scope:mother }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:mother = { is_alive = yes } }
+					scope:mother = { has_variable = hips_gene_1 }
+					scope:mother = { has_variable = hips_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = hips_gene_2
+				value = scope:mother.var:hips_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = hips_gene_2 } }
+			set_variable = {
+				name = hips_gene_2
+				value = scope:mother.var:hips_gene_2
+			}
+		}
+		set_hips_gene_1_effect = yes
+	}
+	else = {
+		set_hips_gene_1_effect = yes
+		set_hips_gene_2_effect = yes
+	}
+	random = {
+		chance = hips_mutation_chance
+		change_variable = {
+			name = hips_gene_1
+			add = {
+				value = {
+					fixed_range = { 
+						max = hips_mutation_max
+						min = hips_mutation_min
+					}
+				}
+			}
+		}
+	}
+	random = {
+		chance = hips_mutation_chance
+		change_variable = {
+			name = hips_gene_2
+			add = {
+				value = {
+					fixed_range = { 
+						max = hips_mutation_max
+						min = hips_mutation_min
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_hips_gene_max_min > 0 }
+		set_variable = {
+			name = hips_genetic
+			value = {
+				value = {
+					fixed_range = { 
+						max = var:hips_gene_1
+						min = var:hips_gene_2
+					}
+				}
+				add = {
+					fixed_range = { 
+						max = var:hips_gene_1
+						min = var:hips_gene_2
+					}
+				}
+				divide = 2
+				if = {
+					limit = { is_male = yes }
+					divide = 2
+				}
+			}
+		}
+	}
+	else = {
+		set_variable = {
+			name = hips_genetic
+			value = {
+				value = {
+					fixed_range = { 
+						min = var:hips_gene_1
+						max = var:hips_gene_2
+					}
+				}
+				add = {
+					fixed_range = { 
+						min = var:hips_gene_1
+						max = var:hips_gene_2
+					}
+				}
+				divide = 2
+				if = {
+					limit = { is_male = yes }
+					divide = 2
+				}
+			}
+		}
+	}
+}
+	
+
+
+add_waist_variable_effect = {
+	if = {
+		limit = { 
+			exists = scope:real_father 
+			exists = scope:mother
+			trigger_if = {
+				limit = { 
+					exists = scope:real_father 
+					exists = scope:mother
+				}
+				scope:real_father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:real_father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:real_father = { has_variable = waist_gene_1 }
+					scope:real_father = { has_variable = waist_gene_2 }
+					scope:mother = { has_variable = waist_gene_1 }
+					scope:mother = { has_variable = waist_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = waist_gene_1
+				value = scope:real_father.var:waist_gene_1
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = waist_gene_2
+				value = scope:mother.var:waist_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = waist_gene_1 } }
+			set_variable = {
+				name = waist_gene_1
+				value = scope:real_father.var:waist_gene_2
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = waist_gene_2 } }
+			set_variable = {
+				name = waist_gene_2
+				value = scope:mother.var:waist_gene_2
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:father
+			exists = scope:mother
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					exists = scope:mother
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:father = { has_variable = waist_gene_1 }
+					scope:father = { has_variable = waist_gene_2 }
+					scope:mother = { has_variable = waist_gene_1 }
+					scope:mother = { has_variable = waist_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = waist_gene_1
+				value = scope:father.var:waist_gene_1
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = waist_gene_2
+				value = scope:mother.var:waist_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = waist_gene_1 } }
+			set_variable = {
+				name = waist_gene_1
+				value = scope:father.var:waist_gene_2
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = waist_gene_2 } }
+			set_variable = {
+				name = waist_gene_2
+				value = scope:mother.var:waist_gene_2
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:real_father 
+			trigger_if = {
+				limit = { exists = scope:real_father }
+				scope:real_father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:real_father = { is_alive = yes } }
+					scope:real_father = { has_variable = waist_gene_1 }
+					scope:real_father = { has_variable = waist_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = waist_gene_1
+				value = scope:real_father.var:waist_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = waist_gene_1 } }
+			set_variable = {
+				name = waist_gene_1
+				value = scope:real_father.var:waist_gene_2
+			}
+		}
+		set_waist_gene_2_effect = yes
+	}
+	else_if = {
+		limit = { 
+			exists = scope:father 
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:father = { is_alive = yes } }
+					scope:father = { has_variable = waist_gene_1 }
+					scope:father = { has_variable = waist_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = waist_gene_1
+				value = scope:father.var:waist_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = waist_gene_1 } }
+			set_variable = {
+				name = waist_gene_1
+				value = scope:father.var:waist_gene_2
+			}
+		}
+		set_waist_gene_2_effect = yes
+	}
+	else_if = {
+		limit = { 
+			exists = scope:mother
+			trigger_if = {
+				limit = { exists = scope:mother }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:mother = { is_alive = yes } }
+					scope:mother = { has_variable = waist_gene_1 }
+					scope:mother = { has_variable = waist_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = waist_gene_2
+				value = scope:mother.var:waist_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = waist_gene_2 } }
+			set_variable = {
+				name = waist_gene_2
+				value = scope:mother.var:waist_gene_2
+			}
+		}
+		set_waist_gene_1_effect = yes
+	}
+	else = {
+		set_waist_gene_1_effect = yes
+		set_waist_gene_2_effect = yes
+	}
+	random = {
+		chance = waist_mutation_chance
+		change_variable = {
+			name = waist_gene_1
+			add = {
+				value = {
+					fixed_range = { 
+						max = waist_mutation_max
+						min = waist_mutation_min
+					}
+				}
+			}
+		}
+	}
+	random = {
+		chance = waist_mutation_chance
+		change_variable = {
+			name = waist_gene_2
+			add = {
+				value = {
+					fixed_range = { 
+						max = waist_mutation_max
+						min = waist_mutation_min
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_waist_gene_max_min > 0 }
+		set_variable = {
+			name = waist_genetic
+			value = {
+				value = {
+					fixed_range = { 
+						max = var:waist_gene_1
+						min = var:waist_gene_2
+					}
+				}
+				add = {
+					fixed_range = { 
+						max = var:waist_gene_1
+						min = var:waist_gene_2
+					}
+				}
+				divide = 2
+			}
+		}
+	}
+	else = {
+		set_variable = {
+			name = waist_genetic
+			value = {
+				value = {
+					fixed_range = { 
+						min = var:waist_gene_1
+						max = var:waist_gene_2
+					}
+				}
+				add = {
+					fixed_range = { 
+						min = var:waist_gene_1
+						max = var:waist_gene_2
+					}
+				}
+				divide = 2
+			}
+		}
+	}
+}
+	
+	
+
+add_shoulders_variable_effect = {
+	if = {
+		limit = { 
+			exists = scope:real_father 
+			exists = scope:mother
+			trigger_if = {
+				limit = { 
+					exists = scope:real_father 
+					exists = scope:mother
+				}
+				scope:real_father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:real_father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:real_father = { has_variable = shoulders_gene_1 }
+					scope:real_father = { has_variable = shoulders_gene_2 }
+					scope:mother = { has_variable = shoulders_gene_1 }
+					scope:mother = { has_variable = shoulders_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = shoulders_gene_1
+				value = scope:real_father.var:shoulders_gene_1
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = shoulders_gene_2
+				value = scope:mother.var:shoulders_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = shoulders_gene_1 } }
+			set_variable = {
+				name = shoulders_gene_1
+				value = scope:real_father.var:shoulders_gene_2
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = shoulders_gene_2 } }
+			set_variable = {
+				name = shoulders_gene_2
+				value = scope:mother.var:shoulders_gene_2
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:father
+			exists = scope:mother
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					exists = scope:mother
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:father = { has_variable = shoulders_gene_1 }
+					scope:father = { has_variable = shoulders_gene_2 }
+					scope:mother = { has_variable = shoulders_gene_1 }
+					scope:mother = { has_variable = shoulders_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = shoulders_gene_1
+				value = scope:father.var:shoulders_gene_1
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = shoulders_gene_2
+				value = scope:mother.var:shoulders_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = shoulders_gene_1 } }
+			set_variable = {
+				name = shoulders_gene_1
+				value = scope:father.var:shoulders_gene_2
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = shoulders_gene_2 } }
+			set_variable = {
+				name = shoulders_gene_2
+				value = scope:mother.var:shoulders_gene_2
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:real_father 
+			trigger_if = {
+				limit = { exists = scope:real_father }
+				scope:real_father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:real_father = { is_alive = yes } }
+					scope:real_father = { has_variable = shoulders_gene_1 }
+					scope:real_father = { has_variable = shoulders_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = shoulders_gene_1
+				value = scope:real_father.var:shoulders_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = shoulders_gene_1 } }
+			set_variable = {
+				name = shoulders_gene_1
+				value = scope:real_father.var:shoulders_gene_2
+			}
+		}
+		set_shoulders_gene_2_effect = yes
+	}
+	else_if = {
+		limit = { 
+			exists = scope:father 
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:father = { is_alive = yes } }
+					scope:father = { has_variable = shoulders_gene_1 }
+					scope:father = { has_variable = shoulders_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = shoulders_gene_1
+				value = scope:father.var:shoulders_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = shoulders_gene_1 } }
+			set_variable = {
+				name = shoulders_gene_1
+				value = scope:father.var:shoulders_gene_2
+			}
+		}
+		set_shoulders_gene_2_effect = yes
+	}
+	else_if = {
+		limit = { 
+			exists = scope:mother
+			trigger_if = {
+				limit = { exists = scope:mother }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:mother = { is_alive = yes } }
+					scope:mother = { has_variable = shoulders_gene_1 }
+					scope:mother = { has_variable = shoulders_gene_2 }
+				}
+			}
+		}
+		random = {
+			chance = 50
+			set_variable = {
+				name = shoulders_gene_2
+				value = scope:mother.var:shoulders_gene_1
+			}
+		}
+		if = {
+			limit = { Not = { has_variable = shoulders_gene_2 } }
+			set_variable = {
+				name = shoulders_gene_2
+				value = scope:mother.var:shoulders_gene_2
+			}
+		}
+		set_shoulders_gene_1_effect = yes
+	}
+	else = {
+		set_shoulders_gene_1_effect = yes
+		set_shoulders_gene_2_effect = yes
+	}
+	random = {
+		chance = shoulders_mutation_chance
+		change_variable = {
+			name = shoulders_gene_1
+			add = {
+				value = {
+					fixed_range = { 
+						max = shoulders_mutation_max
+						min = shoulders_mutation_min
+					}
+				}
+			}
+		}
+	}
+	random = {
+		chance = shoulders_mutation_chance
+		change_variable = {
+			name = shoulders_gene_2
+			add = {
+				value = {
+					fixed_range = { 
+						max = shoulders_mutation_max
+						min = shoulders_mutation_min
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_shoulders_gene_max_min > 0 }
+		set_variable = {
+			name = shoulders_genetic
+			value = {
+				value = {
+					fixed_range = { 
+						max = var:shoulders_gene_1
+						min = var:shoulders_gene_2
+					}
+				}
+				add = {
+					fixed_range = { 
+						max = var:shoulders_gene_1
+						min = var:shoulders_gene_2
+					}
+				}
+				divide = 2
+			}
+		}
+	}
+	else = {
+		set_variable = {
+			name = shoulders_genetic
+			value = {
+				value = {
+					fixed_range = { 
+						min = var:shoulders_gene_1
+						max = var:shoulders_gene_2
+					}
+				}
+				add = {
+					fixed_range = { 
+						min = var:shoulders_gene_1
+						max = var:shoulders_gene_2
+					}
+				}
+				divide = 2
+			}
+		}
+	}
+}
+
+add_metabolic_variable_effect = {
+	if = {
+		limit = { 
+			exists = scope:real_father 
+			exists = scope:mother
+			trigger_if = {
+				limit = { 
+					exists = scope:real_father 
+					exists = scope:mother
+				}
+				scope:real_father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:real_father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:real_father = { has_variable = upper_body_metabolic_gene }
+					scope:real_father = { has_variable = lower_body_metabolic_gene }
+					scope:mother = { has_variable = upper_body_metabolic_gene }
+					scope:mother = { has_variable = lower_body_metabolic_gene }
+				}
+			}
+		}
+		set_variable = {
+			name = father_upper_body_metabolic_gene
+			value = scope:real_father.var:upper_body_metabolic_gene
+		}
+		set_variable = {
+			name = father_lower_body_metabolic_gene
+			value = scope:real_father.var:lower_body_metabolic_gene
+		}
+		set_variable = {
+			name = mother_upper_body_metabolic_gene
+			value = scope:mother.var:upper_body_metabolic_gene
+		}
+		set_variable = {
+			name = mother_lower_body_metabolic_gene
+			value = scope:mother.var:lower_body_metabolic_gene
+		}
+	}
+	else_if = {
+		limit = {
+			exists = scope:father
+			exists = scope:mother
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					exists = scope:mother
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = {
+						scope:father = { is_alive = yes }
+						scope:mother = { is_alive = yes }
+					}
+					scope:father = { has_variable = upper_body_metabolic_gene }
+					scope:father = { has_variable = lower_body_metabolic_gene }
+					scope:mother = { has_variable = upper_body_metabolic_gene }
+					scope:mother = { has_variable = lower_body_metabolic_gene }
+				}
+			}
+		}
+		set_variable = {
+			name = father_upper_body_metabolic_gene
+			value = scope:father.var:upper_body_metabolic_gene
+		}
+		set_variable = {
+			name = father_lower_body_metabolic_gene
+			value = scope:father.var:lower_body_metabolic_gene
+		}
+		set_variable = {
+			name = mother_upper_body_metabolic_gene
+			value = scope:mother.var:upper_body_metabolic_gene
+		}
+		set_variable = {
+			name = mother_lower_body_metabolic_gene
+			value = scope:mother.var:lower_body_metabolic_gene
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:real_father 
+			trigger_if = {
+				limit = { exists = scope:real_father }
+				scope:real_father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:real_father = { is_alive = yes } }
+					scope:real_father = { has_variable = upper_body_metabolic_gene }
+					scope:real_father = { has_variable = lower_body_metabolic_gene }
+				}
+			}
+		}
+		set_variable = {
+			name = father_upper_body_metabolic_gene
+			value = scope:real_father.var:upper_body_metabolic_gene
+		}
+		set_variable = {
+			name = father_lower_body_metabolic_gene
+			value = scope:real_father.var:lower_body_metabolic_gene
+		}
+		set_variable = {
+			name = mother_upper_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = 100
+					min = 0
+				}
+			}
+		}
+		set_variable = {
+			name = mother_lower_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = 100
+					min = 0
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			exists = scope:father 
+			Not = { exists = scope:real_father }
+			trigger_if = {
+				limit = { 
+					exists = scope:father
+					Not = { exists = scope:real_father }
+				}
+				scope:father = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:father = { is_alive = yes } }
+					scope:father = { has_variable = upper_body_metabolic_gene }
+					scope:father = { has_variable = lower_body_metabolic_gene }
+				}
+			}
+		}
+		set_variable = {
+			name = father_upper_body_metabolic_gene
+			value = scope:father.var:upper_body_metabolic_gene
+		}
+		set_variable = {
+			name = father_lower_body_metabolic_gene
+			value = scope:father.var:lower_body_metabolic_gene
+		}
+		set_variable = {
+			name = mother_upper_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = 100
+					min = 0
+				}
+			}
+		}
+		set_variable = {
+			name = mother_lower_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = 100
+					min = 0
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			exists = scope:mother
+			trigger_if = {
+				limit = { exists = scope:mother }
+				scope:mother = { is_alive = yes }
+				trigger_if = {
+					limit = { scope:mother = { is_alive = yes } }
+					scope:mother = { has_variable = upper_body_metabolic_gene }
+					scope:mother = { has_variable = lower_body_metabolic_gene }
+				}
+			}
+		}
+		set_variable = {
+			name = father_upper_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = 100
+					min = 0
+				}
+			}
+		}
+		set_variable = {
+			name = father_lower_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = 100
+					min = 0
+				}
+			}
+		}
+		set_variable = {
+			name = mother_upper_body_metabolic_gene
+			value = scope:mother.var:upper_body_metabolic_gene
+		}
+		set_variable = {
+			name = mother_lower_body_metabolic_gene
+			value = scope:mother.var:lower_body_metabolic_gene
+		}
+	}
+	else = {
+		set_variable = {
+			name = father_upper_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = 100
+					min = 0
+				}
+			}
+		}
+		set_variable = {
+			name = father_lower_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = 100
+					min = 0
+				}
+			}
+		}
+		set_variable = {
+			name = mother_upper_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = 100
+					min = 0
+				}
+			}
+		}
+		set_variable = {
+			name = mother_lower_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = 100
+					min = 0
+				}
+			}
+		}
+	}
+	if = {
+		limit = { check_upper_body_metabolic_gene_max_min > 0 }
+		set_variable = {
+			name = upper_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = var:father_upper_body_metabolic_gene
+					min = var:mother_upper_body_metabolic_gene
+				}
+			}
+		}
+		remove_variable = father_upper_body_metabolic_gene
+		remove_variable = mother_upper_body_metabolic_gene
+	}
+	else = {
+		set_variable = {
+			name = upper_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = var:mother_upper_body_metabolic_gene
+					min = var:father_upper_body_metabolic_gene
+				}
+			}
+		}
+		remove_variable = father_upper_body_metabolic_gene
+		remove_variable = mother_upper_body_metabolic_gene
+	}
+	if = {
+		limit = { check_lower_body_metabolic_gene_max_min > 0 }
+		set_variable = {
+			name = lower_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = var:father_lower_body_metabolic_gene
+					min = var:mother_lower_body_metabolic_gene
+				}
+			}
+		}
+		remove_variable = father_lower_body_metabolic_gene
+		remove_variable = mother_lower_body_metabolic_gene
+	}
+	else = {
+		set_variable = {
+			name = lower_body_metabolic_gene
+			value = {
+				fixed_range = {
+					max = var:mother_lower_body_metabolic_gene
+					min = var:father_lower_body_metabolic_gene
+				}
+			}
+		}
+		remove_variable = father_lower_body_metabolic_gene
+		remove_variable = mother_lower_body_metabolic_gene
+	}
+	set_metabolic_gene_type = yes
+}
+
+set_metabolic_gene_type = {
+	if = {
+		limit = { check_metabolic_gene_ratio > 4 }
+		set_variable = {
+			name = upper_body_full_metabolic_gene
+			value = {
+				value = var:upper_body_metabolic_gene
+				add = var:lower_body_metabolic_gene
+				divide = 2
+			}
+		}
+	}
+	else_if = {
+		limit = { check_metabolic_gene_ratio > 2 }
+		set_variable = {
+			name = upper_body_half_metabolic_gene
+			value = {
+				value = var:upper_body_metabolic_gene
+				add = var:lower_body_metabolic_gene
+				divide = 2
+			}
+		}
+	}
+	else_if = {
+		limit = { check_metabolic_gene_ratio > 0.5 }
+		set_variable = {
+			name = body_mid_metabolic_gene
+			value = {
+				value = var:upper_body_metabolic_gene
+				add = var:lower_body_metabolic_gene
+				divide = 2
+			}
+		}
+	}
+	else_if = {
+		limit = { check_metabolic_gene_ratio > 0.25 }
+		set_variable = {
+			name = lower_body_half_metabolic_gene
+			value = {
+				value = var:upper_body_metabolic_gene
+				add = var:lower_body_metabolic_gene
+				divide = 2
+			}
+		}
+	}
+	else = {
+		set_variable = {
+			name = lower_body_full_metabolic_gene
+			value = {
+				value = var:upper_body_metabolic_gene
+				add = var:lower_body_metabolic_gene
+				divide = 2
+			}
+		}
+	}
+	trigger_event = { 
+		on_action = on_stomach_trait
+	}
+}

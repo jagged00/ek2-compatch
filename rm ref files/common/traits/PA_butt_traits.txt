@@ -1,0 +1,402 @@
+﻿# Pin Buttocks
+small_butt_narrow_hips = {
+	opposites = {
+		small_butt_medium_hips
+		small_butt_wide_hips
+		medium_butt_narrow_hips
+		medium_butt_medium_hips
+		medium_butt_wide_hips
+		big_butt_narrow_hips
+		big_butt_medium_hips
+		big_butt_wide_hips_1
+		big_butt_wide_hips_2
+		huge_hips
+		huge_butt
+		colossal_butt
+	}
+	physical = yes
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_small_butt_narrow_hips_desc
+			}
+			desc = trait_small_butt_narrow_hips_character_desc
+		}
+	}
+}
+# Flat Butt
+small_butt_medium_hips = {
+	opposites = {
+		small_butt_narrow_hips
+		small_butt_wide_hips
+		medium_butt_narrow_hips
+		medium_butt_medium_hips
+		medium_butt_wide_hips
+		big_butt_narrow_hips
+		big_butt_medium_hips
+		big_butt_wide_hips_1
+		big_butt_wide_hips_2
+		huge_hips
+		huge_butt
+		colossal_butt
+	}
+	physical = yes
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_small_butt_medium_hips_desc
+			}
+			desc = trait_small_butt_medium_hips_character_desc
+		}
+	}
+}
+# Quatch Buttocks
+small_butt_wide_hips = {
+	opposites = {
+		small_butt_narrow_hips
+		small_butt_medium_hips
+		medium_butt_narrow_hips
+		medium_butt_medium_hips
+		medium_butt_wide_hips
+		big_butt_narrow_hips
+		big_butt_medium_hips
+		big_butt_wide_hips_1
+		big_butt_wide_hips_2
+		huge_hips
+		huge_butt
+		colossal_butt
+	}
+	physical = yes
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_small_butt_wide_hips_desc
+			}
+			desc = trait_small_butt_wide_hips_character_desc
+		}
+	}
+}
+# Slender Hipped
+medium_butt_narrow_hips = {
+	opposites = {
+		small_butt_narrow_hips
+		small_butt_medium_hips
+		small_butt_wide_hips
+		medium_butt_medium_hips
+		medium_butt_wide_hips
+		big_butt_narrow_hips
+		big_butt_medium_hips
+		big_butt_wide_hips_1
+		big_butt_wide_hips_2
+		huge_hips
+		huge_butt
+		colossal_butt
+	}
+	physical = yes
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_medium_butt_narrow_hips_desc
+			}
+			desc = trait_medium_butt_narrow_hips_character_desc
+		}
+	}
+}
+# Middling Rear
+medium_butt_medium_hips = {
+	opposites = {
+		small_butt_narrow_hips
+		small_butt_medium_hips
+		small_butt_wide_hips
+		medium_butt_narrow_hips
+		medium_butt_wide_hips
+		big_butt_narrow_hips
+		big_butt_medium_hips
+		big_butt_wide_hips_1
+		big_butt_wide_hips_2
+		huge_hips
+		huge_butt
+		colossal_butt
+	}
+	physical = yes
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_medium_butt_medium_hips_desc
+			}
+			desc = trait_medium_butt_medium_hips_character_desc
+		}
+	}
+}
+# Curvy
+medium_butt_wide_hips = {
+	opposites = {
+		small_butt_narrow_hips
+		small_butt_medium_hips
+		small_butt_wide_hips
+		medium_butt_narrow_hips
+		medium_butt_medium_hips
+		big_butt_narrow_hips
+		big_butt_medium_hips
+		big_butt_wide_hips_1
+		big_butt_wide_hips_2
+		huge_hips
+		huge_butt
+		colossal_butt
+	}
+	physical = yes
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_medium_butt_wide_hips_desc
+			}
+			desc = trait_medium_butt_wide_hips_character_desc
+		}
+	}
+}
+# Bubbly Butt
+big_butt_narrow_hips = {
+	opposites = {
+		small_butt_narrow_hips
+		small_butt_medium_hips
+		small_butt_wide_hips
+		medium_butt_narrow_hips
+		medium_butt_medium_hips
+		medium_butt_wide_hips
+		big_butt_medium_hips
+		big_butt_wide_hips_1
+		big_butt_wide_hips_2
+		huge_hips
+		huge_butt
+		colossal_butt
+	}
+	physical = yes
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_big_butt_narrow_hips_desc
+			}
+			desc = trait_big_butt_narrow_hips_character_desc
+		}
+	}
+}
+# Brawn Buttocks
+big_butt_medium_hips = {
+	opposites = {
+		small_butt_narrow_hips
+		small_butt_medium_hips
+		small_butt_wide_hips
+		medium_butt_narrow_hips
+		medium_butt_medium_hips
+		medium_butt_wide_hips
+		big_butt_narrow_hips
+		big_butt_wide_hips_1
+		big_butt_wide_hips_2
+		huge_hips
+		huge_butt
+		colossal_butt
+	}
+	physical = yes
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_big_butt_medium_hips_desc
+			}
+			desc = trait_big_butt_medium_hips_character_desc
+		}
+	}
+}
+# Callipygian
+big_butt_wide_hips_1 = {
+	opposites = {
+		small_butt_narrow_hips
+		small_butt_medium_hips
+		small_butt_wide_hips
+		medium_butt_narrow_hips
+		medium_butt_medium_hips
+		medium_butt_wide_hips
+		big_butt_narrow_hips
+		big_butt_medium_hips
+		big_butt_wide_hips_2
+		huge_hips
+		huge_butt
+		colossal_butt
+	}
+	physical = yes
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_big_butt_wide_hips_1_desc
+			}
+			desc = trait_big_butt_wide_hips_1_character_desc
+		}
+	}
+}
+big_butt_wide_hips_2 = {
+	opposites = {
+		small_butt_narrow_hips
+		small_butt_medium_hips
+		small_butt_wide_hips
+		medium_butt_narrow_hips
+		medium_butt_medium_hips
+		medium_butt_wide_hips
+		big_butt_narrow_hips
+		big_butt_medium_hips
+		big_butt_wide_hips_1
+		huge_hips
+		huge_butt
+		colossal_butt
+	}
+	physical = yes
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_big_butt_wide_hips_2_desc
+			}
+			desc = trait_big_butt_wide_hips_2_character_desc
+		}
+	}
+}
+# Broad Bottomed
+huge_hips = {
+	opposites = {
+		small_butt_narrow_hips
+		small_butt_medium_hips
+		small_butt_wide_hips
+		medium_butt_narrow_hips
+		medium_butt_medium_hips
+		medium_butt_wide_hips
+		big_butt_narrow_hips
+		big_butt_medium_hips
+		big_butt_wide_hips_1
+		big_butt_wide_hips_2
+		huge_butt
+		colossal_butt
+	}
+	physical = yes
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_huge_hips_desc
+			}
+			desc = trait_huge_hips_character_desc
+		}
+	}
+}
+# Steatopygic
+huge_butt = {
+	opposites = {
+		small_butt_narrow_hips
+		small_butt_medium_hips
+		small_butt_wide_hips
+		medium_butt_narrow_hips
+		medium_butt_medium_hips
+		medium_butt_wide_hips
+		big_butt_narrow_hips
+		big_butt_medium_hips
+		big_butt_wide_hips_1
+		big_butt_wide_hips_2
+		huge_hips
+		colossal_butt
+	}
+	physical = yes
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_huge_butt_desc
+			}
+			desc = trait_huge_butt_character_desc
+		}
+	}
+}
+# Colossal Butt
+colossal_butt = {
+	opposites = {
+		small_butt_narrow_hips
+		small_butt_medium_hips
+		small_butt_wide_hips
+		medium_butt_narrow_hips
+		medium_butt_medium_hips
+		medium_butt_wide_hips
+		big_butt_narrow_hips
+		big_butt_medium_hips
+		big_butt_wide_hips_1
+		big_butt_wide_hips_2
+		huge_hips
+		huge_butt
+	}
+	physical = yes
+
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_colossal_butt_desc
+			}
+			desc = trait_colossal_butt_character_desc
+		}
+	}
+}

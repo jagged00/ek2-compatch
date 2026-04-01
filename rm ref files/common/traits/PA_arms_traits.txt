@@ -1,0 +1,170 @@
+﻿skinny_arms_1 = {
+
+	group = skinny_arms
+	level = 1
+
+	physical = yes
+	flag = pa_trait
+
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_skinny_arms_1_desc
+			}
+			desc = trait_skinny_arms_1_character_desc
+		}
+	}
+}
+skinny_arms_2 = {
+
+	group = skinny_arms
+	level = 2
+	physical = yes
+	flag = pa_trait
+
+
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_skinny_arms_2_desc
+			}
+			desc = trait_skinny_arms_2_character_desc
+		}
+	}
+}
+fat_arms_1 = {
+	group = fat_arms
+	level = 1
+	physical = yes
+	flag = pa_trait
+
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_fat_arms_1_desc
+			}
+			desc = trait_fat_arms_1_character_desc
+		}
+	}
+}
+fat_arms_2 = {
+	group = fat_arms
+	level = 2
+	physical = yes
+	flag = pa_trait
+
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_fat_arms_2_desc
+			}
+			desc = trait_fat_arms_2_character_desc
+		}
+	}
+}
+average_muscular = {
+	group = muscular
+	level = 1
+	physical = yes
+	flag = pa_trait
+
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_average_muscular_desc
+			}
+			desc = trait_average_muscular_character_desc
+		}
+	}
+}
+muscular_1 = {
+
+	group = muscular
+	level = 2
+
+	physical = yes
+	flag = pa_trait
+
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_muscular_1_desc
+			}
+			desc = trait_muscular_1_character_desc
+		}
+	}
+}
+muscular_2 = {
+
+	group = muscular
+	level = 3
+	physical = yes
+	flag = pa_trait
+
+
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_muscular_2_desc
+			}
+			desc = trait_muscular_2_character_desc
+		}
+	}
+}
+muscular_3 = {
+	group = muscular
+	level = 4
+	
+	physical = yes
+	flag = pa_trait
+
+
+
+	ruler_designer_cost = 0
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_muscular_3_desc
+			}
+			desc = trait_muscular_3_character_desc
+		}
+	}
+}

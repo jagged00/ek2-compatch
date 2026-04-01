@@ -1,0 +1,145 @@
+﻿on_butt_trait = {
+		trigger = {
+			trigger_if = {
+				limit = { has_variable = puberty_value }
+				var:puberty_value > 0
+			}
+			trigger_else = {
+				is_adult = yes
+			}
+			has_variable = butt_size_genetic
+			has_variable = cbo_muscles
+			has_variable = cbo_lower_body_muscles
+		}
+		effect = {
+			remove_variable = butt_hip_size_total_variable
+			set_variable = {
+				name = butt_hip_size_total_variable
+				value = butt_hip_size_total
+			}
+			set_variable = {
+				name = butt_hip_size_ratio_variable
+				value = butt_hip_size_ratio
+			}
+			if = { 
+				limit = { 
+					var:butt_hip_size_total_variable >= 220
+				}
+				if = { 
+					limit = { Not = { has_trait = colossal_butt } }
+					remove_butt_trait_effect = yes
+					add_trait = colossal_butt
+				}
+			}
+			else_if = {
+				limit = {
+					var:butt_hip_size_total_variable >= 180
+				}
+				if = {
+					limit = { var:butt_hip_size_ratio_variable >= 1.5 }
+					if = {
+						limit = { Not = { has_trait = huge_butt } }
+						remove_butt_trait_effect = yes
+						add_trait = huge_butt
+					}
+				}
+				else_if = {
+					limit = { var:butt_hip_size_ratio_variable < 0.75 }
+					if = {
+						limit = { Not = { has_trait = huge_hips } }
+						remove_butt_trait_effect = yes
+						add_trait = huge_hips
+					}
+				}
+				else_if = {
+					limit = { Not = { has_trait = big_butt_wide_hips_2 } }
+					remove_butt_trait_effect = yes
+					add_trait = big_butt_wide_hips_2
+				}
+			}
+			else_if = {
+				limit = { 
+					var:butt_hip_size_total_variable >= 120
+				}
+				if = {
+					limit = { var:butt_hip_size_ratio_variable >= 1.5 }
+					if = {
+						limit = { Not = { has_trait = big_butt_medium_hips } }
+						remove_butt_trait_effect = yes
+						add_trait = big_butt_medium_hips
+					}
+				}
+				else_if = {
+					limit = { var:butt_hip_size_ratio_variable < 0.75 }
+					if = {
+						limit = { Not = { has_trait = medium_butt_wide_hips } }
+						remove_butt_trait_effect = yes
+						add_trait = medium_butt_wide_hips
+					}
+				}
+				else_if = {
+					limit = { 
+						Not = { has_trait = big_butt_wide_hips_1 }
+					}
+					remove_butt_trait_effect = yes
+					add_trait = big_butt_wide_hips_1
+				}
+			}
+			else_if = {
+				limit = { 
+					var:butt_hip_size_total_variable >= 75
+				}
+				if = {
+					limit = { var:butt_hip_size_ratio_variable >= 1.5 }
+					if = {
+						limit = { Not = { has_trait = big_butt_narrow_hips } }
+						remove_butt_trait_effect = yes
+						add_trait = big_butt_narrow_hips
+					}
+				}
+				else_if = {
+					limit = { var:butt_hip_size_ratio_variable < 0.75 }
+					if = {
+						limit = { Not = { has_trait = small_butt_wide_hips } }
+						remove_butt_trait_effect = yes
+						add_trait = small_butt_wide_hips
+					}
+				}
+				else_if = {
+					limit = { 
+						Not = { has_trait = medium_butt_medium_hips }
+					}
+					remove_butt_trait_effect = yes
+					add_trait = medium_butt_medium_hips
+				}
+			}
+			else_if = {
+				limit = { 
+					var:butt_hip_size_total_variable >= 45
+				}
+				if = {
+					limit = { var:butt_hip_size_ratio_variable >= 1 }
+					if = {
+						limit = { Not = { has_trait = medium_butt_narrow_hips } }
+						remove_butt_trait_effect = yes
+						add_trait = medium_butt_narrow_hips
+					}
+				}
+				else_if = {
+					limit = { Not = { has_trait = small_butt_medium_hips } }
+					remove_butt_trait_effect = yes
+					add_trait = small_butt_medium_hips
+				}
+			}
+			else = {
+				if = {
+					limit = { 
+						Not = { has_trait = small_butt_narrow_hips }
+					}
+					remove_butt_trait_effect = yes
+					add_trait = small_butt_narrow_hips
+				}
+			}
+		}
+	}
+	

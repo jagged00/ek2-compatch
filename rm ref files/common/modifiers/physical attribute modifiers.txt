@@ -1,0 +1,571 @@
+﻿breastfeeding_modifier = {
+	icon = health_positive
+}
+
+needs_to_be_breastfed_modifier = {
+	icon = health_positive
+}
+
+well_fed_baby_modifier_1 = {
+	icon = health_positive
+	health = well_fed_baby_1_health_bonus
+}
+
+well_fed_baby_modifier_2 = {
+	icon = health_positive
+	health = well_fed_baby_2_health_bonus
+}
+
+well_fed_baby_modifier_3 = {
+	icon = health_positive
+	health = well_fed_baby_3_health_bonus
+}
+
+well_fed_baby_modifier_4 = {
+	icon = health_positive
+	health = well_fed_baby_4_health_bonus
+}
+
+well_fed_baby_modifier_5 = {
+	icon = health_positive
+	health = well_fed_baby_5_health_bonus
+}
+
+muscular_1_modifier = {
+	icon = prowess_positive
+	prowess = 2
+	}
+
+muscular_2_modifier = {
+	icon = prowess_positive
+	prowess = 4
+	}
+
+muscular_3_modifier = {
+	icon = prowess_positive
+	prowess = 6
+	}
+
+muscular_4_modifier = {
+	icon = prowess_positive
+	prowess = 8
+	}
+
+muscular_5_modifier = {
+	icon = prowess_positive
+	prowess = 10
+	}
+
+muscular_6_modifier = {
+	icon = prowess_positive
+	prowess = 12
+	}
+
+muscular_7_modifier = {
+	icon = prowess_positive
+	prowess = 14
+	}
+
+muscular_8_modifier = {
+	icon = prowess_positive
+	prowess = 16
+	}
+
+muscular_9_modifier = {
+	icon = prowess_positive
+	prowess = 18
+	}
+	
+muscular_10_modifier = {
+	icon = prowess_positive
+	prowess = 20
+	}
+
+muscular_11_modifier = {
+	icon = prowess_positive
+	prowess = 22
+	}
+
+muscular_12_modifier = {
+	icon = prowess_positive
+	prowess = 24
+	}
+
+muscular_13_modifier = {
+	icon = prowess_positive
+	prowess = 26
+	}
+
+muscular_14_modifier = {
+	icon = prowess_positive
+	prowess = 28
+	}
+
+muscular_15_modifier = {
+	icon = prowess_positive
+	prowess = 30
+	}
+
+muscular_16_modifier = {
+	icon = prowess_positive
+	prowess = 32
+	}
+
+muscular_17_modifier = {
+	icon = prowess_positive
+	prowess = 34
+	}
+
+muscular_18_modifier = {
+	icon = prowess_positive
+	prowess = 36
+	}
+
+muscular_19_modifier = {
+	icon = prowess_positive
+	prowess = 38
+	}
+
+# WEIGHT
+malnourished_modifier = {
+	icon = health_negative
+}
+
+obese_modifier = {
+	icon = health_negative
+}
+
+thin_20_modifier = {
+	icon = health_negative
+	prowess = -20
+	health = -2.0
+	}
+
+thin_19_modifier = {
+	icon = health_negative
+	prowess = -19
+	health = -1.9
+	}
+
+thin_18_modifier = {
+	icon = health_negative
+	prowess = -18
+	health = -1.8
+	}
+
+thin_17_modifier = {
+	icon = health_negative
+	prowess = -17
+	health = -1.7
+	}
+
+thin_16_modifier = {
+	icon = health_negative
+	prowess = -16
+	health = -1.6
+	}
+
+thin_15_modifier = {
+	icon = health_negative
+	prowess = -15
+	health = -1.5
+	}
+
+thin_14_modifier = {
+	icon = health_negative
+	prowess = -14
+	health = -1.4
+	}
+
+thin_13_modifier = {
+	icon = health_negative
+	prowess = -13
+	health = -1.3
+	}
+
+thin_12_modifier = {
+	icon = health_negative
+	prowess = -12
+	health = -1.2
+	}
+
+thin_11_modifier = {
+	icon = health_negative
+	prowess = -11
+	health = -1.1
+	}
+
+thin_10_modifier = {
+	icon = health_negative
+	prowess = -10
+	health = -1.0
+	}
+
+thin_9_modifier = {
+	icon = health_negative
+	prowess = -9
+	health = -0.9
+	}
+
+thin_8_modifier = {
+	icon = health_negative
+	prowess = -8
+	health = -0.8
+	}
+
+thin_7_modifier = {
+	icon = health_negative
+	prowess = -7
+	health = -0.7
+	}
+
+thin_6_modifier = {
+	icon = health_negative
+	prowess = -6
+	health = -0.6
+	}
+
+thin_5_modifier = {
+	icon = health_negative
+	prowess = -5
+	health = -0.5
+	}
+
+thin_4_modifier = {
+	icon = health_negative
+	prowess = -4
+	health = -0.4
+	}
+
+thin_3_modifier = {
+	icon = health_negative
+	prowess = -3
+	health = -0.3
+	}
+
+thin_2_modifier = {
+	icon = health_negative
+	prowess = -2
+	health = -0.2
+	}
+
+thin_1_modifier = {
+	icon = health_negative
+	prowess = -1
+	health = -0.1
+	}
+
+fat_1_modifier = {
+	icon = health_negative
+	prowess = -1
+	health = -0.1
+	}
+
+fat_2_modifier = {
+	icon = health_negative
+	prowess = -2
+	health = -0.2
+	}
+
+fat_3_modifier = {
+	icon = health_negative
+	prowess = -3
+	health = -0.3
+	}
+
+fat_4_modifier = {
+	icon = health_negative
+	prowess = -4
+	health = -0.4
+	}
+
+fat_5_modifier = {
+	icon = health_negative
+	prowess = -5
+	health = -0.5
+	}
+
+fat_6_modifier = {
+	icon = health_negative
+	prowess = -6
+	health = -0.6
+	}
+
+fat_7_modifier = {
+	icon = health_negative
+	prowess = -7
+	health = -0.7
+	}
+
+fat_8_modifier = {
+	icon = health_negative
+	prowess = -8
+	health = -0.8
+	}
+
+fat_9_modifier = {
+	icon = health_negative
+	prowess = -9
+	health = -0.9
+	}
+
+fat_10_modifier = {
+	icon = health_negative
+	prowess = -10
+	health = -1.0
+	}
+
+fat_11_modifier = {
+	icon = health_negative
+	prowess = -12
+	health = -1.1
+	}
+
+fat_12_modifier = {
+	icon = health_negative
+	prowess = -14
+	health = -1.2
+	}
+
+fat_13_modifier = {
+	icon = health_negative
+	prowess = -16
+	health = -1.3
+	}
+
+fat_14_modifier = {
+	icon = health_negative
+	prowess = -18
+	health = -1.4
+	}
+
+fat_15_modifier = {
+	icon = health_negative
+	prowess = -20
+	health = -1.5
+	}
+
+fat_16_modifier = {
+	icon = health_negative
+	prowess = -22
+	health = -1.6
+	}
+
+fat_17_modifier = {
+	icon = health_negative
+	prowess = -24
+	health = -1.7
+	}
+
+fat_18_modifier = {
+	icon = health_negative
+	prowess = -26
+	health = -1.8
+	}
+
+fat_19_modifier = {
+	icon = health_negative
+	prowess = -28
+	health = -1.9
+	}
+
+fat_20_modifier = {
+	icon = health_negative
+	prowess = -30
+	health = -2.0
+	}
+
+short_20_modifier = {
+	icon = prowess_negative
+	prowess = -20
+	}
+
+short_19_modifier = {
+	icon = prowess_negative
+	prowess = -19
+	}
+
+short_18_modifier = {
+	icon = prowess_negative
+	prowess = -18
+	}
+
+short_17_modifier = {
+	icon = prowess_negative
+	prowess = -17
+	}
+
+short_16_modifier = {
+	icon = prowess_negative
+	prowess = -16
+	}
+short_15_modifier = {
+	icon = prowess_negative
+	prowess = -15
+	}
+
+short_14_modifier = {
+	icon = prowess_negative
+	prowess = -14
+	}
+
+short_13_modifier = {
+	icon = prowess_negative
+	prowess = -13
+	}
+
+short_12_modifier = {
+	icon = prowess_negative
+	prowess = -12
+	}
+
+short_11_modifier = {
+	icon = prowess_negative
+	prowess = -11
+	}
+
+short_10_modifier = {
+	icon = prowess_negative
+	prowess = -10
+	}
+short_9_modifier = {
+	icon = prowess_negative
+	prowess = -9
+	}
+
+short_8_modifier = {
+	icon = prowess_negative
+	prowess = -8
+	}
+
+short_7_modifier = {
+	icon = prowess_negative
+	prowess = -7
+	}
+
+short_6_modifier = {
+	icon = prowess_negative
+	prowess = -6
+	}
+
+short_5_modifier = {
+	icon = prowess_negative
+	prowess = -5
+	}
+
+short_4_modifier = {
+	icon = prowess_negative
+	prowess = -4
+	}
+
+short_3_modifier = {
+	icon = prowess_negative
+	prowess = -3
+	}
+
+short_2_modifier = {
+	icon = prowess_negative
+	prowess = -2
+	}
+
+short_1_modifier = {
+	icon = prowess_negative
+	prowess = -1
+	}
+
+tall_1_modifier = {
+	icon = prowess_positive
+	prowess = 1
+	}
+
+tall_2_modifier = {
+	icon = prowess_positive
+	prowess = 2
+	}
+
+tall_3_modifier = {
+	icon = prowess_positive
+	prowess = 3
+	}
+
+tall_4_modifier = {
+	icon = prowess_positive
+	prowess = 4
+	}
+
+tall_5_modifier = {
+	icon = prowess_positive
+	prowess = 5
+	}
+
+tall_6_modifier = {
+	icon = prowess_positive
+	prowess = 6
+	}
+
+tall_7_modifier = {
+	icon = prowess_positive
+	prowess = 7
+	}
+
+tall_8_modifier = {
+	icon = prowess_positive
+	prowess = 8
+	}
+
+tall_9_modifier = {
+	icon = prowess_positive
+	prowess = 9
+	}
+tall_10_modifier = {
+	icon = prowess_positive
+	prowess = 10
+	}
+tall_11_modifier = {
+	icon = prowess_positive
+	prowess = 11
+	}
+
+tall_12_modifier = {
+	icon = prowess_positive
+	prowess = 12
+	}
+
+tall_13_modifier = {
+	icon = prowess_positive
+	prowess = 13
+	}
+
+tall_14_modifier = {
+	icon = prowess_positive
+	prowess = 14
+	}
+
+tall_15_modifier = {
+	icon = prowess_positive
+	prowess = 15
+	}
+
+tall_16_modifier = {
+	icon = prowess_positive
+	prowess = 16
+	}
+
+tall_17_modifier = {
+	icon = prowess_positive
+	prowess = 17
+	}
+
+tall_18_modifier = {
+	icon = prowess_positive
+	prowess = 18
+	}
+
+tall_19_modifier = {
+	icon = prowess_positive
+	prowess = 19
+	}
+tall_20_modifier = {
+	icon = prowess_positive
+	prowess = 20
+	}

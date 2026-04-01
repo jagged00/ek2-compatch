@@ -1,0 +1,81 @@
+﻿
+on_arms_trait = {
+		trigger = {
+			has_variable = cbo_muscles
+		}
+		effect = {
+			remove_variable = visual_arm_muscle_variable
+			remove_variable = upper_body_fat_variable
+			set_variable = {
+				name = visual_arm_muscle_variable
+				value = visual_arm_muscle
+			}
+			set_variable = {
+				name = upper_body_fat_variable
+				value = upper_body_fat
+			}
+			if = { 
+				limit = { var:visual_arm_muscle_variable < 25 }
+				if = {
+					limit = { var:upper_body_fat_variable > 25 }
+					if = { 
+						limit = { Not = { has_trait = fat_arms_1 } }
+						remove_arm_trait_effect = yes
+						add_trait = fat_arms_1
+					}
+				}
+				else_if = { 
+					limit = { var:upper_body_fat_variable < -25 }
+					if = { 
+						limit = { Not = { has_trait = skinny_arms_1 } }
+						remove_arm_trait_effect = yes
+						add_trait = skinny_arms_1
+					}
+				}
+				else_if = { 
+					limit = { var:upper_body_fat_variable > 50 }
+					if = { 
+						limit = { Not = { has_trait = fat_arms_2 } }
+						remove_arm_trait_effect = yes
+						add_trait = fat_arms_2
+					}
+				}
+				else_if = { 
+					limit = { var:upper_body_fat_variable < -50 }
+					if = { 
+						limit = { Not = { has_trait = skinny_arms_2 } }
+						remove_arm_trait_effect = yes
+						add_trait = skinny_arms_2
+					}
+				}
+				else_if = { 
+					limit = { Not = { has_trait = average_muscular } }
+					remove_arm_trait_effect = yes
+					add_trait = average_muscular
+				}
+			}
+			else_if = { 
+				limit = { var:visual_arm_muscle_variable < 50 }
+				if = { 
+					limit = { Not = { has_trait = muscular_1 } }
+					remove_arm_trait_effect = yes
+					add_trait = muscular_1
+				}
+			}
+			else_if = { 
+				limit = { var:visual_arm_muscle_variable < 75 }
+				if = { 
+					limit = { Not = { has_trait = muscular_2 } }
+					remove_arm_trait_effect = yes
+					add_trait = muscular_2
+				}
+			}
+			else = { 
+				if = { 
+					limit = { Not = { has_trait = muscular_3 } }
+					remove_arm_trait_effect = yes
+					add_trait = muscular_3
+				}
+			}
+		}
+	}

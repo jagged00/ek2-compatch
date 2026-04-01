@@ -1,0 +1,464 @@
+﻿on_add_height_modifier = {
+	trigger = {
+		is_alive = yes
+		trigger_if = {
+			limit = { is_alive = yes }
+			has_variable = height_genetic
+		}
+	}
+	effect = {
+		set_variable = {
+			name = actual_height_for_weight
+			value = actual_height_for_weight
+		}
+		if = {
+			limit = {
+				var:actual_height_for_weight < 55
+				var:actual_height_for_weight > 45
+			}
+			if = {
+				limit = { has_height_modifier_trigger = yes }
+				remove_height_modifier_effect = yes
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 60
+				var:actual_height_for_weight >= 55
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_1_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_1_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= 45
+				var:actual_height_for_weight > 40
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_1_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_1_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 65
+				var:actual_height_for_weight >= 60
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_2_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_2_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= 40
+				var:actual_height_for_weight > 35
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_2_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_2_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 70
+				var:actual_height_for_weight >= 65
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_3_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_3_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= 35
+				var:actual_height_for_weight > 30
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_3_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_3_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 75
+				var:actual_height_for_weight >= 70
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_4_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_4_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= 30
+				var:actual_height_for_weight > 25
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_4_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_4_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 80
+				var:actual_height_for_weight >= 75
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_5_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_5_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= 25
+				var:actual_height_for_weight > 20
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_5_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_5_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 85
+				var:actual_height_for_weight >= 80
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_6_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_6_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= 20
+				var:actual_height_for_weight > 15
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_6_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_6_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 90
+				var:actual_height_for_weight >= 85
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_7_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_7_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= 15
+				var:actual_height_for_weight > 10
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_7_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_7_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 95
+				var:actual_height_for_weight >= 90
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_8_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_8_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= 10
+				var:actual_height_for_weight > 5
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_8_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_8_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 100
+				var:actual_height_for_weight >= 95
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_9_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_9_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= 5
+				var:actual_height_for_weight > 0
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_9_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_9_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 105
+				var:actual_height_for_weight >= 100
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_10_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_10_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= 0
+				var:actual_height_for_weight > -5
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_10_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_10_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 110
+				var:actual_height_for_weight >= 105
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_11_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_11_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= -5
+				var:actual_height_for_weight > -10
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_11_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_11_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 115
+				var:actual_height_for_weight >= 110
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_12_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_12_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= -10
+				var:actual_height_for_weight > -15
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_12_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_12_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 120
+				var:actual_height_for_weight >= 115
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_13_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_13_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= -15
+				var:actual_height_for_weight > -20
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_13_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_13_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 125
+				var:actual_height_for_weight >= 120
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_14_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_14_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= -20
+				var:actual_height_for_weight > -25
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_14_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_14_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 130
+				var:actual_height_for_weight >= 125
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_15_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_15_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= -25
+				var:actual_height_for_weight > -30
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_15_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_15_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 135
+				var:actual_height_for_weight >= 130
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_16_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_16_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= -30
+				var:actual_height_for_weight > -35
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_16_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_16_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 140
+				var:actual_height_for_weight >= 135
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_17_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_17_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= -35
+				var:actual_height_for_weight > -40
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_17_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_17_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 145
+				var:actual_height_for_weight >= 140
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_18_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_18_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= -40
+				var:actual_height_for_weight > -45
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_18_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_18_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight < 150
+				var:actual_height_for_weight >= 145
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_19_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_19_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= -45
+				var:actual_height_for_weight > -50
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_19_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_19_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight >= 150
+			}
+			if = {
+				limit = { Not = { has_character_modifier = tall_20_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = tall_20_modifier
+			}
+		}
+		else_if = {
+			limit = {
+				var:actual_height_for_weight <= -50
+			}
+			if = {
+				limit = { Not = { has_character_modifier = short_20_modifier } }
+				remove_height_modifier_effect = yes
+				add_character_modifier = short_20_modifier
+			}
+		}
+		remove_variable = actual_height_for_weight
+	}
+}

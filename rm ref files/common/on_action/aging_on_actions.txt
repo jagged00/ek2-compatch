@@ -1,0 +1,715 @@
+﻿#visual age is on a scale from 0 to 1 based on games default aging gene
+on_add_visual_age_variable = {
+		trigger = { 
+			is_alive = yes
+			Not = { is_immortal = yes }
+			trigger_if = {
+				limit = { is_alive = yes }
+				not = { has_variable = visual_age }
+				Not = { has_character_flag = is_newborn }
+			}
+		}
+		effect = {
+			set_variable = {
+				name = visual_age
+				value = {
+					if = {
+						limit = { 
+							age >= 35
+							has_trait = beauty_good
+						}
+						value = age
+						subtract = 35
+						multiply = 0.02
+						min = 0
+						max = 1.5
+					}
+					else_if = {
+						limit = { age >= 25 }
+						value = age
+						subtract = 25
+						multiply = 0.02
+						min = 0
+						max = 1.5
+					}
+					else = {
+						value = 0
+					}
+				}
+			}
+		}
+	}
+	
+on_increase_visual_age_variable = {
+		trigger = {
+			is_alive = yes
+			Not = { is_immortal = yes }
+			trigger_if = {
+				limit = { is_alive = yes }
+				has_variable = visual_age
+				Not = { has_character_flag = is_newborn }
+			}
+			trigger_if = {
+				limit = { has_trait = beauty_good }
+				age > 35
+			}
+			trigger_else = {
+				age > 25
+			}
+		}
+		effect = {
+			change_variable = {
+				name = visual_age
+				add = 0.02
+			}
+			if = {
+				limit = { var:visual_age > 1.5 }
+				remove_variable = visual_age
+				set_variable = {
+					name = visual_age
+					value = 1.5
+				}
+			}
+			if = {
+				limit = {
+					has_trait = infirm
+					var:visual_age < 0.5
+				}
+				remove_trait = infirm
+			}
+		}
+	}
+	
+on_remove_immortal_age_variable = {
+		trigger = {
+			is_alive = yes
+			is_immortal = yes
+			trigger_if = {
+				limit = { is_alive = yes }
+				Or = {
+					Not = { has_variable = visual_age }
+					trigger_if = {
+						limit = { has_variable = visual_age }
+						var:visual_age > 0
+					}
+				}
+			}
+		}
+		effect = {
+			remove_variable = visual_age
+			set_variable = {
+				name = visual_age
+				value = 0
+			}
+		}
+	}
+
+on_newborn = {
+	trigger = {
+		is_alive = yes
+	}
+	effect = {
+		add_character_flag = {
+			flag = is_newborn
+			days = 180
+		}
+		trigger_event = { on_action = on_add_height_growth_newborn }
+	}
+}
+
+on_add_height_growth_delay = {
+	effect = {
+		trigger_event = { 
+			on_action = on_add_height_growth
+			days = 5
+		}
+	}
+}
+
+on_add_height_growth_newborn = {
+	trigger = {
+		Not = { has_character_flag = height_growth_set }
+	}
+	effect = {
+		add_character_flag = {
+			flag = height_growth_set
+			days = 360
+		}
+		set_variable = {
+			name = height_growth
+			value = 0
+		}
+		trigger_event = { 
+			id = aging.0005
+			days = { 1 60 }
+		}
+		trigger_event = { 
+			id = aging.0005
+			days = { 61 120 }
+		}
+		trigger_event = { 
+			id = aging.0005
+			days = { 121 180}
+		}
+		trigger_event = { 
+			id = aging.0005
+			days = { 181 240 }
+		}
+		trigger_event = { 
+			id = aging.0005
+			days = { 241 300 }
+		}
+		trigger_event = { 
+			id = aging.0006
+			days = { 301 360 }
+		}
+		trigger_event = { 
+			on_action = on_height_trait
+		}
+	}
+}
+
+on_add_height_growth = {
+	trigger = {
+		is_alive = yes
+		Not = { has_character_flag = height_growth_set }
+		Not = { has_character_flag = is_newborn }
+	}
+	effect = {
+		if = {
+			limit = { 
+				Or = {
+					Not = { has_variable = height_growth }
+					trigger_if = {
+						limit = { has_variable = height_growth }
+						Not = { var:height_growth = 1 }
+					}
+				}
+			}
+			add_character_flag = {
+				flag = height_growth_set
+				days = 360
+			}
+			if = {
+				limit = { Not = { has_variable = height_growth } }
+				set_variable = {
+					name = height_growth
+					value = {
+						value = age
+						divide = 18
+						max = 1
+					}
+				}
+			}
+			if = {
+				limit = { var:height_growth > 1 }
+				remove_variable = height_growth
+				set_variable = {
+					name = height_growth
+					value = 1
+				}
+			}
+			else_if = {
+				limit = { var:height_growth < minimum_height_growth }
+				remove_variable = height_growth
+				set_variable = {
+					name = height_growth
+					value = minimum_height_growth
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 1 60 }
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 61 120 }
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 121 180}
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 181 240 }
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 241 300 }
+				}
+				trigger_event = { 
+					id = aging.0006
+					days = { 301 360 }
+				}
+			}
+			else_if = {
+				limit = { var:height_growth > maximum_height_growth }
+				remove_variable = height_growth
+				set_variable = {
+					name = height_growth
+					value = maximum_height_growth
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 1 60 }
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 61 120 }
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 121 180}
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 181 240 }
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 241 300 }
+				}
+				trigger_event = { 
+					id = aging.0006
+					days = { 301 360 }
+				}
+			}
+			else = {
+				trigger_event = { 
+					id = aging.0005
+					days = { 1 60 }
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 61 120 }
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 121 180}
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 181 240 }
+				}
+				trigger_event = { 
+					id = aging.0005
+					days = { 241 300 }
+				}
+				trigger_event = { 
+					id = aging.0006
+					days = { 301 360 }
+				}
+			}
+		}
+	}
+}
+
+on_puberty_start = {
+				trigger = {
+					is_alive = yes
+					age >= 8
+					trigger_if = {
+						limit = { is_alive = yes }
+						Not = { has_character_flag = is_newborn }
+						Not = { has_character_flag = puberty_ongoing }
+						has_variable = puberty_start_age
+						trigger_if = {
+							limit = {
+								has_variable = puberty_start_age
+								Not = { has_character_flag = puberty_ongoing }
+							}
+							age >= var:puberty_start_age
+						}
+					}
+				}
+				effect = {
+					add_character_flag = puberty_start
+					add_character_flag = puberty_ongoing
+					trigger_event = { 
+						id = aging.0001
+						days = { 1 360 }
+					}
+				}
+			}
+	
+on_puberty = {
+	trigger = {
+		is_alive = yes
+		trigger_if = {
+			limit = { is_alive = yes }
+			Not = { has_character_flag = is_newborn }
+			trigger_if = {
+				limit = { has_variable = puberty_value }
+				Not = { var:puberty_value = 1.25 }
+			}
+		}
+	}
+	effect = {
+		if = { 
+			limit = { Not = { has_variable = puberty_start_age } }
+			trigger_event = { on_action = on_puberty_start_age }
+		}
+		else_if = {
+			limit = { Not = { has_character_flag = puberty_ongoing } }
+			trigger_event = { on_action = on_puberty_start }
+		}
+		else = {
+			remove_character_flag = puberty_start
+			trigger_event = { on_action = on_puberty_ongoing }
+		}
+	}
+}
+
+on_puberty_ongoing = {
+	trigger = {
+		is_alive = yes
+		trigger_if = {
+			limit = { is_alive = yes }
+			Not = { has_character_flag = is_newborn }
+			has_character_flag = puberty_ongoing
+			age >= 8
+			Or = {
+				Not = { has_variable = puberty_value }
+				trigger_if = {
+					limit = { has_variable = puberty_value }
+					Not = { var:puberty_value = 1.25 }
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = { has_sexuality = none }
+			trigger_event = child_personality.4000
+		}
+		if = {
+			limit = { Not = { has_variable = puberty_value } }
+			set_variable = {
+				name = puberty_value
+				value = 0
+			}
+		}
+		if = {
+			limit = { has_variable = puberty_rate }
+			remove_variable = puberty_rate
+		}
+		if = {
+			limit = {
+				var:puberty_value > 1.25
+			}
+			remove_variable = puberty_value
+			remove_variable = puberty_rate
+			remove_character_flag = puberty_ongoing
+			set_variable = {
+				name = puberty_value
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				var:puberty_value < minimum_puberty_growth
+			}
+			remove_variable = puberty_value
+			set_variable = {
+				name = puberty_value
+				value = minimum_puberty_growth
+			}
+			trigger_event = { 
+				id = aging.0002
+				days = { 1 60 }
+			}
+			trigger_event = { 
+				id = aging.0002
+				days = { 61 120 }
+			}
+			trigger_event = { 
+				id = aging.0002
+				days = { 121 180}
+			}
+			trigger_event = { 
+				id = aging.0002
+				days = { 181 240 }
+			}
+			trigger_event = { 
+				id = aging.0002
+				days = { 241 300 }
+			}
+			trigger_event = { 
+				id = aging.0002
+				days = { 301 360 }
+			}
+		}
+		else = {
+			trigger_event = { 
+				id = aging.0002
+				days = { 1 60 }
+			}
+			trigger_event = { 
+				id = aging.0002
+				days = { 61 120 }
+			}
+			trigger_event = { 
+				id = aging.0002
+				days = { 121 180}
+			}
+			trigger_event = { 
+				id = aging.0002
+				days = { 181 240 }
+			}
+			trigger_event = { 
+				id = aging.0002
+				days = { 241 300 }
+			}
+			trigger_event = { 
+				id = aging.0002
+				days = { 301 360 }
+			}
+		}
+	}
+}
+
+on_puberty_start_age = {
+		trigger = {
+			is_alive = yes
+			trigger_if = {
+				limit = { is_alive = yes }
+				not = { has_variable = puberty_start_age }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					is_male = yes
+					exists = scope:real_father
+					trigger_if = {
+						limit = {
+							exists = scope:real_father
+						}
+						scope:real_father = { is_alive = yes }
+						trigger_if = {
+							limit = {
+								scope:real_father = { is_alive = yes }
+							}
+							scope:real_father = { has_variable = puberty_start_age }
+						}
+					}
+				}
+				set_variable = {
+					name = puberty_start_age
+					value = scope:real_father.var:puberty_start_age
+				}
+			}
+			else_if = {
+				limit = {
+					is_male = yes
+					exists = scope:father
+					trigger_if = {
+						limit = {
+							exists = scope:father
+						}
+						scope:father = { is_alive = yes }
+						trigger_if = {
+							limit = {
+								scope:father = { is_alive = yes }
+							}
+							scope:father = { has_variable = puberty_start_age }
+						}
+					}
+				}
+				set_variable = {
+					name = puberty_start_age
+					value = scope:father.var:puberty_start_age
+				}
+			}
+			else_if = {
+				limit = {
+					is_female = yes
+					exists = scope:mother
+					trigger_if = {
+						limit = {
+							exists = scope:mother
+						}
+						scope:mother = { is_alive = yes }
+						trigger_if = {
+							limit = {
+								scope:mother = { is_alive = yes }
+							}
+							scope:mother = { has_variable = puberty_start_age }
+						}
+					}
+				}
+				set_variable = {
+					name = puberty_start_age
+					value = scope:mother.var:puberty_start_age
+				}
+			}
+			else_if = {
+				random_list = {
+					10 = {
+						set_variable = {
+							name = puberty_start_age
+							value = {
+								value = 8
+								if = {
+									limit = { is_male = yes }
+									add = 1
+								}
+							}
+						}
+					}
+					20 = {
+						set_variable = {
+							name = puberty_start_age
+							value = {
+								value = 9
+								if = {
+									limit = { is_male = yes }
+									add = 1
+								}
+							}
+						}
+					}
+					30 = {
+						set_variable = {
+							name = puberty_start_age
+							value = {
+								value = 10
+								if = {
+									limit = { is_male = yes }
+									add = 1
+								}
+							}
+						}
+					}
+					20 = {
+						set_variable = {
+							name = puberty_start_age
+							value = {
+								value = 11
+								if = {
+									limit = { is_male = yes }
+									add = 1
+								}
+							}
+						}
+					}
+					10 = {
+						set_variable = {
+							name = puberty_start_age
+							value = {
+								value = 12
+								if = {
+									limit = { is_male = yes }
+									add = 1
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { is_adult = yes }
+				set_variable = {
+					name = puberty_value
+					value = 1.0
+				}
+			}
+			else_if = {
+				limit = { age < var:puberty_start_age }
+				set_variable = {
+					name = puberty_value
+					value = 0
+				}
+			}
+			else_if = {
+				limit = { 
+					age = var:puberty_start_age
+					Not = { age = 0 }
+				}
+				set_variable = {
+					name = puberty_value
+					value = 0
+				}
+				trigger_event = { 
+					on_action = on_puberty
+					days = 4
+				}
+			}
+			else_if = {
+				limit = { age = 15 }
+				set_variable = {
+					name = puberty_value
+					value = 0.85
+				}
+				trigger_event = { 
+					on_action = on_puberty
+					days = 4
+				}
+			}
+			else_if = {
+				limit = { age = 14 }
+				set_variable = {
+					name = puberty_value
+					value = 0.7
+				}
+				trigger_event = { 
+					on_action = on_puberty
+					days = 4
+				}
+			}
+			else_if = {
+				limit = { age = 13 }
+				set_variable = {
+					name = puberty_value
+					value = 0.55
+				}
+				trigger_event = { 
+					on_action = on_puberty
+					days = 4
+				}
+			}
+			else_if = {
+				limit = { age = 12 }
+				set_variable = {
+					name = puberty_value
+					value = 0.4
+				}
+				trigger_event = { 
+					on_action = on_puberty
+					days = 4
+				}
+			}
+			else_if = {
+				limit = { age = 11 }
+				set_variable = {
+					name = puberty_value
+					value = 0.3
+				}
+				trigger_event = { 
+					on_action = on_puberty
+					days = 4
+				}
+			}
+			else_if = {
+				limit = { age = 10 }
+				set_variable = {
+					name = puberty_value
+					value = 0.2
+				}
+				trigger_event = { 
+					on_action = on_puberty
+					days = 4
+				}
+			}
+			else_if = {
+				limit = { age = 9 }
+				set_variable = {
+					name = puberty_value
+					value = 0.1
+				}
+				trigger_event = { 
+					on_action = on_puberty
+					days = 4
+				}
+			}
+		}
+	}

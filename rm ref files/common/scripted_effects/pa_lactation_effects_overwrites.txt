@@ -1,0 +1,167 @@
+﻿recalculation_wet_nurse_lactation = {
+	if = {
+		limit = { Not = { has_variable = lactation_genetic } }
+		set_lactation_genetic = yes
+	}
+	if = {
+		limit = { has_court_position = wet_nurse_court_position }
+		remove_variable = carn_milk_production
+		set_variable = {
+			name = carn_milk_production
+			value = var:lactation_genetic
+		}
+	}
+	else = {
+		remove_variable = carn_milk_production
+		remove_variable = post_pregnancy_breasts
+		set_variable = {
+			name = carn_milk_production
+			value = var:lactation_genetic
+		}
+		set_variable = {
+			name = post_pregnancy_breasts
+			value = 1
+		}
+		trigger_event = {
+			id = pregnancy_body.2001
+			days = 30
+		}
+	}
+}
+
+pa_add_milk_production_birth = {
+
+	### ACTUALLY CHANGING THE VARIABLE
+	if = {
+		limit = { Not = { has_variable = lactation_genetic } }
+		set_lactation_genetic = yes
+	}
+	remove_variable = carn_milk_production
+	set_variable = {
+		name = carn_milk_production
+		value = var:lactation_genetic
+	}
+
+		### NOTIFICATIONS AND ON_ACTIONS ###
+
+	if = {
+		limit = {
+			Or = {
+				Not = { has_variable = post_pregnancy_breasts }
+				trigger_if = {
+					limit = { has_variable = post_pregnancy_breasts }
+					var:post_pregnancy_breasts < 1
+				}
+			}
+		}
+		trigger_event = {
+			on_action = carn_on_milk_production_change
+		}
+	}
+	if = {
+		limit = {
+			Not = { has_variable = post_pregnancy_breasts }
+		}
+		trigger_event = {
+			on_action = carn_on_start_lactating
+		}
+		custom_tooltip = carn_starts_lactating_tooltip
+	}
+	else_if = {
+		# milk production increased
+		limit = { var:post_pregnancy_breasts < 1 }
+		custom_tooltip = carn_milk_production_increases_tooltip
+	}
+	remove_variable = post_pregnancy_breasts
+	set_variable = {
+		name = post_pregnancy_breasts
+		value = 1
+	}
+}
+
+pa_milk_production_decrease = {
+	remove_variable = carn_milk_production
+	if = {
+		limit = { Not = { has_variable = lactation_genetic } }
+		set_lactation_genetic = yes
+	}
+	if = {
+		limit = { has_variable = post_pregnancy_breasts }
+		set_variable = {
+			name = carn_milk_production
+			value = {
+				value = var:lactation_genetic
+				multiply = var:post_pregnancy_breasts
+			}
+		}
+	}
+	else = {
+		set_variable = {
+			name = carn_milk_production
+			value = 0
+		}
+	}
+	if = {
+		limit = { var:carn_milk_production <= 0 }
+		remove_variable = carn_milk_production
+		trigger_event = {
+			on_action = carn_on_stop_lactating
+		}
+		custom_tooltip = carn_stops_lactating_tooltip
+	}
+	else = {
+		# milk production decreased
+		custom_tooltip = carn_milk_production_decreases_tooltip
+	}
+}
+
+
+set_breastfeeding_modifiers_effect = {
+	if = {
+		limit = { $BREASTS$.var:carn_milk_production >= 100 }
+		if = {
+			limit = { $BREASTS$.var:carn_milk_production <= 120 }
+			$CHILD$ = { 
+				add_character_modifier = {
+					modifier = well_fed_baby_modifier_1
+					months = 36
+				}
+			}
+		}
+		else_if = {
+			limit = { $BREASTS$.var:carn_milk_production <= 140 }
+			$CHILD$ = { 
+				add_character_modifier = {
+					modifier = well_fed_baby_modifier_2
+					months = 36
+				}
+			}
+		}
+		else_if = {
+			limit = { $BREASTS$.var:carn_milk_production <= 160 }
+			$CHILD$ = { 
+				add_character_modifier = {
+					modifier = well_fed_baby_modifier_3
+					months = 36
+				}
+			}
+		}
+		else_if = {
+			limit = { $BREASTS$.var:carn_milk_production <= 180 }
+			$CHILD$ = {
+				add_character_modifier = {
+					modifier = well_fed_baby_modifier_4
+					months = 36
+				}
+			}
+		}
+		else = {
+			$CHILD$ = {
+				add_character_modifier = {
+					modifier = well_fed_baby_modifier_5
+					months = 36
+				}
+			}
+		}
+	}
+}

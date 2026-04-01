@@ -1,0 +1,44 @@
+﻿
+on_birth_child = {
+	on_actions = { 
+		on_newborn
+		on_physical_variable
+	}
+}
+
+on_birthday = {
+	on_actions = {
+		on_physical_variable
+		on_increase_visual_age_variable
+		on_remove_immortal_age_variable
+		on_seed_carn_trait
+		on_puberty
+		on_remove_pregnant_trait
+	}
+}
+
+on_guest_arrived_from_pool = {
+	on_actions = { 
+		on_physical_variable
+			}
+}
+
+on_gene_variable_seeding = {
+	trigger = {
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = triggered_bookmark_events
+				target = flag:gene_variable_seeding
+				}
+			}
+		}
+	effect = {
+		add_to_global_variable_list = {
+			name = triggered_bookmark_events
+			target = flag:gene_variable_seeding
+		}
+		every_living_character = {
+				trigger_event = { on_action = on_physical_variable }
+		}
+	}
+}

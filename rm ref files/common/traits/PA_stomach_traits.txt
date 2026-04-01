@@ -1,0 +1,406 @@
+﻿pregnant_stomach_1 = {
+	opposites = {
+		average_weight
+		fat
+		skinny
+		abs
+	}
+	group = pregnant_stomach
+	level = 1
+	physical = yes
+	flag = pa_trait
+	
+
+	random_creation = 0
+	
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pregnant_stomach_1_desc
+			}
+			desc = trait_pregnant_stomach_1_character_desc
+		}
+	}
+}
+pregnant_stomach_2 = {
+	opposites = {
+		average_weight
+		fat
+		skinny
+		abs
+	}
+	group = pregnant_stomach
+	level = 2
+	physical = yes
+	flag = pa_trait
+	
+
+	random_creation = 0
+	
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pregnant_stomach_2_desc
+			}
+			desc = trait_pregnant_stomach_2_character_desc
+		}
+	}
+}
+pregnant_stomach_3 = {
+	opposites = {
+		average_weight
+		fat
+		skinny
+		abs
+	}
+	group = pregnant_stomach
+	level = 3
+	physical = yes
+	flag = pa_trait
+	
+
+	random_creation = 0
+	
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_pregnant_stomach_3_desc
+			}
+			desc = trait_pregnant_stomach_3_character_desc
+		}
+	}
+}
+abs_1 = {
+	opposites = {
+		average_weight
+		fat
+		skinny
+		pregnant_stomach
+	}
+	group = abs
+	level = 1
+	physical = yes
+	flag = pa_trait
+	
+
+	random_creation = 0
+	
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_abs_1_desc
+			}
+			desc = trait_abs_1_character_desc
+		}
+	}
+}
+abs_2 = {
+	opposites = {
+		average_weight
+		fat
+		skinny
+		pregnant_stomach
+	}
+	group = abs
+	level = 2
+	physical = yes
+	flag = pa_trait
+	
+
+	random_creation = 0
+	
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_abs_2_desc
+			}
+			desc = trait_abs_2_character_desc
+		}
+	}
+}
+abs_3 = {
+	opposites = {
+		average_weight
+		fat
+		skinny
+		pregnant_stomach
+	}
+	group = abs
+	level = 3
+	physical = yes
+	flag = pa_trait
+	
+
+	random_creation = 0
+	
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_abs_3_desc
+			}
+			desc = trait_abs_3_character_desc
+		}
+	}
+}
+skinny_1 = {
+	opposites = {
+		average_weight
+		fat
+		abs
+		pregnant_stomach
+	}
+	group = skinny
+	level = 1
+	physical = yes
+	flag = pa_trait
+	
+
+	random_creation = 0
+	
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_skinny_1_desc
+			}
+			desc = trait_skinny_1_character_desc
+		}
+	}
+}
+skinny_2 = {
+	opposites = {
+		average_weight
+		fat
+		abs
+		pregnant_stomach
+	}
+	group = skinny
+	level = 2
+	physical = yes
+	flag = pa_trait
+
+	random_creation = 0
+	
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_skinny_2_desc
+			}
+			desc = trait_skinny_2_character_desc
+		}
+	}
+}
+skinny_3 = {
+	opposites = {
+		average_weight
+		fat
+		abs
+		pregnant_stomach
+	}
+	group = skinny
+	level = 3
+	physical = yes
+	flag = pa_trait
+
+	random_creation = 0
+	
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_skinny_3_desc
+			}
+			desc = trait_skinny_3_character_desc
+		}
+	}
+}
+skinny_4 = {
+	opposites = {
+		average_weight
+		fat
+		abs
+		pregnant_stomach
+	}
+	group = skinny
+	level = 4
+	physical = yes
+	flag = pa_trait
+
+	random_creation = 0
+	
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_skinny_4_desc
+			}
+			desc = trait_skinny_4_character_desc
+		}
+	}
+}
+average_weight = {
+	opposites = {
+		skinny
+		fat
+		abs
+		pregnant_stomach
+	}
+	physical = yes
+	flag = pa_trait
+
+	random_creation = 0
+	
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_average_weight_desc
+			}
+			desc = trait_average_weight_character_desc
+		}
+	}
+}
+fat_1 = {
+	opposites = {
+		average_weight
+		skinny
+		abs
+	}
+	group = fat
+	level = 1
+	physical = yes
+	flag = pa_trait
+
+
+	random_creation = 0
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_fat_1_desc
+			}
+			desc = trait_fat_1_character_desc
+		}
+	}
+}
+fat_2 = {
+	opposites = {
+		average_weight
+		skinny
+		abs
+	}
+	group = fat
+	level = 2
+	physical = yes
+	flag = pa_trait
+
+
+	random_creation = 0
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_fat_2_desc
+			}
+			desc = trait_fat_2_character_desc
+		}
+	}
+}
+fat_3 = {
+	opposites = {
+		average_weight
+		skinny
+		abs
+	}
+	group = fat
+	level = 3
+	physical = yes
+	flag = pa_trait
+
+
+	random_creation = 0
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_fat_3_desc
+			}
+			desc = trait_fat_3_character_desc
+		}
+	}
+}
+fat_4 = {
+	opposites = {
+		average_weight
+		skinny
+		abs
+	}
+	group = fat
+	level = 4
+	physical = yes
+	flag = pa_trait
+
+
+	random_creation = 0
+	shown_in_ruler_designer = no
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_fat_4_desc
+			}
+			desc = trait_fat_4_character_desc
+		}
+	}
+}

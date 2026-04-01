@@ -1,0 +1,158 @@
+﻿giant_value = 100
+tall_value = 70
+average_height_value = 50
+short_value = 30
+dwarf_value = 0
+
+giant_ratio = {
+	if = {
+		limit = { 
+			has_variable = actual_height_variable
+			var:actual_height_variable >= 0
+		}
+		if = {
+			limit = { var:actual_height_variable >= giant_value }
+			value = var:actual_height_variable
+			divide = giant_value
+		}
+		else_if = {
+			limit = { var:actual_height_variable >= tall_value }
+			value = var:actual_height_variable
+			subtract = tall_value
+			divide = {
+				value = giant_value
+				subtract = tall_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+tall_ratio = {
+	if = {
+		limit = { 
+			has_variable = actual_height_variable
+			var:actual_height_variable >= 0
+		}
+		if = {
+			limit = { var:actual_height_variable >= giant_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:actual_height_variable >= tall_value }
+			value = giant_value
+			subtract = var:actual_height_variable
+			divide = {
+				value = giant_value
+				subtract = tall_value
+			}
+		}
+		else_if = {
+			limit = { var:actual_height_variable >= average_height_value }
+			value = var:actual_height_variable
+			subtract = average_height_value
+			divide = {
+				value = tall_value
+				subtract = average_height_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+average_height_ratio = {
+	if = {
+		limit = { 
+			has_variable = actual_height_variable
+			var:actual_height_variable >= 0
+		}
+		if = {
+			limit = { var:actual_height_variable >= tall_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:actual_height_variable >= average_height_value }
+			value = tall_value
+			subtract = var:actual_height_variable
+			divide = {
+				value = tall_value
+				subtract = average_height_value
+			}
+		}
+		else_if = {
+			limit = { var:actual_height_variable >= short_value }
+			value = var:actual_height_variable
+			subtract = short_value
+			divide = {
+				value = average_height_value
+				subtract = short_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+short_ratio = {
+	if = {
+		limit = { 
+			has_variable = actual_height_variable
+			var:actual_height_variable >= 0
+		}
+		if = {
+			limit = { var:actual_height_variable >= average_height_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:actual_height_variable >= short_value }
+			value = average_height_value
+			subtract = var:actual_height_variable
+			divide = {
+				value = average_height_value
+				subtract = short_value
+			}
+		}
+		else = {
+			value = var:actual_height_variable
+			divide = short_value
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+dwarf_ratio = {
+	if = {
+		limit = { 
+			has_variable = actual_height_variable
+			var:actual_height_variable >= 0
+		}
+		if = {
+			limit = { var:actual_height_variable >= short_value }
+			value = 0
+		}
+		else = {
+			value = short_value
+			subtract = var:actual_height_variable
+			divide = short_value
+		}
+	}
+	else = {
+		value = 0
+	}
+}

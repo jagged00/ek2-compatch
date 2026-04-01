@@ -1,0 +1,188 @@
+﻿obesity_value = 50
+chubby_value = 15
+average_stomach_value = 0
+abs_definition_value = 50
+thin_value = -15
+skeletal_value = -50
+
+obesity_ratio = {
+	if = {
+		limit = { has_variable = actual_stomach_size_variable }
+		if = {
+			limit = { var:actual_stomach_size_variable >= obesity_value }
+			value = var:actual_stomach_size_variable
+			divide = obesity_value
+		}
+		else_if = {
+			limit = { var:actual_stomach_size_variable >= chubby_value }
+			value = var:actual_stomach_size_variable
+			subtract = chubby_value
+			divide = {
+				value = obesity_value
+				subtract = chubby_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+chubby_ratio = {
+	if = {
+		limit = { has_variable = actual_stomach_size_variable }
+		if = {
+			limit = { var:actual_stomach_size_variable >= obesity_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:actual_stomach_size_variable >= chubby_value }
+			value = obesity_value
+			subtract = var:actual_stomach_size_variable
+			divide = {
+				value = obesity_value
+				subtract = chubby_value
+			}
+		}
+		else_if = {
+			limit = { var:actual_stomach_size_variable >= average_stomach_value }
+			value = var:actual_stomach_size_variable
+			subtract = average_stomach_value
+			divide = {
+				value = chubby_value
+				subtract = average_stomach_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+normalized_actual_stomach_size_variable = {
+	value = var:actual_stomach_size_variable
+	multiply = -1
+}
+
+normalized_thin_value = {
+	value = thin_value
+	multiply = -1
+}
+
+normalized_skeletal_value = {
+	value = skeletal_value
+	multiply = -1
+}
+
+average_stomach_ratio = {
+	if = {
+		limit = { 
+			has_variable = actual_stomach_size_variable 
+			has_variable = abs_variable
+		}
+		if = {
+			limit = { var:actual_stomach_size_variable >= chubby_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:actual_stomach_size_variable >= average_stomach_value }
+			value = chubby_value
+			subtract = var:actual_stomach_size_variable
+			divide = {
+				value = chubby_value
+				subtract = average_stomach_value
+			}
+			subtract = abs_ratio
+			min = 0
+		}
+		else_if = {
+			limit = { var:actual_stomach_size_variable >= thin_value }
+			value = normalized_thin_value
+			subtract = normalized_actual_stomach_size_variable
+			divide = normalized_thin_value
+			subtract = abs_ratio
+			min = 0
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+abs_ratio = {
+	if = {
+		limit = { has_variable = abs_variable }
+		value = var:abs_variable
+		divide = abs_definition_value
+	}
+	else = {
+		value = 0
+	}
+}
+
+thin_ratio = {
+	if = {
+		limit = { has_variable = actual_stomach_size_variable }
+		if = {
+			limit = { var:actual_stomach_size_variable >= average_stomach_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:actual_stomach_size_variable >= thin_value }
+			value = normalized_actual_stomach_size_variable
+			divide = normalized_thin_value
+		}
+		else_if = {
+			limit = { var:actual_stomach_size_variable >= skeletal_value }
+			value = normalized_skeletal_value
+			subtract = normalized_actual_stomach_size_variable
+			divide = {
+				value = normalized_skeletal_value
+				subtract = normalized_thin_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+skeletal_ratio = {
+	if = {
+		limit = { has_variable = actual_stomach_size_variable }
+		if = {
+			limit = { var:actual_stomach_size_variable >= thin_value }
+			value = 0
+		}
+		else = {
+			value = normalized_actual_stomach_size_variable
+			divide = normalized_skeletal_value
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+pregnant_ratio = {
+	if = {
+		limit = { is_pregnant = yes }
+		value = pregnant_stomach_size
+		divide = 100
+	}
+	else = {
+		value = 0
+	}
+}

@@ -1,0 +1,270 @@
+﻿physical_attributes_active = { always = yes }
+
+carn_should_have_tits_trigger = {
+	Or = {
+		is_female = yes
+		And = {
+			is_male = yes
+			carn_is_futa_trigger = yes
+		}
+	}
+}
+
+carn_is_futa_trigger = {
+	OR = {
+		has_trait = futa
+		has_trait = futa_genetic
+	}
+}
+
+has_breast_traits = {
+	OR = { 
+		has_trait = tits_average
+		has_trait = tits_big_good_1
+		has_trait = tits_big_good_2
+		has_trait = tits_big_good_3
+		has_trait = tits_big_good_4
+		has_trait = tits_big_good_5
+		has_trait = tits_big_bad_1
+		has_trait = tits_big_bad_2
+		has_trait = tits_big_bad_3
+		has_trait = tits_small_bad_1
+		has_trait = tits_small_bad_2
+		has_trait = tits_small_bad_3
+		has_trait = tits_small_good_1
+		has_trait = tits_small_good_2
+		has_trait = tits_small_good_3
+	}
+}
+		
+has_butt_traits = {
+	OR = { 
+		has_trait = small_butt_narrow_hips
+		has_trait = small_butt_medium_hips
+		has_trait = small_butt_wide_hips
+		has_trait = medium_butt_narrow_hips
+		has_trait = medium_butt_medium_hips
+		has_trait = medium_butt_wide_hips
+		has_trait = big_butt_narrow_hips
+		has_trait = big_butt_medium_hips
+		has_trait = big_butt_wide_hips_1
+		has_trait = big_butt_wide_hips_2
+		has_trait = huge_hips
+		has_trait = huge_butt
+		has_trait = colossal_butt
+	}
+}
+
+has_big_butt = {
+	OR = { 
+		has_trait = big_butt_narrow_hips
+		has_trait = big_butt_medium_hips
+		has_trait = big_butt_wide_hips_1
+		has_trait = big_butt_wide_hips_2
+		has_trait = huge_hips
+		has_trait = huge_butt
+		has_trait = colossal_butt
+	}
+}
+
+has_medium_butt = {
+	OR = { 
+		has_trait = medium_butt_narrow_hips
+		has_trait = medium_butt_medium_hips
+		has_trait = medium_butt_wide_hips
+	}
+}
+
+has_small_butt = {
+	OR = { 
+		has_trait = small_butt_narrow_hips
+		has_trait = small_butt_medium_hips
+		has_trait = small_butt_wide_hips
+	}
+}
+
+has_wide_hips = {
+	OR = { 
+		has_trait = small_butt_wide_hips
+		has_trait = medium_butt_wide_hips
+		has_trait = big_butt_wide_hips_1
+		has_trait = big_butt_wide_hips_2
+		has_trait = huge_hips
+		has_trait = huge_butt
+		has_trait = colossal_butt
+	}
+}
+
+has_medium_hips = {
+	OR = { 
+		has_trait = small_butt_medium_hips
+		has_trait = medium_butt_medium_hips
+		has_trait = big_butt_medium_hips
+	}
+}
+
+has_narrow_hips = {
+	OR = { 
+		has_trait = small_butt_narrow_hips
+		has_trait = medium_butt_narrow_hips
+		has_trait = big_butt_narrow_hips
+	}
+}
+		
+has_height_trait = {
+	OR = { 
+		has_trait = tall_5
+		has_trait = tall_4
+		has_trait = tall_3
+		has_trait = tall_2
+		has_trait = tall_1
+		has_trait = average_height
+		has_trait = short_1
+		has_trait = short_2
+		has_trait = short_3
+		has_trait = short_4
+		has_trait = short_5
+	}
+}
+			
+has_arm_trait = {
+	OR = { 
+		has_trait = skinny_arms_1
+		has_trait = skinny_arms_2
+		has_trait = fat_arms_1
+		has_trait = fat_arms_2
+		has_trait = average_muscular
+		has_trait = muscular_1
+		has_trait = muscular_2
+		has_trait = muscular_3
+	}
+}
+			
+has_height_modifier_trigger = {
+	Or = {
+		has_character_modifier = short_20_modifier
+		has_character_modifier = short_19_modifier
+		has_character_modifier = short_18_modifier
+		has_character_modifier = short_17_modifier
+		has_character_modifier = short_16_modifier
+		has_character_modifier = short_15_modifier
+		has_character_modifier = short_14_modifier
+		has_character_modifier = short_13_modifier
+		has_character_modifier = short_12_modifier
+		has_character_modifier = short_11_modifier
+		has_character_modifier = short_10_modifier
+		has_character_modifier = short_9_modifier
+		has_character_modifier = short_8_modifier
+		has_character_modifier = short_7_modifier
+		has_character_modifier = short_6_modifier
+		has_character_modifier = short_5_modifier
+		has_character_modifier = short_4_modifier
+		has_character_modifier = short_3_modifier
+		has_character_modifier = short_2_modifier
+		has_character_modifier = short_1_modifier
+		has_character_modifier = tall_1_modifier
+		has_character_modifier = tall_2_modifier
+		has_character_modifier = tall_3_modifier
+		has_character_modifier = tall_4_modifier
+		has_character_modifier = tall_5_modifier
+		has_character_modifier = tall_6_modifier
+		has_character_modifier = tall_7_modifier
+		has_character_modifier = tall_8_modifier
+		has_character_modifier = tall_9_modifier
+		has_character_modifier = tall_10_modifier
+		has_character_modifier = tall_11_modifier
+		has_character_modifier = tall_12_modifier
+		has_character_modifier = tall_13_modifier
+		has_character_modifier = tall_14_modifier
+		has_character_modifier = tall_15_modifier
+		has_character_modifier = tall_16_modifier
+		has_character_modifier = tall_17_modifier
+		has_character_modifier = tall_18_modifier
+		has_character_modifier = tall_19_modifier
+		has_character_modifier = tall_20_modifier
+	}
+}
+
+has_weight_modifier_trigger = {
+	Or = {
+		has_character_modifier = thin_20_modifier
+		has_character_modifier = thin_19_modifier
+		has_character_modifier = thin_18_modifier
+		has_character_modifier = thin_17_modifier
+		has_character_modifier = thin_16_modifier
+		has_character_modifier = thin_15_modifier
+		has_character_modifier = thin_14_modifier
+		has_character_modifier = thin_13_modifier
+		has_character_modifier = thin_12_modifier
+		has_character_modifier = thin_11_modifier
+		has_character_modifier = thin_10_modifier
+		has_character_modifier = thin_9_modifier
+		has_character_modifier = thin_8_modifier
+		has_character_modifier = thin_7_modifier
+		has_character_modifier = thin_6_modifier
+		has_character_modifier = thin_5_modifier
+		has_character_modifier = thin_4_modifier
+		has_character_modifier = thin_3_modifier
+		has_character_modifier = thin_2_modifier
+		has_character_modifier = thin_1_modifier
+		has_character_modifier = fat_1_modifier
+		has_character_modifier = fat_2_modifier
+		has_character_modifier = fat_3_modifier
+		has_character_modifier = fat_4_modifier
+		has_character_modifier = fat_5_modifier
+		has_character_modifier = fat_6_modifier
+		has_character_modifier = fat_7_modifier
+		has_character_modifier = fat_8_modifier
+		has_character_modifier = fat_9_modifier
+		has_character_modifier = fat_10_modifier
+		has_character_modifier = fat_11_modifier
+		has_character_modifier = fat_12_modifier
+		has_character_modifier = fat_13_modifier
+		has_character_modifier = fat_14_modifier
+		has_character_modifier = fat_15_modifier
+		has_character_modifier = fat_16_modifier
+		has_character_modifier = fat_17_modifier
+		has_character_modifier = fat_18_modifier
+		has_character_modifier = fat_19_modifier
+		has_character_modifier = fat_20_modifier
+	}
+}
+
+has_muscle_modifier_trigger = {
+	Or = {
+		has_character_modifier = muscular_1_modifier
+		has_character_modifier = muscular_2_modifier
+		has_character_modifier = muscular_3_modifier
+		has_character_modifier = muscular_4_modifier
+		has_character_modifier = muscular_5_modifier
+		has_character_modifier = muscular_6_modifier
+		has_character_modifier = muscular_7_modifier
+		has_character_modifier = muscular_8_modifier
+		has_character_modifier = muscular_9_modifier
+		has_character_modifier = muscular_10_modifier
+		has_character_modifier = muscular_11_modifier
+		has_character_modifier = muscular_12_modifier
+		has_character_modifier = muscular_13_modifier
+		has_character_modifier = muscular_14_modifier
+		has_character_modifier = muscular_15_modifier
+		has_character_modifier = muscular_16_modifier
+		has_character_modifier = muscular_17_modifier
+		has_character_modifier = muscular_18_modifier
+		has_character_modifier = muscular_19_modifier
+	}
+}
+
+has_all_variables_seeded = {
+	And = {
+		has_variable = visual_arm_muscle_variable
+		has_variable = upper_body_fat_variable
+		has_variable = cbo_muscles
+		has_variable = cbo_lower_body_muscles
+		has_variable = butt_hip_size_total_variable
+		has_variable = butt_hip_size_ratio_variable
+		has_variable = actual_breast_size_variable
+		has_variable = actual_height_variable
+		has_variable = abs_variable
+		has_variable = actual_stomach_size_variable
+	}
+}

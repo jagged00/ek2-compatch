@@ -1,0 +1,143 @@
+﻿massive_tits_value = 100
+big_tits_value = 60
+average_tits_value = 30
+small_tits_value = 15
+
+massive_tits_ratio = {
+	if = {
+		limit = { has_variable = actual_breast_size_variable }
+		if = {
+			limit = { var:actual_breast_size_variable >= massive_tits_value }
+			value = var:actual_breast_size_variable
+			divide = massive_tits_value
+		}
+		else_if = {
+			limit = { var:actual_breast_size_variable >= big_tits_value }
+			value = var:actual_breast_size_variable
+			subtract = big_tits_value
+			divide = {
+				value = massive_tits_value
+				subtract = big_tits_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+big_tits_ratio = {
+	if = {
+		limit = { has_variable = actual_breast_size_variable }
+		if = {
+			limit = { var:actual_breast_size_variable >= massive_tits_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:actual_breast_size_variable >= big_tits_value }
+			value = massive_tits_value
+			subtract = var:actual_breast_size_variable
+			divide = {
+				value = massive_tits_value
+				subtract = big_tits_value
+			}
+		}
+		else_if = {
+			limit = { var:actual_breast_size_variable >= average_tits_value }
+			value = var:actual_breast_size_variable
+			subtract = average_tits_value
+			divide = {
+				value = big_tits_value
+				subtract = average_tits_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+average_tits_ratio = {
+	if = {
+		limit = { has_variable = actual_breast_size_variable }
+		if = {
+			limit = { var:actual_breast_size_variable >= big_tits_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:actual_breast_size_variable >= average_tits_value }
+			value = big_tits_value
+			subtract = var:actual_breast_size_variable
+			divide = {
+				value = big_tits_value
+				subtract = average_tits_value
+			}
+		}
+		else_if = {
+			limit = { var:actual_breast_size_variable >= small_tits_value }
+			value = var:actual_breast_size_variable
+			subtract = small_tits_value
+			divide = {
+				value = average_tits_value
+				subtract = small_tits_value
+			}
+		}
+		else = {
+			value = 0
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+small_tits_ratio = {
+	if = {
+		limit = { has_variable = actual_breast_size_variable }
+		if = {
+			limit = { var:actual_breast_size_variable >= average_tits_value }
+			value = 0
+		}
+		else_if = {
+			limit = { var:actual_breast_size_variable >= small_tits_value }
+			value = average_tits_value
+			subtract = var:actual_breast_size_variable
+			divide = {
+				value = average_tits_value
+				subtract = small_tits_value
+			}
+		}
+		else = {
+			value = var:actual_breast_size_variable
+			divide = small_tits_value
+		}
+	}
+	else = {
+		value = 0
+	}
+}
+
+flat_tits_ratio = {
+	if = {
+		limit = { has_variable = actual_breast_size_variable }
+		if = {
+			limit = { var:actual_breast_size_variable >= small_tits_value }
+			value = 0
+		}
+		else = {
+			value = small_tits_value
+			subtract = var:actual_breast_size_variable
+			divide = small_tits_value
+			
+		}
+	}
+	else = {
+		value = 0
+	}
+}

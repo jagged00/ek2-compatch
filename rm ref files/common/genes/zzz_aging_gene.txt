@@ -1,0 +1,788 @@
+﻿@maleMin = -0.499
+@maleMax = 0.499
+@femaleMin = -0.4
+@femaleMax = 0.4
+@boyMin = -0.499
+@boyMax = 0.499
+@girlMin = -0.4
+@girlMax = 0.4
+
+@maleBsMin = 0.0
+@maleBsMax = 1.0
+@femaleBsMin = 0.0
+@femaleBsMax = 0.8
+
+age_presets = {
+	age_preset_aging_primary = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 1.0 0.0 }
+		}
+	}
+	age_preset_aging_secondary = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 1.0 0.0 }
+		}					
+	}
+	age_preset_aging_secondary_full = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 1.0 0.0 }
+		}					
+	}
+	age_preset_aging_tertiary = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 1.0 0.0 }
+		}					
+	}
+	age_preset_aging_tertiary_reversed = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 1.0 0.0 }
+		}					
+	}
+	age_preset_aging_hsv_curve = {
+		mode = multiply
+		curve = {
+			{ 0.0 0.0 }
+			{ 1.0 0.0 }
+		}
+	}
+}
+
+morph_genes = {
+
+	gene_age = {
+
+		old_1 = {
+			index = 0
+			male = {
+
+				## Children ##
+				setting = {
+					attribute = "head_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints
+				}
+				setting = {
+					attribute = "body_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints_body
+				}
+				setting = {
+					attribute = "bs_infant_1" 
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_head
+				}
+				setting = {
+					attribute = "bs_infant_1_body"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_infant_1"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_i"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_breast_size_min"	   
+					value = { min = 1.0 max = 1.0 }
+					age = age_preset_pre_puberty
+				}
+				decal = {
+					body_part = head
+					textures = {
+						# diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_diffuse.dds"
+						normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					age = {
+						mode = multiply
+						curve = {
+							{ 0.0 1.0 }
+							{ 0.25 0.0 }
+						}
+					}
+					priority = 4
+				}
+				decal = {
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_diffuse.dds"
+						# normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = hard_light 
+						# normal = replace
+						# properties = 
+					}
+					age = age_preset_child_skin
+					priority = 0
+					decal_apply_order = pre_skin_color # pre_skin_color | post_skin_color
+				}
+				decal = {
+					body_part = torso
+					textures = {
+						normal = "gfx/models/portraits/decals/female_body/decal_female_body_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					age = {
+						mode = multiply
+						curve = {
+							{ 0.0 1.0 }
+							{ 0.10 0.8 }
+							{ 0.25 0.0 }
+						}
+					}
+					priority = 4
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+			
+		}
+
+		old_2 = {
+			index = 1
+			male = {
+
+				## Children ##
+				setting = {
+					attribute = "head_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints
+				}
+				setting = {
+					attribute = "body_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints_body
+				}
+				setting = {
+					attribute = "bs_infant_1" 
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_head
+				}
+				setting = {
+					attribute = "bs_infant_1_body"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_infant_1"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_i"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_breast_size_min"	   
+					value = { min = 1.0 max = 1.0 }
+					age = age_preset_pre_puberty
+				}
+				decal = {
+					body_part = head
+					textures = {
+						normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					age = {
+						mode = multiply
+						curve = {
+							{ 0.0 1.0 }
+							{ 0.25 0.0 }
+						}
+					}
+					priority = 4
+				}
+				decal = {
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_diffuse.dds"
+						# normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = hard_light 
+						# normal = replace
+						# properties = 
+					}
+					age = age_preset_child_skin
+					priority = 0
+					decal_apply_order = pre_skin_color # pre_skin_color | post_skin_color
+				}
+				decal = {
+					body_part = torso
+					textures = {
+						normal = "gfx/models/portraits/decals/female_body/decal_female_body_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					age = {
+						mode = multiply
+						curve = {
+							{ 0.0 1.0 }
+							{ 0.10 0.8 }
+							{ 0.25 0.0 }
+						}
+					}
+					priority = 4
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+
+		old_3 = {
+			index = 2
+			male = {
+
+				## Children ##
+				setting = {
+					attribute = "head_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints
+				}
+				setting = {
+					attribute = "body_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints_body
+				}
+				setting = {
+					attribute = "bs_infant_1" 
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_head
+				}
+				setting = {
+					attribute = "bs_infant_1_body"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_infant_1"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_i"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_breast_size_min"	   
+					value = { min = 1.0 max = 1.0 }
+					age = age_preset_pre_puberty
+				}
+				decal = {
+					body_part = head
+					textures = {
+						normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					age = {
+						mode = multiply
+						curve = {
+							{ 0.0 1.0 }
+							{ 0.25 0.0 }
+						}
+					}
+					priority = 4
+				}
+				decal = {
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_diffuse.dds"
+						# normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = hard_light 
+						# normal = replace
+						# properties = 
+					}
+					age = age_preset_child_skin
+					priority = 0
+					decal_apply_order = pre_skin_color # pre_skin_color | post_skin_color
+				}
+				decal = {
+					body_part = torso
+					textures = {
+						normal = "gfx/models/portraits/decals/female_body/decal_female_body_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					age = {
+						mode = multiply
+						curve = {
+							{ 0.0 1.0 }
+							{ 0.10 0.8 }
+							{ 0.25 0.0 }
+						}
+					}
+					priority = 4
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+
+		old_4 = {
+			index = 3
+			male = {
+
+				## Children ##
+				setting = {
+					attribute = "head_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints
+				}
+				setting = {
+					attribute = "body_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints_body
+				}
+				setting = {
+					attribute = "bs_infant_1" 
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_head
+				}
+				setting = {
+					attribute = "bs_infant_1_body"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_infant_1"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_i"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_breast_size_min"	   
+					value = { min = 1.0 max = 1.0 }
+					age = age_preset_pre_puberty
+				}
+				decal = {
+					body_part = head
+					textures = {
+						normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					age = {
+						mode = multiply
+						curve = {
+							{ 0.0 1.0 }
+							{ 0.10 0.8 }
+							{ 0.25 0.0 }
+						}
+					}
+					priority = 4
+				}
+				decal = {
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_diffuse.dds"
+						# normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = hard_light 
+						# normal = replace
+						# properties = 
+					}
+					age = age_preset_child_skin
+					priority = 0
+					decal_apply_order = pre_skin_color # pre_skin_color | post_skin_color
+				}
+				decal = {
+					body_part = torso
+					textures = {
+						normal = "gfx/models/portraits/decals/female_body/decal_female_body_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					age = {
+						mode = multiply
+						curve = {
+							{ 0.0 1.0 }
+							{ 0.25 0.0 }
+						}
+					}
+					priority = 4
+				}
+
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+
+	   old_beauty_1 = {
+			index = 4
+			generic = no # Can't be selected unless the character has a trait with forced_portrait_age_index matching this
+			male = {
+				## Children ##
+				setting = {
+					attribute = "head_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints
+				}
+				setting = {
+					attribute = "body_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints_body
+				}
+				setting = {
+					attribute = "bs_infant_1" 
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_head
+				}
+				setting = {
+					attribute = "bs_infant_1_body"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_infant_1"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_i"	   
+					value = { min = @maleBsMax max = @maleBsMax }
+					age = age_preset_child_bs_body
+				}
+				setting = {
+					attribute = "bs_body_breast_size_min"	   
+					value = { min = 1.0 max = 1.0 }
+					age = age_preset_pre_puberty
+				}
+				decal = {
+					body_part = head
+					textures = {
+						normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					age = {
+						mode = multiply
+						curve = {
+							{ 0.0 1.0 }
+							{ 0.25 0.0 }
+						}
+					}
+					priority = 4
+				}
+				decal = {
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_diffuse.dds"
+						# normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = hard_light 
+						# normal = replace
+						# properties = 
+					}
+					age = age_preset_child_skin
+					priority = 0
+					decal_apply_order = pre_skin_color # pre_skin_color | post_skin_color
+				}
+				decal = {
+					body_part = torso
+					textures = {
+						normal = "gfx/models/portraits/decals/female_body/decal_female_body_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					age = {
+						mode = multiply
+						curve = {
+							{ 0.0 1.0 }
+							{ 0.10 0.8 }
+							{ 0.25 0.0 }
+						}
+					}
+					priority = 4
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+
+		no_aging = {
+			index = 5
+			male = {
+				## Children ##
+				setting = {
+					attribute = "head_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints
+				}
+				setting = {
+					attribute = "body_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints_body
+				}
+				setting = {
+					attribute = "bs_body_breast_size_min"	   
+					value = { min = 1.0 max = 1.0 }
+					age = age_preset_pre_puberty
+				}
+			}
+			female = male
+			boy = male
+			girl = male
+		}
+
+		old_variable = {
+			index = 6
+			visible = no
+			generic = no
+			male = {
+				## Children ##
+				setting = {
+					attribute = "head_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints
+				}
+				setting = {
+					attribute = "body_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints_body
+				}
+				setting = {
+					attribute = "bs_body_breast_size_min"	   
+					value = { min = 1.0 max = 1.0 }
+					age = age_preset_pre_puberty
+				}
+				decal = {
+					body_part = head
+					textures = {
+						# diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_diffuse.dds"
+						normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					alpha_curve = {		  #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						#character age%, decal alpha
+						{0.0  1.0 }
+						{1.0   0.0 }
+					}
+					priority = 4
+				}
+				decal = {
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_diffuse.dds"
+						# normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = hard_light 
+						# normal = replace
+						# properties = 
+					}
+					alpha_curve = {		  #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						#character age%, decal alpha
+						{ 0.0 0.5 }
+						{ 0.6 0.0 }
+					}
+					priority = 0
+					decal_apply_order = pre_skin_color # pre_skin_color | post_skin_color
+				}
+				decal = {
+					body_part = torso
+					textures = {
+						normal = "gfx/models/portraits/decals/female_body/decal_female_body_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					alpha_curve = {		  #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						#character age%, decal alpha
+						{ 0.0 1.0 }
+						{ 0.4 0.8 }
+						{ 1.0 0.0 }
+					}
+					priority = 4
+				}
+			}
+			female = male
+			boy = {
+				## Children ##
+				setting = {
+					attribute = "head_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints
+				}
+				setting = {
+					attribute = "body_infant_proportions" 
+					value = { min = @maleMax max = @maleMax }
+					age = age_preset_infant_joints_body
+				}
+				setting = {
+					attribute = "bs_body_breast_size_min"	   
+					value = { min = 1.0 max = 1.0 }
+					age = age_preset_pre_puberty
+				}
+				setting = {
+					attribute = "bs_infant_1"
+					curve = {
+						{ 0.0 1.0 }
+						{ 0.1 1.0 }
+						{ 0.2 0.9 }
+						{ 0.4 0.5 }
+						{ 0.8 0.0 }
+						{ 1.0 0.0 }
+					}
+				}
+				setting = {
+					attribute = "bs_infant_1_body"
+					curve = {
+						{ 0.0 1.0 }
+						{ 0.2 0.4 }
+						{ 0.4 0.1 }
+						{ 0.6 0.0 }
+						{ 1.0 0.0 }
+					}
+				}
+				setting = {
+					attribute = "bs_body_infant_1"
+					curve = {
+						{ 0.0 1.0 }
+						{ 0.2 0.4 }
+						{ 0.4 0.1 }
+						{ 0.6 0.0 }
+						{ 1.0 0.0 }
+					}
+				}
+				setting = {
+					attribute = "bs_body_i"
+					curve = {
+						{ 0.0 1.0 }
+						{ 0.2 0.4 }
+						{ 0.4 0.1 }
+						{ 0.6 0.0 }
+						{ 1.0 0.0 }
+					}
+				}
+				decal = {
+					body_part = head
+					textures = {
+						# diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_diffuse.dds"
+						normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					alpha_curve = {		  #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						#character age%, decal alpha
+						{0.0  1.0 }
+						{1.0   0.0 }
+					}
+					priority = 4
+				}
+				decal = {
+					body_part = head
+					textures = {
+						diffuse = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_diffuse.dds"
+						# normal = "gfx/models/portraits/decals/female_head/decal_female_head_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						diffuse = hard_light 
+						# normal = replace
+						# properties = 
+					}
+					alpha_curve = {		  #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						#character age%, decal alpha
+						{ 0.0 0.5 }
+						{ 0.6 0.0 }
+					}
+					priority = 0
+					decal_apply_order = pre_skin_color # pre_skin_color | post_skin_color
+				}
+				decal = {
+					body_part = torso
+					textures = {
+						normal = "gfx/models/portraits/decals/female_body/decal_female_body_infant_01_normal.dds"
+					}
+					blend_modes = {				 #overlay/replace/hard_light/multiply
+						# diffuse = replace 
+						normal = replace
+						# properties = 
+					}
+					alpha_curve = {		  #controls decal alpha relative to gene strength. Will give a linear interpolation if left unspecified
+						#character age%, decal alpha
+						{ 0.0 1.0 }
+						{ 0.4 0.8 }
+						{ 1.0 0.0 }
+					}
+					priority = 4
+				}
+			}
+			girl = boy
+			
+		}
+	}
+}

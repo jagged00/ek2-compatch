@@ -1,0 +1,118 @@
+﻿
+on_carn_tits_trait = {
+		trigger = {
+			trigger_if = {
+				limit = { has_variable = puberty_value }
+				var:puberty_value > 0
+			}
+			trigger_else = {
+				is_adult = yes
+			}
+			carn_should_have_tits_trigger = yes
+			has_variable = breast_size_genetic
+		}
+		effect = {
+			remove_variable = actual_breast_size_variable
+			set_variable = {
+				name = actual_breast_size_variable
+				value = actual_breast_size
+			}
+			if = { 
+				limit = { 
+					var:actual_breast_size_variable < 40
+					var:actual_breast_size_variable >= 30
+				}
+				if = {
+					limit = { Not = { has_trait = tits_average } }
+					remove_breasts_trait_effect = yes
+					add_trait = tits_average
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_breast_size_variable < 60
+					var:actual_breast_size_variable >= 40
+				}
+				if = {
+					limit = { Not = { has_trait = tits_big_good_1 } }
+					remove_breasts_trait_effect = yes
+					add_trait = tits_big_good_1
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_breast_size_variable < 30
+					var:actual_breast_size_variable >= 20
+				}
+				if = {
+					limit = { Not = { has_trait = tits_small_good_1 } }
+					remove_breasts_trait_effect = yes
+					add_trait = tits_small_good_1
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_breast_size_variable < 80
+					var:actual_breast_size_variable >= 60
+				}
+				if = {
+					limit = { Not = { has_trait = tits_big_good_2 } }
+					remove_breasts_trait_effect = yes
+					add_trait = tits_big_good_2
+				}
+			}
+			else_if = { 
+				limit = { 
+					var:actual_breast_size_variable < 20
+					var:actual_breast_size_variable >= 10
+				}
+				if = {
+					limit = { Not = { has_trait = tits_small_good_2 } }
+					remove_breasts_trait_effect = yes
+					add_trait = tits_small_good_2
+				}
+			}
+			else_if = {
+				limit = { 
+					var:actual_breast_size_variable < 120
+					var:actual_breast_size_variable >= 80
+				}
+				if = {
+					limit = { Not = { has_trait = tits_big_good_3 } }
+					remove_breasts_trait_effect = yes
+					add_trait = tits_big_good_3
+				}
+			}
+			else_if = {
+				limit = { 
+					var:actual_breast_size_variable < 10
+				}
+				if = {
+					limit = { Not = { has_trait = tits_small_good_3 } }
+					remove_breasts_trait_effect = yes
+					add_trait = tits_small_good_3
+				}
+			}
+			else_if = {
+				limit = { 
+					var:actual_breast_size_variable < 160
+					var:actual_breast_size_variable >= 120
+				}
+				if = {
+					limit = { Not = { has_trait = tits_big_good_4 } }
+					remove_breasts_trait_effect = yes
+					add_trait = tits_big_good_4
+				}
+			}
+			else_if = {
+				limit = { 
+					var:actual_breast_size_variable >= 160
+				}
+				if = {
+					limit = { Not = { has_trait = tits_big_good_5 } }
+					remove_breasts_trait_effect = yes
+					add_trait = tits_big_good_5
+				}
+			}
+		}
+	}

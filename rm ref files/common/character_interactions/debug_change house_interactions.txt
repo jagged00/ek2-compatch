@@ -1,0 +1,34 @@
+﻿
+switch_parent_house_interaction = {
+	category = interaction_debug_main
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+	is_shown = {
+		debug_only = yes
+		scope:recipient = {
+			exists = father
+			exists = mother
+		}
+	}
+	
+	on_accept = {
+		if = {
+			limit = { 
+				scope:recipient = { house = father.house }
+			}
+			scope:recipient = { set_house = mother.house }
+		}
+		else_if = {
+			limit = { 
+				scope:recipient = { house = mother.house }
+			}
+			scope:recipient = { set_house = father.house }
+		}
+		else = {
+			scope:recipient = { set_house = father.house }
+		}
+	}
+	
+	auto_accept = yes
+}
+

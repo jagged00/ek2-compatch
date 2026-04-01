@@ -1,0 +1,61 @@
+﻿check_breast_gene_max_min = {
+			value = {
+				add = var:breast_size_gene_1
+				subtract = var:breast_size_gene_2
+			}
+		}
+
+check_butt_gene_max_min = {
+			value = {
+				add = var:butt_size_gene_1
+				subtract = var:butt_size_gene_2
+			}
+		}
+
+check_hips_gene_max_min = {
+			value = {
+				add = var:hips_gene_1
+				subtract = var:hips_gene_2
+			}
+		}
+		
+check_waist_gene_max_min = {
+			value = {
+				add = var:waist_gene_1
+				subtract = var:waist_gene_2
+			}
+		}
+		
+check_shoulders_gene_max_min = {
+			value = {
+				add = var:shoulders_gene_1
+				subtract = var:shoulders_gene_2
+			}
+		}
+		
+check_height_gene_max_min = {
+			value = {
+				add = var:height_gene_1
+				subtract = var:height_gene_2
+			}
+		}
+		
+check_lactation_gene_max_min = {
+			value = var:lactation_gene_1
+			subtract = var:lactation_gene_2
+		}
+		
+check_upper_body_metabolic_gene_max_min = {
+			value = var:father_upper_body_metabolic_gene
+			subtract = var:mother_upper_body_metabolic_gene
+		}
+		
+check_lower_body_metabolic_gene_max_min = {
+			value = var:father_lower_body_metabolic_gene
+			subtract = var:mother_lower_body_metabolic_gene
+		}
+		
+check_metabolic_gene_ratio = {
+			value = var:upper_body_metabolic_gene
+			divide = var:lower_body_metabolic_gene
+		}
