@@ -1,0 +1,202 @@
+﻿cbo_weight = {
+	usage = game
+
+	@overweight_multiplier = 0.5
+	@underweight_multiplier = -0.5
+
+	overweight = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_type
+				value = 0
+			}
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_fat_distribution
+				value = 0
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_fat_distribution
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = {
+					value = scope:weight_for_portrait # An absolute and normalized value derived from character body weight
+					multiply = @overweight_multiplier
+				}
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_fat_distribution
+				value = {
+					value = scope:weight_for_portrait # An absolute and normalized value derived from character body weight
+					multiply = @overweight_multiplier
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				scope:current_weight > overweight_threshold
+			}
+		}
+	}
+
+	underweight = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_type
+				value = 0
+			}
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_fat_distribution
+				value = 0
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_fat_distribution
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = {
+					value = scope:weight_for_portrait # An absolute and normalized value derived from character body weight
+					multiply = @underweight_multiplier
+				}
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_fat_distribution
+				value = {
+					value = scope:weight_for_portrait # An absolute and normalized value derived from character body weight
+					multiply = @underweight_multiplier
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				scope:current_weight < underweight_threshold
+			}
+		}
+	}
+
+	ruler_designer_overweight = {
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_type
+				value = 0
+			}
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_fat_distribution
+				value = 0
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_fat_distribution
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = {
+					value = scope:weight_for_portrait # An absolute and normalized value derived from character body weight
+					multiply = @overweight_multiplier
+				}
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_fat_distribution
+				value = {
+					value = scope:weight_for_portrait # An absolute and normalized value derived from character body weight
+					multiply = @overweight_multiplier
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				exists = scope:ruler_designer
+				scope:current_weight > overweight_threshold
+			}
+		}
+	}
+	ruler_designer_underweight = {
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_type
+				value = 0
+			}
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_fat_distribution
+				value = 0
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_fat_distribution
+				value = 0.5
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_type
+				value = {
+					value = scope:weight_for_portrait # An absolute and normalized value derived from character body weight
+					multiply = @underweight_multiplier
+				}
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_body_fat_distribution
+				value = {
+					value = scope:weight_for_portrait # An absolute and normalized value derived from character body weight
+					multiply = @underweight_multiplier
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				exists = scope:ruler_designer
+				scope:current_weight < underweight_threshold
+			}
+		}
+	}
+}
+

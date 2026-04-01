@@ -1,0 +1,16 @@
+﻿l_english:
+
+ breast_size_gui_tooltip: "Breast Size:  [Character.Custom('GetBreastBandSize')] [Character.Custom('GetBreastSize')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_breast_size')|0]"
+ penis_size_gui_tooltip: "Endowment: [Character.Custom('GetPenisSize')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_penis_size')|0]"
+ penis_size_metric_gui_tooltip: "Endowment: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_penis_size_metric')|0] cm / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_penis_size')|0]"
+ height_gui_tooltip: "Height: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_height')|0]"
+ total_weight_gui_tooltip: "Muscles: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_muscle')|0], Fat: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_fat')|0]"
+
+
+ sex_details_gui_tooltip: "Desire: [Character.MakeScope.Var('sexual_desire').GetValue|0], Libido: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('monthly_libido')|0]"
+
+ ideal_male_gui_tooltip: "Ideal Male: Height [Character.MakeScope.Var('male_height_preference').GetValue|0], Muscle [Character.MakeScope.Var('male_muscle_preference').GetValue|0], Fat [Character.MakeScope.Var('male_fat_preference').GetValue|0], Rear [Character.MakeScope.Var('male_butt_size_preference').GetValue|0], Endowment [Character.MakeScope.Var('penis_size_preference').GetValue|0]"
+ ideal_female_gui_tooltip: "Ideal Female: Height [Character.MakeScope.Var('female_height_preference').GetValue|0], Muscle [Character.MakeScope.Var('female_muscle_preference').GetValue|0], Fat [Character.MakeScope.Var('female_fat_preference').GetValue|0], Rear [Character.MakeScope.Var('female_butt_size_preference').GetValue|0], Breasts [Character.MakeScope.Var('breast_size_preference').GetValue|0]"
+
+ player_notification_gui_tooltip: "Set up this character with the values necessary for this mod to work. \nYou can also wait until their next birthday."
+ 

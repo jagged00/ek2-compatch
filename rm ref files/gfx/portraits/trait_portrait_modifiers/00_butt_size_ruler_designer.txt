@@ -1,0 +1,572 @@
+﻿
+butt_size = {
+	small_butt_narrow_hips = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			small_butt_narrow_hips
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 0.1
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 0.1
+				}
+			}
+		}
+	}
+	small_butt_medium_hips = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			small_butt_medium_hips
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 0.1
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 0.4
+				}
+			}
+		}
+	}
+	small_butt_wide_hips = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			small_butt_wide_hips
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 0.1
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 0.8
+				}
+			}
+		}
+	}
+	medium_butt_narrow_hips = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			medium_butt_narrow_hips
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 0.4
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 0.1
+				}
+			}
+		}
+	}
+	medium_butt_medium_hips = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			medium_butt_medium_hips
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 0.6
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 0.6
+				}
+			}
+		}
+	}
+	medium_butt_wide_hips = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			medium_butt_wide_hips
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 0.4
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 0.8
+				}
+			}
+		}
+	}
+	big_butt_narrow_hips = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			big_butt_narrow_hips
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 0.8
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 0.1
+				}
+			}
+		}
+	}
+	big_butt_medium_hips = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			big_butt_medium_hips
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 0.8
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 0.4
+				}
+			}
+		}
+	}
+	big_butt_wide_hips_1 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			big_butt_wide_hips_1
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 0.6
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 0.6
+				}
+			}
+		}
+	}
+	huge_hips = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			huge_hips
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 0.6
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 1.0
+				}
+			}
+		}
+	}
+	huge_butt = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			huge_butt
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 1.0
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 0.8
+				}
+			}
+		}
+	}
+	big_butt_wide_hips_2 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			big_butt_wide_hips_2
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 0.8
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 0.8
+				}
+			}
+		}
+	}
+	colossal_butt = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			colossal_butt
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 1.0
+				}
+				morph = {
+					mode = add
+					gene = gene_butt_excess
+					template = butt_excess
+					value = 0.5
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 1.0
+				}
+				morph = {
+					mode = add
+					gene = gene_hips_excess
+					template = hips_excess
+					value = 0.5
+				}
+			}
+		}
+	}
+	random_butt = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_butt_size
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_butt_size
+					value = 0.4
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_hips
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_hips
+					value = 0.4
+				}
+			}
+		}
+	}
+}

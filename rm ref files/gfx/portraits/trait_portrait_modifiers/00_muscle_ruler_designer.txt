@@ -1,0 +1,221 @@
+﻿
+muscle_ruler_designer = {
+	average_muscular = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+					is_adult = yes
+				}
+			}
+		}
+		traits = {
+			average_muscular
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_upper_body_muscle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_lower_body_muscle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_muscle_definition
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_upper_body_muscle
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_muscle_definition
+					value = 0.0
+				}
+			}
+		}
+	}
+	muscular_1 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		traits = {
+			muscular_1
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_upper_body_muscle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_lower_body_muscle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_muscle_definition
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_upper_body_muscle
+					value = 0.4
+				}
+				morph = {
+					mode = modify
+					gene = gene_muscle_definition
+					value = 0.8
+				}
+			}
+		}
+	}
+	muscular_2 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		traits = {
+			muscular_2
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_upper_body_muscle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_lower_body_muscle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_muscle_definition
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_upper_body_muscle
+					value = 0.6
+				}
+				morph = {
+					mode = modify
+					gene = gene_muscle_definition
+					value = 1.0
+				}
+			}
+		}
+	}
+	muscular_3 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		traits = {
+			muscular_3
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_upper_body_muscle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_lower_body_muscle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_muscle_definition
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_upper_body_muscle
+					value = 0.90
+				}
+				morph = {
+					mode = modify
+					gene = gene_muscle_definition
+					value = 1.0
+				}
+			}
+		}
+	}
+	muscular_random = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_upper_body_muscle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_lower_body_muscle
+					value = 0.0
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_muscle_definition
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_upper_body_muscle
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_muscle_definition
+					value = 0.0
+				}
+			}
+		}
+	}
+}

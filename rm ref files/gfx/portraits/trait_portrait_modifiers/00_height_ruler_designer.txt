@@ -1,0 +1,457 @@
+﻿
+height_trait_ruler_designer = {
+	short_4 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			exists = scope:ruler_designer
+		}
+		traits = {
+			short_4
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.10
+				}
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = {
+						if = {
+							limit = { age >= 1 }
+							value = age
+							divide = 9
+							max = 1
+						}
+						else = {
+							value = 0
+						}
+					}
+				}
+			}
+		}
+	}
+	short_3 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			exists = scope:ruler_designer
+		}
+		traits = {
+			short_3
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.25
+				}
+			}
+		}
+	}
+	short_2 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			exists = scope:ruler_designer
+		}
+		traits = {
+			short_2
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.35
+				}
+			}
+		}
+	}
+	short_1 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			exists = scope:ruler_designer
+		}
+		traits = {
+			short_1
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.42
+				}
+			}
+		}
+	}
+	average_height = {
+		ignore_outfit_tags = yes
+		trigger = {
+			exists = scope:ruler_designer
+		}
+		traits = {
+			average_height
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.5
+				}
+			}
+		}
+	}
+	tall_1 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			exists = scope:ruler_designer
+		}
+		traits = {
+			tall_1
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.58
+				}
+			}
+		}
+	}
+	tall_2 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			exists = scope:ruler_designer
+		}
+		traits = {
+			tall_2
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.65
+				}
+			}
+		}
+	}
+	tall_3 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			exists = scope:ruler_designer
+		}
+		traits = {
+			tall_3
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.75
+				}
+			}
+		}
+	}
+	tall_4 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			exists = scope:ruler_designer
+		}
+		traits = {
+			tall_4
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.9
+				}
+			}
+		}
+	}
+	random_height = {
+		ignore_outfit_tags = yes
+		trigger = {
+			exists = scope:ruler_designer
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_height
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.5
+				}
+			}
+		}
+	}
+}
+
+
+height_trait_dead = {
+	short_5 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			is_alive = no
+		}
+		traits = {
+			short_5
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.20
+				}
+			}
+		}
+	}
+	short_4 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			is_alive = no
+		}
+		traits = {
+			short_4
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.30
+				}
+			}
+		}
+	}
+	short_3 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			is_alive = no
+		}
+		traits = {
+			short_3
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.35
+				}
+			}
+		}
+	}
+	short_2 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			is_alive = no
+		}
+		traits = {
+			short_2
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.40
+				}
+			}
+		}
+	}
+	short_1 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			is_alive = no
+		}
+		traits = {
+			short_1
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.45
+				}
+			}
+		}
+	}
+	average_height = {
+		ignore_outfit_tags = yes
+		trigger = {
+			is_alive = no
+		}
+		traits = {
+			average_height
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.5
+				}
+			}
+		}
+	}
+	tall_1 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			is_alive = no
+		}
+		traits = {
+			tall_1
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.55
+				}
+			}
+		}
+	}
+	tall_2 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			is_alive = no
+		}
+		traits = {
+			tall_2
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.60
+				}
+			}
+		}
+	}
+	tall_3 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			is_alive = no
+		}
+		traits = {
+			tall_3
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.70
+				}
+			}
+		}
+	}
+	tall_4 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			is_alive = no
+		}
+		traits = {
+			tall_4
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.7
+				}
+			}
+		}
+	}
+	tall_5 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			is_alive = no
+		}
+		traits = {
+			tall_5
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.8
+				}
+			}
+		}
+	}
+	random_height = {
+		ignore_outfit_tags = yes
+		trigger = {
+			is_alive = no
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify
+					gene = gene_height
+					value = 0.5
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+﻿l_english:
+
+ trait_average_muscular: "Soft"
+ trait_average_muscular_desc: "This character lacks definition."
+ trait_average_muscular_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] lacks definition.\nMuscles Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_muscle')|0]\nArm Muscle Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('visual_arm_muscle')|0]\nShoulders Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_shoulders')|0]"
+ 
+ trait_muscular: "Muscular"
+
+ trait_muscular_1: "Muscular"
+ trait_muscular_1_desc: "This character is relatively muscular."
+ trait_muscular_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is relatively muscular.\nMuscles Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_muscle')|0]\nArm Muscle Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('visual_arm_muscle')|0]\nShoulders Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_shoulders')|0]"
+ 
+ trait_muscular_2: "Bulky"
+ trait_muscular_2_desc: "This character's muscles make them quite imposing."
+ trait_muscular_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s muscles make them quite imposing.\nMuscles Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_muscle')|0]\nArm Muscle Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('visual_arm_muscle')|0]\nShoulders Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_shoulders')|0]"
+ 
+ trait_muscular_3: "Hulking"
+ trait_muscular_3_desc: "This character is quite effective at smashing."
+ trait_muscular_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is quite effective at smashing.\nMuscles Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_muscle')|0]\nArm Muscle Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('visual_arm_muscle')|0]\nShoulders Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_shoulders')|0]"
+ 
+ trait_skinny_arms: "Skinny Arms"
+
+ trait_skinny_arms_1: "Wiry"
+ trait_skinny_arms_1_desc: "This character has skinny little arms."
+ trait_skinny_arms_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has skinny little arms.\nMuscles Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_muscle')|0]\nArm Muscle Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('visual_arm_muscle')|0]\nShoulders Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_shoulders')|0]"
+ 
+ trait_skinny_arms_2: "Skeletal"
+ trait_skinny_arms_2_desc: "This character is just skin and bones."
+ trait_skinny_arms_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is just skin and bones.\nMuscles Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_muscle')|0]\nArm Muscle Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('visual_arm_muscle')|0]\nShoulders Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_shoulders')|0]"
+ 
+ trait_fat_arms: "Flabby"
+
+ trait_fat_arms_1: "Doughy"
+ trait_fat_arms_1_desc: "This character's body is soft and doughy."
+ trait_fat_arms_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s body is soft and doughy.\nMuscles Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_muscle')|0]\nArm Muscle Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('visual_arm_muscle')|0]\nShoulders Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_shoulders')|0]"
+ 
+ trait_fat_arms_2: "Flabby"
+ trait_fat_arms_2_desc: "Whether or not this character has muscles, they are hidden under a thick layer of fat."
+ trait_fat_arms_2_character_desc: "Whether or not [ROOT.GetCharacter.GetFirstNameNoTooltip] has muscles, they are hidden under a thick layer of fat.\nMuscles Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_muscle')|0]\nArm Muscle Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('visual_arm_muscle')|0]\nShoulders Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_shoulders')|0]"
+ 

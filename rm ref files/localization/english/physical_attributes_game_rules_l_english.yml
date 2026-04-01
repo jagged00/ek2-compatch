@@ -1,0 +1,7 @@
+﻿l_english:
+ rule_measurement_units: "Measurement Units"
+ setting_us_custom_units: "United States Customary"
+ setting_us_custom_units_desc: "The totally sensible system of measurements commonly used in the United States."
+ setting_metric_units: "Metric Units"
+ setting_metric_units_desc: "The system of measurements commonly used everywhere except Myanmar, the United States, and Liberia."
+ 

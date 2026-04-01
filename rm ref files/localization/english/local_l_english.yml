@@ -1,0 +1,12 @@
+﻿l_english:
+ LIEGE_DISAPPROVES_MARRIAGE:0 "Liege/Guardian Disapproves: $VALUE|+0=$"
+ CLASS_MISMATCH_MARRIAGE:0 "Class Mismatch: $VALUE|+0=$"
+ VIRGIN_BRIDE_BONUS:0 "Virgin Bride: $VALUE|+0=$"
+ FERTILE_BRIDE_BONUS:0 "Peak Fertility: $VALUE|+0=$"
+ SUPERIOR_WEALTH_MARRIAGE:0 "Superior Wealth/Prestige: $VALUE|+0=$"
+ WOMAN_MARRIES_DOWN:0 "Woman Marries Down: $VALUE|+0=$"
+ PARENTS_DISAPPROVE_MARRIAGE:0 "Parents Disapprove: $VALUE|+0=$"
+ WIDOW_REMARRIAGE_BONUS:0 "Childless Widow Remarriage: $VALUE|+0=$"
+ STRONG_RULER_CLOSE_DIPLOMACY_MARRIAGE_ACCEPTANCE:0 "Strong Neighbor: $VALUE|+0=$"
+ NON_VIRGIN_TARNISH_NOBLE:0 "Not A Virgin: $VALUE|+0=$"
+ NON_VIRGIN_TARNISH_COMMONER:0 "Not A Virgin: $VALUE|+0=$"

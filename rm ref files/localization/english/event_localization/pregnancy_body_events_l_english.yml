@@ -1,0 +1,24 @@
+﻿l_english:
+ pregnancy_body.5001.t: "[breastfeeding_child_mother.GetNamePossessiveOrMy|U]'s Milk Won't Come"
+ pregnancy_body.5001.desc: "No matter how much [breastfeeding_child_mother.GetFirstName|U] may try her milk won't come.\nWe have begun to feed [breastfeeding_child.GetFirstName|U] with goats milk, but it is an imperfect replacement."
+ pregnancy_body.5001.a: "I should hire a wet nurse."
+ pregnancy_body.5001.b: "Don't ever remind me again."
+ pregnancy_body.5001.c: "Don't ever remind me, or my descendants again."
+ 
+ pregnancy_body.5002.t: "My Milk Won't Come"
+ pregnancy_body.5002.desc: "No matter how much I may try my milk won't come, when I look at my [breastfeeding_child.GetFirstName|U] I feel a profound sense of shame.\nWe have begun to feed [breastfeeding_child.GetFirstName|U] with goats milk, but it is an imperfect replacement."
+ pregnancy_body.5002.a: "I should hire a wet nurse."
+ pregnancy_body.5002.b: "Don't ever remind me again."
+ pregnancy_body.5002.c: "Don't ever remind me, or my descendants again."
+
+ pregnancy_body.6001.t: "No Mother's Milk"
+ pregnancy_body.6001.desc: "With [breastfeeding_child_mother.GetNamePossessiveOrMy|U]'s death my [breastfeeding_child.GetFirstName|U] has no mother's milk.\nWe have begun to feed [breastfeeding_child.GetFirstName|U] with goats milk, but it is an imperfect replacement."
+ pregnancy_body.6001.a: "I should hire a wet nurse."
+ pregnancy_body.6001.b: "Don't ever remind me again."
+ pregnancy_body.6001.c: "Don't ever remind me, or my descendants again."
+ 
+ pregnancy_body.7001.t: "No More Milk for [breastfeeding_child.GetFirstName|U]"
+ pregnancy_body.7001.desc: "[wet_nurse.GetFirstName|U] can no longer be [breastfeeding_child.GetFirstName|U]'s wetnurse, but [breastfeeding_child.GetSheHe|U] is still young for solid food.\nWe have begun to feed [breastfeeding_child.GetFirstName|U] with goats milk, but it is an imperfect replacement."
+ pregnancy_body.7001.a: "I should hire a new wet nurse."
+ pregnancy_body.7001.b: "Don't ever remind me again."
+ pregnancy_body.7001.c: "Don't ever remind me, or my descendants again."

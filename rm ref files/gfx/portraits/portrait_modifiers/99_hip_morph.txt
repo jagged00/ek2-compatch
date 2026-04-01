@@ -1,0 +1,313 @@
+﻿
+hips = {
+	usage = game
+	selection_behavior = max
+	hips = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_hips
+				value = 1.0
+				}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1
+			}
+		}
+	}
+	hips_alive = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_hips
+				value = 0
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_hips
+				value = {
+					value = hips_size_portrait_modifier
+					max = 1.0
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = hips_genetic
+				}
+			}
+		}
+	}
+	hips_alive_variable = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_hips
+				template = hips_variable
+				value = 0
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_hips
+				value = {
+					value = 0.33
+					multiply = {
+						value = 1.0
+						subtract = capped_puberty_value
+					}
+					add = {
+						value = hips_size_portrait_modifier
+					}
+					max = 1.0
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 150
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = hips_genetic
+					has_variable = puberty_value
+				}
+			}
+		}
+	}
+	hips_excess = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_hips
+				value = 1
+			}
+			morph = {
+				mode = add
+				gene = gene_hips_excess
+				template = hips_excess
+				value = {
+					value = hips_size_portrait_modifier
+					subtract = 1
+					divide = 2
+					min = 0
+					max = 1
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 300
+				trigger_if = {
+					limit = { is_alive = yes }
+					trigger_if = {
+						limit = {
+							has_variable = hips_genetic
+							has_variable = puberty_value
+						}
+						var:hips_genetic > 100
+					}
+					trigger_else = {
+						always = no
+					}
+				}
+				trigger_else = {
+					always = no
+				}
+			}
+		}
+	}
+}
+waist = {
+	usage = game
+	selection_behavior = max
+	waist = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_waist
+				value = 1.0
+				}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1
+			}
+		}
+	}
+	waist_alive = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_waist
+				value = 0
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_waist
+				value = {
+					value = var:waist_genetic
+					multiply = 0.01
+					max = 1.0
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = waist_genetic
+				}
+			}
+		}
+	}
+	waist_alive_variable = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_waist
+				template = waist_variable
+				value = 0
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_waist
+				value = {
+					value = 0.5
+					multiply = {
+						value = 1.0
+						subtract = capped_puberty_value
+					}
+					add = {
+						value = var:waist_genetic
+						multiply = capped_puberty_value
+						multiply = 0.01
+					}
+					max = 1.0
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 150
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = waist_genetic
+					has_variable = puberty_value
+				}
+			}
+		}
+	}
+}
+
+shoulders = {
+	usage = game
+	selection_behavior = max
+	shoulders = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_shoulders
+				value = 1.0
+				}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1
+			}
+		}
+	}
+	shoulders_alive = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_shoulders
+				value = 0
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_shoulders
+				value = {
+					value = var:shoulders_genetic
+					multiply = 0.01
+					max = 1.0
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = shoulders_genetic
+				}
+			}
+		}
+	}
+	shoulders_alive_variable = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_shoulders
+				template = shoulders_variable
+				value = 0
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_shoulders
+				value = {
+					value = 0.5
+					multiply = {
+						value = 1.0
+						subtract = capped_puberty_value
+					}
+					add = {
+						value = var:shoulders_genetic
+						multiply = capped_puberty_value
+						multiply = 0.01
+					}
+					max = 1.0
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 150
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = shoulders_genetic
+					has_variable = puberty_value
+				}
+			}
+		}
+	}
+}

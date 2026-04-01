@@ -1,0 +1,53 @@
+﻿l_english:
+ trait_tits_average: "Melons"
+ trait_tits_average_immersive: "A Bosom"
+ trait_tits_average_desc: "This character has a bosom."
+ trait_tits_average_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has a bosom.\nmelon Size: [Character.Custom('GetmelonBandSize')] [Character.Custom('GetmelonSize')] / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_melon_size')|0]\nmelon Size from Fat: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_fat')|0]\nmelon Size from Pregnancy: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_lactation')|0]"
+
+ trait_tits_small: "Small Melons"
+ trait_tits_small_good: "$trait_melons_small$"
+ trait_tits_small_bad: "$trait_melons_small$"
+
+ trait_tits_small_1: "Small Melons"
+ trait_tits_small_1_immersive: "Petite"
+ trait_tits_small_1_desc: "This character has a smaller bust than most."
+ trait_tits_small_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has a smaller bust than most.\nmelon Size: [Character.Custom('GetmelonBandSize')] [Character.Custom('GetmelonSize')] / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_melon_size')|0]\nmelon Size from Fat: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_fat')|0]\nmelon Size from Pregnancy: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_lactation')|0]"
+
+ trait_tits_small_2: "Tiny Melons"
+ trait_tits_small_2_immersive: "Budding"
+ trait_tits_small_2_desc: "This character has girlish melons that are hardly noticeable."
+ trait_tits_small_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has girlish melons that are hardly noticeable.\nmelon Size: [Character.Custom('GetmelonBandSize')] [Character.Custom('GetmelonSize')] / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_melon_size')|0]\nmelon Size from Fat: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_fat')|0]\nmelon Size from Pregnancy: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_lactation')|0]"
+
+ trait_tits_small_3: "Flat Melons"
+ trait_tits_small_3_immersive: "Flat-Chested"
+ trait_tits_small_3_desc: "This character's bosom is as flat as a board."
+ trait_tits_small_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s bosom is as flat as a board.\nmelon Size: [Character.Custom('GetmelonBandSize')] [Character.Custom('GetmelonSize')] / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_melon_size')|0]\nmelon Size from Fat: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_fat')|0]\nmelon Size from Pregnancy: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_lactation')|0]"
+
+ trait_tits_big: "Big Melons"
+ trait_tits_big_good: "$trait_melons_big$"
+ trait_tits_big_bad: "$trait_melons_big$"
+
+ trait_tits_big_1: "Big Melons"
+ trait_tits_big_1_immersive: "Bosomy"
+ trait_tits_big_1_desc: "This character has a larger bust than most."
+ trait_tits_big_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has a larger bust than most.\nmelon Size: [Character.Custom('GetmelonBandSize')] [Character.Custom('GetmelonSize')] / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_melon_size')|0]\nmelon Size from Fat: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_fat')|0]\nmelon Size from Pregnancy: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_lactation')|0]"
+
+ trait_tits_big_2: "Huge Melons"
+ trait_tits_big_2_immersive: "Buxom"
+ trait_tits_big_2_desc: "This character has huge... tracts of land."
+ trait_tits_big_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has huge... tracts of land.\nmelon Size: [Character.Custom('GetmelonBandSize')] [Character.Custom('GetmelonSize')] / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_melon_size')|0]\nmelon Size from Fat: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_fat')|0]\nmelon Size from Pregnancy: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_lactation')|0]"
+
+ trait_tits_big_3: "Gigantic Melons"
+ trait_tits_big_3_immersive: "Voluptuous"
+ trait_tits_big_3_desc: "This character's enormous bosom is the stuff of legends."
+ trait_tits_big_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s enormous bosom is the stuff of legends.\nmelon Size: [Character.Custom('GetmelonBandSize')] [Character.Custom('GetmelonSize')] / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_melon_size')|0]\nmelon Size from Fat: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_fat')|0]\nmelon Size from Pregnancy: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_lactation')|0]"
+
+ trait_tits_big_4: "Titanic Melons"
+ trait_tits_big_4_immersive: "Titanic Melons"
+ trait_tits_big_4_desc: "When this character goes by women will often gossip about how she's had work done, until they suddenly realize they don't even know what this means, triggering an existential crisis as they begin to question the nature of their reality."
+ trait_tits_big_4_character_desc: "When [ROOT.GetCharacter.GetFirstNameNoTooltip] goes by women will often gossip about how she's had work done, until they suddenly realize they don't even know what this means, triggering an existential crisis as they begin to question the nature of their reality.\nmelon Size: [Character.Custom('GetmelonBandSize')] [Character.Custom('GetmelonSize')] / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_melon_size')|0]\nmelon Size from Fat: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_fat')|0]\nmelon Size from Pregnancy: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_lactation')|0]"
+
+ trait_tits_big_5: "Monsterous Melons"
+ trait_tits_big_5_immersive: "Monsterous Melons"
+ trait_tits_big_5_desc: "This character appears to have passed the threshold, and is now majority melon."
+ trait_tits_big_5_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] appears to have passed the threshold, and is now majority melon.\nmelon Size: [Character.Custom('GetmelonBandSize')] [Character.Custom('GetmelonSize')] / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_melon_size')|0]\nmelon Size from Fat: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_fat')|0]\nmelon Size from Pregnancy: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('melon_size_from_lactation')|0]"

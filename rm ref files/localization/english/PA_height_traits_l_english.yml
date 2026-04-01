@@ -1,0 +1,49 @@
+﻿l_english:
+
+ trait_average_height: "Average Height"
+ trait_average_height_desc: "This character's height is pretty standard."
+ trait_average_height_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s height is pretty standard.\nHeight: [Character.Custom('GetHeight')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('metric_height')|0] cm / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_height')|0]"
+
+ trait_short: "Short"
+
+ trait_short_1: "Short"
+ trait_short_1_desc: "This character is just a little shorter than most."
+ trait_short_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is just a little shorter than most.\nHeight: [Character.Custom('GetHeight')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('metric_height')|0] cm / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_height')|0]"
+
+ trait_short_2: "Little"
+ trait_short_2_desc: "This character has trouble seeing in crowds."
+ trait_short_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has trouble seeing in crowds.\nHeight: [Character.Custom('GetHeight')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('metric_height')|0] cm / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_height')|0]"
+
+ trait_short_3: "Pint Sized"
+ trait_short_3_desc: "This character is useful in a tight spot."
+ trait_short_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is useful in a tight spot.\nHeight: [Character.Custom('GetHeight')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('metric_height')|0] cm / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_height')|0]"
+
+ trait_short_4: "Miniature"
+ trait_short_4_desc: "This character is often overlooked."
+ trait_short_4_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is often overlooked.\nHeight: [Character.Custom('GetHeight')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('metric_height')|0] cm / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_height')|0]"
+
+ trait_short_5: "Diminutive"
+ trait_short_5_desc: "This character's proportions are extraordinarily small."
+ trait_short_5_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s proportions are extraordinarily small.\nHeight: [Character.Custom('GetHeight')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('metric_height')|0] cm / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_height')|0]"
+
+ trait_tall: "Tall"
+
+ trait_tall_1: "Tall"
+ trait_tall_1_desc: "This character is taller than most."
+ trait_tall_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is taller than most.\nHeight: [Character.Custom('GetHeight')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('metric_height')|0] cm / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_height')|0]"
+
+ trait_tall_2: "Towering"
+ trait_tall_2_desc: "This character looks down on most people."
+ trait_tall_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] looks down on most people.\nHeight: [Character.Custom('GetHeight')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('metric_height')|0] cm / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_height')|0]"
+
+ trait_tall_3: "Altitudinous"
+ trait_tall_3_desc: "This character's head is in the clouds."
+ trait_tall_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s head is in the clouds.\nHeight: [Character.Custom('GetHeight')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('metric_height')|0] cm / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_height')|0]"
+
+ trait_tall_4: "Huge"
+ trait_tall_4_desc: "This character's height is quite extraordinary."
+ trait_tall_4_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s height is quite extraordinary.\nHeight: [Character.Custom('GetHeight')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('metric_height')|0] cm / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_height')|0]"
+
+ trait_tall_5: "Gigantic"
+ trait_tall_5_desc: "This character's proportions are out of a ancient myth."
+ trait_tall_5_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] proportions are out of a ancient myth.\nHeight: [Character.Custom('GetHeight')] / [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('metric_height')|0] cm / Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_height')|0]"

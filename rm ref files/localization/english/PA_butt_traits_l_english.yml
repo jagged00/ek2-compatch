@@ -1,0 +1,55 @@
+﻿l_english:
+
+ trait_butt: "Rear Profile"
+
+ trait_small_butt_narrow_hips: "Pin Rear Contour"
+ trait_small_butt_narrow_hips_desc: "This character has a narrow rear profile."
+ trait_small_butt_narrow_hips_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has a narrow rear profile.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"
+
+ trait_small_butt_medium_hips: "Flat Profile"
+ trait_small_butt_medium_hips_desc: "It is not entirely clear if this character has a rear profile."
+ trait_small_butt_medium_hips_character_desc: "It is not entirely clear if [ROOT.GetCharacter.GetFirstNameNoTooltip] has a rear profile.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"
+
+ trait_small_butt_wide_hips: "Flat Rear"
+ trait_small_butt_wide_hips_desc: "This character has a notably flat rear profile."
+ trait_small_butt_wide_hips_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has a notably flat rear profile.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"
+
+ trait_medium_butt_narrow_hips: "Slender Hipped"
+ trait_medium_butt_narrow_hips_desc: "This character ties their belt very tight."
+ trait_medium_butt_narrow_hips_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] ties their belt very tight.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"
+
+ trait_medium_butt_medium_hips: "Middling Rear"
+ trait_medium_butt_medium_hips_desc: "This character's rear is unremarkable, so it shan't be remarked upon."
+ trait_medium_butt_medium_hips_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s rear is unremarkable, so it shan't be remarked upon.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"
+
+ trait_medium_butt_wide_hips: "Curvy"
+ trait_medium_butt_wide_hips_desc: "This character's body seems determined to avoid straight lines."
+ trait_medium_butt_wide_hips_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s body seems determined to avoid straight lines.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"
+
+ trait_big_butt_narrow_hips: "Rounded Rear"
+ trait_big_butt_narrow_hips_desc: "This character is often remembered for a lively and distinctive presence."
+ trait_big_butt_narrow_hips_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is often remembered for a lively and distinctive presence.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"
+
+ trait_big_butt_medium_hips: "Brawn Rear Contour"
+ trait_big_butt_medium_hips_desc: "When this character walks in, many onlookers take notice."
+ trait_big_butt_medium_hips_character_desc: "When [ROOT.GetCharacter.GetFirstNameNoTooltip] walks in, many onlookers take notice.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"
+
+ trait_big_butt_wide_hips_1: "Broad Profile"
+ trait_big_butt_wide_hips_1_desc: "This character makes the rocking world go round."
+ trait_big_butt_wide_hips_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] makes the rocking world go round.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"
+
+ trait_big_butt_wide_hips_2: "Callipygian"
+ trait_big_butt_wide_hips_2_desc: "This character is the embodiment of Venus of the well-balanced form."
+ trait_big_butt_wide_hips_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the embodiment of Venus of the well-balanced form.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"
+
+ trait_huge_hips: "Quatch Rear Contour"
+ trait_huge_hips_desc: "This character has a full rear."
+ trait_huge_hips_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has a full rear.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"
+
+ trait_huge_butt: "Maximus Gluteus"
+ trait_huge_butt_desc: "This character's rear is abnormally large."
+ trait_huge_butt_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s rear is abnormally large.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"
+
+ trait_colossal_butt: "Colossal Bottomed"
+ trait_colossal_butt_desc: "Like the Colossus of Rhodes, this character's rear profile leaves others in awe of its sheer scale."
+ trait_colossal_butt_character_desc: "Like the Colossus of Rhodes, [ROOT.GetCharacter.GetFirstNameNoTooltip]'s rear profile leaves others in awe of its sheer scale.\nRear Profile Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_butt_size')|0]\nHips Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_hips_size')|0]\nLower Body Muscle Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('cbo_lower_body_muscles_gui')|0]"

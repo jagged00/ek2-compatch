@@ -1,0 +1,143 @@
+﻿body_metabolic = {
+	usage = game
+	selection_behavior = max
+	no_metabolic = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+		}
+		weight = {
+			base = 1
+		}
+	}
+	upper_body_high_full = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_fat_distribution
+				template = upper_body_high_full
+				value = 1
+			}
+			morph = {
+				mode = modify gene = gene_bs_body_fat_distribution
+				value = { if = { limit = { exists = var:bb_gene_bs_body_type } add = var:bb_gene_bs_body_type	} }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				is_alive = yes
+				trigger_if = { 
+					limit = { is_alive = yes }
+					has_variable = upper_body_full_metabolic_gene
+				}
+			}
+		}
+	}
+	upper_body_high_half = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_fat_distribution
+				template = upper_body_high_half
+				value = 1
+			}
+			morph = {
+				mode = modify gene = gene_bs_body_fat_distribution
+				value = { if = { limit = { exists = var:bb_gene_bs_body_type } add = var:bb_gene_bs_body_type	} }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				is_alive = yes
+				trigger_if = { 
+					limit = { is_alive = yes }
+					has_variable = upper_body_half_metabolic_gene
+				}
+			}
+		}
+	}
+	body_mid = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_fat_distribution
+				template = body_mid
+				value = 1
+			}
+			morph = {
+				mode = modify gene = gene_bs_body_fat_distribution
+				value = { if = { limit = { exists = var:bb_gene_bs_body_type } add = var:bb_gene_bs_body_type	} }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				is_alive = yes
+				trigger_if = { 
+					limit = { is_alive = yes }
+					has_variable = body_mid_metabolic_gene
+				}
+			}
+		}
+	}
+	lower_body_high_half = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_fat_distribution
+				template = lower_body_high_half
+				value = 1
+			}
+			morph = {
+				mode = modify gene = gene_bs_body_fat_distribution
+				value = { if = { limit = { exists = var:bb_gene_bs_body_type } add = var:bb_gene_bs_body_type	} }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				is_alive = yes
+				trigger_if = { 
+					limit = { is_alive = yes }
+					has_variable = lower_body_half_metabolic_gene
+				}
+			}
+		}
+	}
+	lower_body_high_full = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_body_fat_distribution
+				template = lower_body_high_full
+				value = 1
+			}
+			morph = {
+				mode = modify gene = gene_bs_body_fat_distribution
+				value = { if = { limit = { exists = var:bb_gene_bs_body_type } add = var:bb_gene_bs_body_type	} }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				is_alive = yes
+				trigger_if = { 
+					limit = { is_alive = yes }
+					has_variable = lower_body_full_metabolic_gene
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,70 @@
+﻿l_english:
+
+ trait_average_weight: "Average Weight"
+ trait_average_weight_desc: "This character is at a healthy weight."
+ trait_average_weight_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is at a healthy weight.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_pregnant_stomach: "Pregnant Belly"
+
+ trait_pregnant_stomach_1: "Starting to Show"
+ trait_pregnant_stomach_1_desc: "This character is in the early stages of pregnancy."
+ trait_pregnant_stomach_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is in the early stages of pregnancy.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_pregnant_stomach_2: "Late Pregnancy"
+ trait_pregnant_stomach_2_desc: "This character is in the later stages of pregnancy."
+ trait_pregnant_stomach_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is in the later stages of pregnancy.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_pregnant_stomach_3: "Heavily Pregnant"
+ trait_pregnant_stomach_3_desc: "This character is heavily pregnant and may be carrying twins."
+ trait_pregnant_stomach_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]is heavily pregnant and may be carrying twins.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_abs: "Abs"
+
+ trait_abs_1: "Toned"
+ trait_abs_1_desc: "This character has some muscle definition."
+ trait_abs_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has some muscle definition.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_abs_3: "Ripped"
+ trait_abs_3_desc: "This character has some bulges on their stomach, the good kind."
+ trait_abs_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has some bulges on their stomach, the good kind.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_abs_2: "Chiseled"
+ trait_abs_2_desc: "This character's body is cut from stone."
+ trait_abs_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s body is cut from stone.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_skinny: "Skinny"
+
+ trait_skinny_1: "Svelte"
+ trait_skinny_1_desc: "This character is slim."
+ trait_skinny_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is slim.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_skinny_2: "Skinny"
+ trait_skinny_2_desc: "This character has little body fat."
+ trait_skinny_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has little body fat.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_skinny_3: "Malnourished"
+ trait_skinny_3_desc: "This character's body weight is unhealthily low."
+ trait_skinny_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s body weight is unhealthily low.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_skinny_4: "Sunken"
+ trait_skinny_4_desc: "This character lacks body fat and their skeleton is clearly visible."
+ trait_skinny_4_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] lacks body fat and their skeleton is clearly visible.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_fat: "Fat"
+
+ trait_fat_1: "Chubby"
+ trait_fat_1_desc: "This character is just a little soft bodied."
+ trait_fat_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] is just a little soft bodied.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_fat_2: "Fat"
+ trait_fat_2_desc: "This character has cushion for the pushing."
+ trait_fat_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has cushion for the pushing.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_fat_3: "Obese"
+ trait_fat_3_desc: "This character's body weight is unhealthily high."
+ trait_fat_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s body weight is unhealthily high.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+
+ trait_fat_4: "Morbidly Obese"
+ trait_fat_4_desc: "This character's weight is extraordinary and ponderous."
+ trait_fat_4_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]'s weight is extraordinary and ponderous.\nStomach Size Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_stomach_size')|0]\nUpper Body Fat Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('upper_body_fat')|0]\nAbs Game Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('abs_value')|0]\nGenetic Waist Size: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('actual_waist_size')|0]\nAging Stomach: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('aging_stomach_size')|0]\nPregnant Belly Value: [GuiScope.SetRoot( Character.MakeScope ).ScriptValue('pregnant_stomach_size')|0]"
+ 

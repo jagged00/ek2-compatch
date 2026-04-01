@@ -1,0 +1,159 @@
+﻿
+height = {
+	usage = game
+	selection_behavior = max
+	height = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_height
+				value = 1.0
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1
+			}
+		}
+	}
+	height_alive = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_height
+				value = {
+					value = 0
+				}
+			}
+			morph = {
+				mode = modify
+				gene = gene_height
+				value = {
+					value = var:height_genetic
+					multiply = 0.01
+					max = 1.0
+				}
+			}
+			morph = {
+				mode = modify gene = gene_height
+				value = { if = { limit = { exists = var:bb_gene_height } add = var:bb_gene_height	} }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = height_genetic
+					Not = { has_variable = height_growth }
+				}
+			}
+		}
+	}
+	height_alive_growth = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_height
+				value = 0.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_height
+				template = normal_height
+				value = {
+					value = actual_height
+					add = 50
+					divide = 200
+					max = 1
+					min = 0
+				}
+			}
+			morph = {
+				mode = modify_multiply
+				gene = gene_age
+				template = old_variable
+				value = 0.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_age
+				value = 1
+			}
+			morph = {
+				mode = modify gene = gene_height
+				value = { if = { limit = { exists = var:bb_gene_height } add = var:bb_gene_height	} }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = height_genetic
+					has_variable = height_growth
+					age >= 12
+				}
+			}
+		}
+	}
+	height_alive_growth_puberty = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_height
+				value = 0.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_height
+				template = normal_height
+				value = {
+					value = actual_height
+					add = 50
+					divide = 200
+					max = 1
+					min = 0
+				}
+			}
+			morph = {
+				mode = modify_multiply
+				gene = gene_age
+				template = old_variable
+				value = 0.0
+			}
+			morph = {
+				mode = modify
+				gene = gene_age
+				value = {
+					value = puberty_aging_value
+				}
+			}
+			morph = {
+				mode = modify gene = gene_height
+				value = { if = { limit = { exists = var:bb_gene_height } add = var:bb_gene_height	} }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 500
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = height_genetic
+					has_variable = height_growth
+				}
+			}
+		}
+	}
+}

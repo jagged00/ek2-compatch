@@ -1,0 +1,308 @@
+﻿
+breasts_size = {
+	small_breasts_3 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		traits = {
+			tits_small_good_3
+			tits_small_bad_3
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_bust
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_bust
+					value = 0.05
+				}
+			}
+		}
+	}
+	small_breasts_2 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		traits = {
+			tits_small_good_2
+			tits_small_bad_2
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_bust
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_bust
+					value = 0.15
+				}
+			}
+		}
+	}
+	small_breasts_1 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		traits = {
+			tits_small_good_1
+			tits_small_bad_1
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_bust
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_bust
+					value = 0.25
+				}
+			}
+		}
+	}
+	average_breasts = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		traits = {
+			tits_average
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_bust
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_bust
+					value = 0.35
+				}
+			}
+		}
+	}
+	large_breasts_1 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		traits = {
+			tits_big_good_1
+			tits_big_bad_1
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_bust
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_bust
+					value = 0.50
+				}
+			}
+		}
+	}
+	large_breasts_2 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		traits = {
+			tits_big_good_2
+			tits_big_bad_2
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_bust
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_bust
+					value = 0.70
+				}
+			}
+		}
+	}
+	large_breasts_3 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		traits = {
+			tits_big_good_3
+			tits_big_bad_3
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_bust
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_bust
+					value = 0.90
+				}
+			}
+		}
+	}
+	large_breasts_4 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		traits = {
+			tits_big_good_4
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_bust
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_bust
+					value = 1.00
+				}
+				morph = {
+					mode = add
+					gene = gene_breast_excess
+					template = breast_excess
+					value = 0.5
+				}
+			}
+		}
+	}
+	large_breasts_5 = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		traits = {
+			tits_big_good_5
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_bust
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_bust
+					value = 1.00
+				}
+				morph = {
+					mode = add
+					gene = gene_breast_excess
+					template = breast_excess
+					value = 1.0
+				}
+			}
+		}
+	}
+	random_breasts = {
+		ignore_outfit_tags = yes
+		trigger = {
+			Or = {
+				exists = scope:ruler_designer
+				trigger_if = {
+					limit = { Not = { exists = scope:ruler_designer } }
+					is_alive = no
+				}
+			}
+		}
+		dna_modifiers = {
+			human = {
+				morph = {
+					mode = modify_multiply
+					gene = gene_bs_bust
+					value = 0.0
+				}
+				morph = {
+					mode = modify
+					gene = gene_bs_bust
+					value = 0.0
+				}
+			}
+		}
+	}
+}

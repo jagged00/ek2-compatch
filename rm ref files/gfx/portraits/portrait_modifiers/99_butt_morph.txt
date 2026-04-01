@@ -1,0 +1,94 @@
+﻿
+butt_size = {
+	usage = game
+	selection_behavior = max
+	butt_size = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_butt_size
+				value = 1.0
+				}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1
+			}
+		}
+	}
+	butt_size_alive_variable = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify_multiply
+				gene = gene_bs_butt_size
+				value = 0
+			}
+			morph = {
+				mode = modify
+				gene = gene_bs_butt_size
+				value = {
+					value = butt_size_portrait_modifier
+					max = 1.0
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 150
+				is_alive = yes
+				trigger_if = {
+					limit = { is_alive = yes }
+					has_variable = butt_size_genetic
+					has_variable = puberty_value
+				}
+			}
+		}
+	}
+	butt_size_excess = {
+		ignore_outfit_tags = yes
+		dna_modifiers = {
+			morph = {
+				mode = modify
+				gene = gene_bs_butt_size
+				value = 1
+			}
+			morph = {
+				mode = add
+				gene = gene_butt_excess
+				template = butt_excess
+				value = {
+					value = butt_size_portrait_modifier
+					subtract = 1
+					min = 0
+					max = 1.0
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				trigger_if = {
+					limit = { is_alive = yes }
+					trigger_if = {
+						limit = {
+							has_variable = butt_size_genetic
+							has_variable = puberty_value
+						}
+						butt_size_portrait_modifier > 1
+					}
+					trigger_else = {
+						always = no
+					}
+				}
+				trigger_else = {
+					always = no
+				}
+			}
+		}
+	}
+}
