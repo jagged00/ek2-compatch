@@ -1,0 +1,231 @@
+# EK2 + RM compatibility: per-heritage lore baselines with RM-style variance
+# Notes:
+# - Uses EK2 heritage pillar identity for lore buckets.
+# - Keeps RM-style weighted variance for startup/generated characters.
+# - Does NOT force child genes to be identical; inherited children stay natural via RM parent logic.
+
+set_height_gene_1_effect = {
+	# Failsafe clamp envelope for all generated characters.
+	set_variable = {
+		name = height_gene_1
+		value = { fixed_range = { min = 20 max = 120 } }
+	}
+
+	# Giants
+	if = {
+		limit = { culture = { has_cultural_pillar = heritage_atmoran_giant } }
+		random_list = {
+			6 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 95 max = 105 } } } }
+			10 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 105 max = 115 } } } }
+			6 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 115 max = 125 } } } }
+			2 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 125 max = 135 } } } }
+		}
+	}
+
+	# Dremora
+	else_if = {
+		limit = { culture = { has_cultural_pillar = heritage_dremora } }
+		random_list = {
+			5 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 64 max = 70 } } } }
+			12 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 70 max = 76 } } } }
+			5 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 76 max = 84 } } } }
+		}
+	}
+
+	# Altmer (tallest mer)
+	else_if = {
+		limit = { culture = { has_cultural_pillar = heritage_aldmeri } }
+		random_list = {
+			5 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 54 max = 58 } } } }
+			12 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 58 max = 62 } } } }
+			5 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 62 max = 67 } } } }
+		}
+	}
+
+	# Ayleid / Dwemer / Falmer / Maormer (tall mer, below altmer median)
+	else_if = {
+		limit = {
+			culture = {
+				OR = {
+					has_cultural_pillar = heritage_ayleid
+					has_cultural_pillar = heritage_dwemeri
+					has_cultural_pillar = heritage_falmeri
+					has_cultural_pillar = heritage_maormeri
+				}
+			}
+		}
+		random_list = {
+			6 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 50 max = 54 } } } }
+			12 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 54 max = 59 } } } }
+			4 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 59 max = 64 } } } }
+		}
+	}
+
+	# Dunmer / Chimer
+	else_if = {
+		limit = {
+			culture = {
+				OR = {
+					has_cultural_pillar = heritage_chimeri
+					has_cultural_pillar = heritage_dunmeri
+				}
+			}
+		}
+		random_list = {
+			6 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 44 max = 48 } } } }
+			12 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 48 max = 52 } } } }
+			4 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 52 max = 57 } } } }
+		}
+	}
+
+	# Bosmer (shortest mer)
+	else_if = {
+		limit = { culture = { has_cultural_pillar = heritage_bosmeri } }
+		random_list = {
+			6 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 34 max = 38 } } } }
+			12 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 38 max = 43 } } } }
+			4 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 43 max = 48 } } } }
+		}
+	}
+
+	# Orcish
+	else_if = {
+		limit = { culture = { has_cultural_pillar = heritage_orcish } }
+		random_list = {
+			5 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 46 max = 50 } } } }
+			12 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 50 max = 55 } } } }
+			5 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 55 max = 61 } } } }
+		}
+	}
+
+	# Human lineages (Nord/Breton/Imperial/Redguard/etc.)
+	else_if = {
+		limit = {
+			culture = {
+				OR = {
+					has_cultural_pillar = heritage_atmoran
+					has_cultural_pillar = heritage_breton
+					has_cultural_pillar = heritage_cyrodiilic
+					has_cultural_pillar = heritage_cyrod
+					has_cultural_pillar = heritage_deathlander
+					has_cultural_pillar = heritage_kothri
+					has_cultural_pillar = heritage_tsaesci
+					has_cultural_pillar = heritage_yokudan
+				}
+			}
+		}
+		random_list = {
+			5 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 42 max = 47 } } } }
+			12 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 47 max = 53 } } } }
+			5 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 53 max = 60 } } } }
+		}
+	}
+
+	# Argonian / Khajiit / Lilmothiit
+	else_if = {
+		limit = {
+			culture = {
+				OR = {
+					has_cultural_pillar = heritage_argonian
+					has_cultural_pillar = heritage_khajiiti
+					has_cultural_pillar = heritage_lilmothiit
+				}
+			}
+		}
+		random_list = {
+			6 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 42 max = 46 } } } }
+			12 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 46 max = 51 } } } }
+			4 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 51 max = 57 } } } }
+		}
+	}
+
+	# Goblinken / Imgan
+	else_if = {
+		limit = {
+			culture = {
+				OR = {
+					has_cultural_pillar = heritage_goblinken
+					has_cultural_pillar = heritage_imgan
+				}
+			}
+		}
+		random_list = {
+			8 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 28 max = 34 } } } }
+			10 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 34 max = 40 } } } }
+			2 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 40 max = 48 } } } }
+		}
+	}
+
+	# Keep hard limits to prevent malformed outliers from script/mod interactions.
+	if = {
+		limit = { var:height_gene_1 < 0 }
+		set_variable = { name = height_gene_1 value = 0 }
+	}
+	if = {
+		limit = { var:height_gene_1 > 150 }
+		set_variable = { name = height_gene_1 value = 150 }
+	}
+}
+
+set_height_gene_2_effect = {
+	# Same lore distributions as gene_1, but without mutating a pre-existing gene_1 value.
+	if = {
+		limit = { has_variable = height_gene_1 }
+		set_variable = { name = ek2_saved_height_gene_1 value = var:height_gene_1 }
+	}
+
+	set_height_gene_1_effect = yes
+	set_variable = { name = height_gene_2 value = var:height_gene_1 }
+
+	if = {
+		limit = { has_variable = ek2_saved_height_gene_1 }
+		set_variable = { name = height_gene_1 value = var:ek2_saved_height_gene_1 }
+		remove_variable = ek2_saved_height_gene_1
+	}
+}
+
+set_height_growth_rates = {
+	if = {
+		limit = { Not = { has_variable = height_growth_rate } }
+		set_variable = {
+			name = height_growth_rate
+			value = { fixed_range = { min = 8 max = 12 } }
+		}
+
+		if = {
+			limit = { culture = { has_cultural_parameter = heritage_lifespan_2 } }
+			set_variable = { name = height_growth_rate value = { fixed_range = { min = 6 max = 10 } } }
+		}
+		if = {
+			limit = { culture = { has_cultural_parameter = heritage_lifespan_3 } }
+			set_variable = { name = height_growth_rate value = { fixed_range = { min = 5 max = 8 } } }
+		}
+		if = {
+			limit = { culture = { has_cultural_parameter = heritage_lifespan_6 } }
+			set_variable = { name = height_growth_rate value = { fixed_range = { min = 3 max = 6 } } }
+		}
+	}
+}
+
+set_puberty_growth_rates = {
+	if = {
+		limit = { Not = { has_variable = puberty_rate } }
+		set_variable = {
+			name = puberty_rate
+			value = { fixed_range = { min = 2 max = 4 } }
+		}
+
+		if = {
+			limit = { culture = { has_cultural_parameter = heritage_lifespan_2 } }
+			set_variable = { name = puberty_rate value = { fixed_range = { min = 1.5 max = 3 } } }
+		}
+		if = {
+			limit = { culture = { has_cultural_parameter = heritage_lifespan_3 } }
+			set_variable = { name = puberty_rate value = { fixed_range = { min = 1 max = 2.5 } } }
+		}
+		if = {
+			limit = { culture = { has_cultural_parameter = heritage_lifespan_6 } }
+			set_variable = { name = puberty_rate value = { fixed_range = { min = 0.5 max = 1.5 } } }
+		}
+	}
+}
