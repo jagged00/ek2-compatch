@@ -56,18 +56,28 @@ maximum_height_growth = {
 puberty_aging_value = {
 	value = 0
 	add = {
-		value = age
-		divide = 10
-		multiply = 0.4
-	}
-	add = {
 		if = {
-			limit = { has_variable = puberty_value }
+			limit = { has_variable = puberty_start_age }
+			value = age
+			divide = var:puberty_start_age
+			multiply = 0.4
+		}
+		else = {
+			value = age
+			divide = 10
+			multiply = 0.4
+		}
+	}
+	if = {
+		limit = { has_variable = puberty_value }
+		add = {
 			value = var:puberty_value
 			divide = 1.25
 			multiply = 0.6
 		}
-		else = {
+	}
+	else = {
+		add = {
 			value = age
 			subtract = 10
 			divide = 15
