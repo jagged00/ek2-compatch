@@ -152,6 +152,7 @@ on_newborn = {
 			days = 180
 		}
 		trigger_event = { on_action = on_add_height_growth_newborn }
+		trigger_event = { on_action = on_assign_child_height_trait }
 	}
 }
 
@@ -236,6 +237,9 @@ on_add_height_growth_newborn = {
 		}
 		trigger_event = { 
 			on_action = on_height_trait
+		}
+		trigger_event = {
+			on_action = on_assign_child_height_trait
 		}
 	}
 }
@@ -406,6 +410,87 @@ on_add_height_growth = {
 			trigger_event = {
 				on_action = on_height_trait
 			}
+			trigger_event = {
+				on_action = on_assign_child_height_trait
+			}
+		}
+	}
+}
+
+# Use genetic adult target height for children so they are assigned stable
+# long-term height traits early; RM growth then scales them into that target.
+on_assign_child_height_trait = {
+	trigger = {
+		is_alive = yes
+		age < 18
+		has_variable = height_genetic
+	}
+	effect = {
+		remove_height_trait_effect = yes
+		if = {
+			limit = {
+				var:height_genetic < 15
+			}
+			add_trait = short_4
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 25
+				var:height_genetic >= 15
+			}
+			add_trait = short_3
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 35
+				var:height_genetic >= 25
+			}
+			add_trait = short_2
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 45
+				var:height_genetic >= 35
+			}
+			add_trait = short_1
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 55
+				var:height_genetic >= 45
+			}
+			add_trait = average_height
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 65
+				var:height_genetic >= 55
+			}
+			add_trait = tall_1
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 75
+				var:height_genetic >= 65
+			}
+			add_trait = tall_2
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 85
+				var:height_genetic >= 75
+			}
+			add_trait = tall_3
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 125
+				var:height_genetic >= 85
+			}
+			add_trait = tall_4
+		}
+		else = {
+			add_trait = tall_5
 		}
 	}
 }
