@@ -13,28 +13,7 @@ on_add_visual_age_variable = {
 			set_variable = {
 				name = visual_age
 				value = {
-					if = {
-						limit = { 
-							age >= 35
-							has_trait = beauty_good
-						}
-						value = age
-						subtract = 35
-						multiply = 0.02
-						min = 0
-						max = 1.5
-					}
-					else_if = {
-						limit = { age >= 25 }
-						value = age
-						subtract = 25
-						multiply = 0.02
-						min = 0
-						max = 1.5
-					}
-					else = {
-						value = 0
-					}
+					value = ek2_rm_visual_age_base_value
 
 					# EK2 lifespan pacing for visual aging.
 					if = {
@@ -65,17 +44,17 @@ on_increase_visual_age_variable = {
 			}
 			trigger_if = {
 				limit = { has_trait = beauty_good }
-				age > 35
+				ek_human_age_equivalent > 35
 			}
 			trigger_else = {
-				age > 25
+				ek_human_age_equivalent > 25
 			}
 		}
 		effect = {
-			change_variable = {
+			set_variable = {
 				name = visual_age
-				add = {
-					value = 0.02
+				value = {
+					value = ek2_rm_visual_age_base_value
 					if = {
 						limit = { culture = { has_cultural_parameter = heritage_lifespan_2 } }
 						multiply = 0.85
@@ -137,11 +116,43 @@ on_newborn = {
 		is_alive = yes
 	}
 	effect = {
+		# Failsafe: if genetic height did not initialize correctly for a newborn,
+		# force RM inheritance/seeding now so post-start generations don't collapse short.
+		if = {
+			limit = { Not = { has_variable = height_genetic } }
+			add_height_variable_effect = yes
+		}
+		# Hard fallback: if any part of height genes is still missing, seed from our
+		# culture buckets and finalize a usable genetic value immediately.
+		if = {
+			limit = { Not = { has_variable = height_gene_1 } }
+			set_height_gene_1_effect = yes
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_2 } }
+			set_height_gene_2_effect = yes
+		}
+		if = {
+			limit = {
+				Not = { has_variable = height_genetic }
+				has_variable = height_gene_1
+				has_variable = height_gene_2
+			}
+			set_variable = {
+				name = height_genetic
+				value = {
+					value = var:height_gene_1
+					add = var:height_gene_2
+					divide = 2
+				}
+			}
+		}
 		add_character_flag = {
 			flag = is_newborn
 			days = 180
 		}
 		trigger_event = { on_action = on_add_height_growth_newborn }
+		trigger_event = { on_action = on_assign_child_height_trait }
 	}
 }
 
@@ -159,6 +170,39 @@ on_add_height_growth_newborn = {
 		Not = { has_character_flag = height_growth_set }
 	}
 	effect = {
+		if = {
+			limit = {
+				Or = {
+					Not = { has_variable = height_genetic }
+					Not = { has_variable = height_gene_1 }
+					Not = { has_variable = height_gene_2 }
+				}
+			}
+			add_height_variable_effect = yes
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_1 } }
+			set_height_gene_1_effect = yes
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_2 } }
+			set_height_gene_2_effect = yes
+		}
+		if = {
+			limit = {
+				Not = { has_variable = height_genetic }
+				has_variable = height_gene_1
+				has_variable = height_gene_2
+			}
+			set_variable = {
+				name = height_genetic
+				value = {
+					value = var:height_gene_1
+					add = var:height_gene_2
+					divide = 2
+				}
+			}
+		}
 		add_character_flag = {
 			flag = height_growth_set
 			days = 360
@@ -194,6 +238,9 @@ on_add_height_growth_newborn = {
 		trigger_event = { 
 			on_action = on_height_trait
 		}
+		trigger_event = {
+			on_action = on_assign_child_height_trait
+		}
 	}
 }
 
@@ -204,6 +251,39 @@ on_add_height_growth = {
 		Not = { has_character_flag = is_newborn }
 	}
 	effect = {
+		if = {
+			limit = {
+				Or = {
+					Not = { has_variable = height_genetic }
+					Not = { has_variable = height_gene_1 }
+					Not = { has_variable = height_gene_2 }
+				}
+			}
+			add_height_variable_effect = yes
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_1 } }
+			set_height_gene_1_effect = yes
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_2 } }
+			set_height_gene_2_effect = yes
+		}
+		if = {
+			limit = {
+				Not = { has_variable = height_genetic }
+				has_variable = height_gene_1
+				has_variable = height_gene_2
+			}
+			set_variable = {
+				name = height_genetic
+				value = {
+					value = var:height_gene_1
+					add = var:height_gene_2
+					divide = 2
+				}
+			}
+		}
 		if = {
 			limit = { 
 				Or = {
@@ -327,6 +407,90 @@ on_add_height_growth = {
 					days = { 301 360 }
 				}
 			}
+			trigger_event = {
+				on_action = on_height_trait
+			}
+			trigger_event = {
+				on_action = on_assign_child_height_trait
+			}
+		}
+	}
+}
+
+# Use genetic adult target height for children so they are assigned stable
+# long-term height traits early; RM growth then scales them into that target.
+on_assign_child_height_trait = {
+	trigger = {
+		is_alive = yes
+		age < 18
+		has_variable = height_genetic
+	}
+	effect = {
+		remove_height_trait_effect = yes
+		if = {
+			limit = {
+				var:height_genetic < 15
+			}
+			add_trait = short_4
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 25
+				var:height_genetic >= 15
+			}
+			add_trait = short_3
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 35
+				var:height_genetic >= 25
+			}
+			add_trait = short_2
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 45
+				var:height_genetic >= 35
+			}
+			add_trait = short_1
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 55
+				var:height_genetic >= 45
+			}
+			add_trait = average_height
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 65
+				var:height_genetic >= 55
+			}
+			add_trait = tall_1
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 75
+				var:height_genetic >= 65
+			}
+			add_trait = tall_2
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 85
+				var:height_genetic >= 75
+			}
+			add_trait = tall_3
+		}
+		else_if = {
+			limit = {
+				var:height_genetic < 125
+				var:height_genetic >= 85
+			}
+			add_trait = tall_4
+		}
+		else = {
+			add_trait = tall_5
 		}
 	}
 }
