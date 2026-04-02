@@ -13,28 +13,7 @@ on_add_visual_age_variable = {
 			set_variable = {
 				name = visual_age
 				value = {
-					if = {
-						limit = { 
-							age >= 35
-							has_trait = beauty_good
-						}
-						value = age
-						subtract = 35
-						multiply = 0.02
-						min = 0
-						max = 1.5
-					}
-					else_if = {
-						limit = { age >= 25 }
-						value = age
-						subtract = 25
-						multiply = 0.02
-						min = 0
-						max = 1.5
-					}
-					else = {
-						value = 0
-					}
+					value = ek2_rm_visual_age_base_value
 
 					# EK2 lifespan pacing for visual aging.
 					if = {
@@ -65,17 +44,17 @@ on_increase_visual_age_variable = {
 			}
 			trigger_if = {
 				limit = { has_trait = beauty_good }
-				age > 35
+				ek_human_age_equivalent > 35
 			}
 			trigger_else = {
-				age > 25
+				ek_human_age_equivalent > 25
 			}
 		}
 		effect = {
-			change_variable = {
+			set_variable = {
 				name = visual_age
-				add = {
-					value = 0.02
+				value = {
+					value = ek2_rm_visual_age_base_value
 					if = {
 						limit = { culture = { has_cultural_parameter = heritage_lifespan_2 } }
 						multiply = 0.85

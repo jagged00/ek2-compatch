@@ -101,3 +101,29 @@ puberty_aging_value = {
 
 	max = 1
 }
+
+
+ek2_rm_visual_age_base_value = {
+	if = {
+		limit = {
+			ek_human_age_equivalent >= 35
+			has_trait = beauty_good
+		}
+		value = ek_human_age_equivalent
+		subtract = 35
+		multiply = 0.02
+		min = 0
+		max = 1.5
+	}
+	else_if = {
+		limit = { ek_human_age_equivalent >= 25 }
+		value = ek_human_age_equivalent
+		subtract = 25
+		multiply = 0.02
+		min = 0
+		max = 1.5
+	}
+	else = {
+		value = 0
+	}
+}
