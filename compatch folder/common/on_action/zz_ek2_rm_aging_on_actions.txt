@@ -122,6 +122,31 @@ on_newborn = {
 			limit = { Not = { has_variable = height_genetic } }
 			add_height_variable_effect = yes
 		}
+		# Hard fallback: if any part of height genes is still missing, seed from our
+		# culture buckets and finalize a usable genetic value immediately.
+		if = {
+			limit = { Not = { has_variable = height_gene_1 } }
+			set_height_gene_1_effect = yes
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_2 } }
+			set_height_gene_2_effect = yes
+		}
+		if = {
+			limit = {
+				Not = { has_variable = height_genetic }
+				has_variable = height_gene_1
+				has_variable = height_gene_2
+			}
+			set_variable = {
+				name = height_genetic
+				value = {
+					value = var:height_gene_1
+					add = var:height_gene_2
+					divide = 2
+				}
+			}
+		}
 		add_character_flag = {
 			flag = is_newborn
 			days = 180
@@ -144,6 +169,39 @@ on_add_height_growth_newborn = {
 		Not = { has_character_flag = height_growth_set }
 	}
 	effect = {
+		if = {
+			limit = {
+				Or = {
+					Not = { has_variable = height_genetic }
+					Not = { has_variable = height_gene_1 }
+					Not = { has_variable = height_gene_2 }
+				}
+			}
+			add_height_variable_effect = yes
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_1 } }
+			set_height_gene_1_effect = yes
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_2 } }
+			set_height_gene_2_effect = yes
+		}
+		if = {
+			limit = {
+				Not = { has_variable = height_genetic }
+				has_variable = height_gene_1
+				has_variable = height_gene_2
+			}
+			set_variable = {
+				name = height_genetic
+				value = {
+					value = var:height_gene_1
+					add = var:height_gene_2
+					divide = 2
+				}
+			}
+		}
 		add_character_flag = {
 			flag = height_growth_set
 			days = 360
@@ -189,6 +247,39 @@ on_add_height_growth = {
 		Not = { has_character_flag = is_newborn }
 	}
 	effect = {
+		if = {
+			limit = {
+				Or = {
+					Not = { has_variable = height_genetic }
+					Not = { has_variable = height_gene_1 }
+					Not = { has_variable = height_gene_2 }
+				}
+			}
+			add_height_variable_effect = yes
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_1 } }
+			set_height_gene_1_effect = yes
+		}
+		if = {
+			limit = { Not = { has_variable = height_gene_2 } }
+			set_height_gene_2_effect = yes
+		}
+		if = {
+			limit = {
+				Not = { has_variable = height_genetic }
+				has_variable = height_gene_1
+				has_variable = height_gene_2
+			}
+			set_variable = {
+				name = height_genetic
+				value = {
+					value = var:height_gene_1
+					add = var:height_gene_2
+					divide = 2
+				}
+			}
+		}
 		if = {
 			limit = { 
 				Or = {
@@ -311,6 +402,9 @@ on_add_height_growth = {
 					id = aging.0006
 					days = { 301 360 }
 				}
+			}
+			trigger_event = {
+				on_action = on_height_trait
 			}
 		}
 	}

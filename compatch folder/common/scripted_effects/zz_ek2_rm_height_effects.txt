@@ -256,19 +256,6 @@ set_height_growth_rates = {
 			name = height_growth_rate
 			value = { fixed_range = { min = 8 max = 12 } }
 		}
-
-		if = {
-			limit = { culture = { has_cultural_parameter = heritage_lifespan_2 } }
-			set_variable = { name = height_growth_rate value = { fixed_range = { min = 6 max = 10 } } }
-		}
-		if = {
-			limit = { culture = { has_cultural_parameter = heritage_lifespan_3 } }
-			set_variable = { name = height_growth_rate value = { fixed_range = { min = 5 max = 8 } } }
-		}
-		if = {
-			limit = { culture = { has_cultural_parameter = heritage_lifespan_6 } }
-			set_variable = { name = height_growth_rate value = { fixed_range = { min = 3 max = 6 } } }
-		}
 	}
 }
 
