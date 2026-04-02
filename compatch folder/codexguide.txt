@@ -1,0 +1,26 @@
+
+Read error.log first and do not reintroduce missing on_action / event-link errors.
+
+Only edit files in compatch folder/ (treat ek2 ref file/ and rm ref files/ as references only).
+
+Preserve these compatch files and logic:
+
+common/scripted_effects/zz_ek2_rm_height_effects.txt (heritage-specific heights + clamps)
+
+common/on_action/zz_ek2_rm_aging_on_actions.txt (visual_age setup/update)
+
+common/script_values/zz_ek2_rm_aging_values.txt (ek2_rm_visual_age_base_value)
+
+gfx/portraits/portrait_modifiers/99_visual_age.txt (portrait aging behavior)
+
+Use ek_human_age_equivalent for age-dependent visual decisions (not raw age) unless explicitly asked otherwise.
+
+After edits:
+
+run brace-balance checks on touched script files,
+
+run targeted rg checks for changed keys (on_actions/script_values/modifier names),
+
+commit,
+
+create PR message with summary + validation.
