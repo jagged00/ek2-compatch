@@ -207,6 +207,8 @@ set_height_gene_1_effect = {
 		}
 	}
 
+	}
+
 	# Keep hard limits to prevent malformed outliers from script/mod interactions.
 	if = {
 		limit = { var:height_gene_1 < 0 }
