@@ -16,41 +16,14 @@ minimum_height_growth = {
 		}
 	}
 
-	# Baseline human-ish growth floor.
+	# Keep RM baseline growth floor so children do not stall undersized.
 	divide = 25
-
-	# Long-lived species reach adult proportions later.
-	if = {
-		limit = { culture = { has_cultural_parameter = heritage_lifespan_2 } }
-		divide = 1.2
-	}
-	if = {
-		limit = { culture = { has_cultural_parameter = heritage_lifespan_3 } }
-		divide = 1.45
-	}
-	if = {
-		limit = { culture = { has_cultural_parameter = heritage_lifespan_6 } }
-		divide = 2.2
-	}
 	max = 1
 }
 
 maximum_height_growth = {
 	value = 0.1
 	multiply = age
-
-	if = {
-		limit = { culture = { has_cultural_parameter = heritage_lifespan_2 } }
-		multiply = 0.9
-	}
-	if = {
-		limit = { culture = { has_cultural_parameter = heritage_lifespan_3 } }
-		multiply = 0.75
-	}
-	if = {
-		limit = { culture = { has_cultural_parameter = heritage_lifespan_6 } }
-		multiply = 0.5
-	}
 }
 
 puberty_aging_value = {
@@ -100,4 +73,30 @@ puberty_aging_value = {
 	}
 
 	max = 1
+}
+
+
+ek2_rm_visual_age_base_value = {
+	if = {
+		limit = {
+			ek_human_age_equivalent >= 35
+			has_trait = beauty_good
+		}
+		value = ek_human_age_equivalent
+		subtract = 35
+		multiply = 0.02
+		min = 0
+		max = 1.5
+	}
+	else_if = {
+		limit = { ek_human_age_equivalent >= 25 }
+		value = ek_human_age_equivalent
+		subtract = 25
+		multiply = 0.02
+		min = 0
+		max = 1.5
+	}
+	else = {
+		value = 0
+	}
 }
