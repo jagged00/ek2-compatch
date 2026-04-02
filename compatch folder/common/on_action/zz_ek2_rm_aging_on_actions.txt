@@ -116,6 +116,12 @@ on_newborn = {
 		is_alive = yes
 	}
 	effect = {
+		# Failsafe: if genetic height did not initialize correctly for a newborn,
+		# force RM inheritance/seeding now so post-start generations don't collapse short.
+		if = {
+			limit = { Not = { has_variable = height_genetic } }
+			add_height_variable_effect = yes
+		}
 		add_character_flag = {
 			flag = is_newborn
 			days = 180
