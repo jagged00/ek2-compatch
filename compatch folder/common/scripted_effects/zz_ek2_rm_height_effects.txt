@@ -8,9 +8,11 @@ set_height_gene_1_effect = {
 	# Failsafe clamp envelope for all generated characters.
 	set_variable = {
 		name = height_gene_1
-		value = { fixed_range = { min = 20 max = 120 } }
+		value = { fixed_range = { min = 44 max = 58 } }
 	}
 
+	if = {
+		limit = { exists = culture }
 	# Giants
 	if = {
 		limit = { culture = { has_cultural_pillar = heritage_atmoran_giant } }
@@ -46,7 +48,7 @@ set_height_gene_1_effect = {
 	else_if = {
 		limit = {
 			culture = {
-				OR = {
+				Or = {
 					has_cultural_pillar = heritage_ayleid
 					has_cultural_pillar = heritage_dwemeri
 					has_cultural_pillar = heritage_falmeri
@@ -65,7 +67,7 @@ set_height_gene_1_effect = {
 	else_if = {
 		limit = {
 			culture = {
-				OR = {
+				Or = {
 					has_cultural_pillar = heritage_chimeri
 					has_cultural_pillar = heritage_dunmeri
 				}
@@ -102,7 +104,7 @@ set_height_gene_1_effect = {
 	else_if = {
 		limit = {
 			culture = {
-				OR = {
+				Or = {
 					has_cultural_pillar = heritage_atmoran
 					has_cultural_pillar = heritage_breton
 					has_cultural_pillar = heritage_cyrodiilic
@@ -125,7 +127,7 @@ set_height_gene_1_effect = {
 	else_if = {
 		limit = {
 			culture = {
-				OR = {
+				Or = {
 					has_cultural_pillar = heritage_argonian
 					has_cultural_pillar = heritage_khajiiti
 					has_cultural_pillar = heritage_lilmothiit
@@ -143,7 +145,7 @@ set_height_gene_1_effect = {
 	else_if = {
 		limit = {
 			culture = {
-				OR = {
+				Or = {
 					has_cultural_pillar = heritage_goblinken
 					has_cultural_pillar = heritage_imgan
 				}
@@ -154,6 +156,8 @@ set_height_gene_1_effect = {
 			10 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 34 max = 40 } } } }
 			2 = { set_variable = { name = height_gene_1 value = { fixed_range = { min = 40 max = 48 } } } }
 		}
+	}
+
 	}
 
 	# Keep hard limits to prevent malformed outliers from script/mod interactions.
